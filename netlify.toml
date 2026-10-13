@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+  # Templates are generated before each deploy so canvas changes pushed to /source go live.
+  command = "python3 tools/sync.py"
+
+[[headers]]
+  for = "/js/templates.js"
+  [headers.values]
+    Cache-Control = "no-cache"

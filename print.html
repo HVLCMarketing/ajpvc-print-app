@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Print · AJPVC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Public+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/app.css">
+<style id="pageSize"></style>
+</head>
+<body class="print-page">
+<div class="print-bar no-print">
+  <div>
+    <strong id="printTitle">Preparing…</strong>
+    <span class="muted" id="printMeta"></span>
+  </div>
+  <div class="row">
+    <span class="badge badge-warn" id="printWarn" hidden></span>
+    <button type="button" class="btn primary" id="printBtn" disabled>Print / Save as PDF</button>
+  </div>
+  <p class="hint">In the print dialog choose <b>Save as PDF</b> (or your printer), set margins to <b>None</b>, and turn on <b>Background graphics</b>.</p>
+</div>
+<div id="sheets"></div>
+<script src="js/templates.js"></script>
+<script src="js/render.js"></script>
+<script src="js/print.js"></script>
+</body>
+</html>

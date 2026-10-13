@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AJPVC Print Materials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Public+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header class="topbar">
+  <img src="assets/logo-long-transparent.png" alt="Advanced Joint Pain &amp; Vascular Center" class="topbar-logo">
+  <nav class="tabs" aria-label="Sections">
+    <button type="button" class="tab is-active" data-tab="materials">Location materials</button>
+    <button type="button" class="tab" data-tab="order">Place an order</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ MATERIALS ============ -->
+  <section id="tab-materials" class="tab-panel">
+    <div class="layout">
+      <aside class="panel">
+        <div class="panel-head">
+          <h1>Location details</h1>
+          <p class="muted">Fill these in once. Every printable piece updates as you type.</p>
+        </div>
+
+        <div class="loc-picker">
+          <label for="locSelect">Location</label>
+          <div class="row">
+            <select id="locSelect"></select>
+            <button type="button" class="btn ghost" id="newLoc">+ New</button>
+          </div>
+        </div>
+
+        <form id="locForm" autocomplete="off">
+          <label>Location name <span class="hint">shown on the brochure cover, e.g. "Bakersfield"</span>
+            <input name="locationName" required></label>
+          <label>Street address
+            <input name="street" placeholder="5020 Commerce Drive, Suite 100"></label>
+          <div class="grid3">
+            <label>City <input name="city"></label>
+            <label>State <input name="state" maxlength="2"></label>
+            <label>ZIP <input name="zip" inputmode="numeric" maxlength="10"></label>
+          </div>
+          <label>Hours <span class="hint">printed exactly as typed</span>
+            <input name="hours" placeholder="Mon–Fri 8:00 am – 5:00 pm"></label>
+
+          <fieldset class="map-field">
+            <legend>Location map</legend>
+            <div class="map-preview" id="mapPreview"><span>No map yet</span></div>
+            <div class="row">
+              <label class="btn ghost file-btn">Upload map image<input type="file" id="mapFile" accept="image/*"></label>
+              <button type="button" class="btn ghost" id="clearMap">Remove</button>
+            </div>
+            <p class="hint">Use a screenshot or exported map (PNG or JPG). It's printed on the trifold.</p>
+          </fieldset>
+
+          <details class="events">
+            <summary>Event details (flyer &amp; postcard)</summary>
+            <label>Open house date <input name="openHouseDate" placeholder="Saturday, Nov 8"></label>
+            <label>Open house time <input name="openHouseTime" placeholder="10 am – 2 pm"></label>
+            <label>Community talk date <input name="talkDate" placeholder="Tuesday, Nov 18, 6 pm"></label>
+            <label>Community talk venue <input name="talkVenue" placeholder="Beale Memorial Library"></label>
+          </details>
+
+          <div class="row form-actions">
+            <button type="button" class="btn ghost" id="exportLocs">Export locations</button>
+            <label class="btn ghost file-btn">Import<input type="file" id="importLocs" accept="application/json"></label>
+            <button type="button" class="btn danger-ghost" id="deleteLoc">Delete location</button>
+          </div>
+          <p class="hint" id="saveState">Saved in this browser.</p>
+        </form>
+      </aside>
+
+      <section class="gallery" aria-label="Printable materials">
+        <div class="gallery-head">
+          <h2>Printable materials</h2>
+          <p class="muted"><mark class="ph">Highlighted</mark> text is still a placeholder. Fill it in or update the design before printing.</p>
+        </div>
+        <div id="pieces" class="pieces"></div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ============ ORDER ============ -->
+  <section id="tab-order" class="tab-panel" hidden>
+    <div class="order-wrap">
+      <h1>Place a print order</h1>
+      <p class="muted">Orders go to the marketing team by email. Materials are printed with the location details saved on the Materials tab.</p>
+
+      <form name="print-order" method="POST" data-netlify="true" netlify-honeypot="company_website" id="orderForm" class="order-form">
+        <input type="hidden" name="form-name" value="print-order">
+        <p class="hp"><label>Leave blank <input name="company_website"></label></p>
+
+        <h2>Location</h2>
+        <label>Location
+          <select name="location" id="orderLocation" required></select></label>
+        <input type="hidden" name="location_details" id="orderLocationDetails">
+
+        <h2>Quantities</h2>
+        <div class="qty-grid" id="qtyGrid">
+          <label>Trifold brochures <input type="number" name="qty_trifold" min="0" step="50" value="0"></label>
+          <label>Patient folders <input type="number" name="qty_patient_folder" min="0" step="25" value="0"></label>
+          <label>Provider folders <input type="number" name="qty_provider_folder" min="0" step="25" value="0"></label>
+          <label>Grand opening flyers <input type="number" name="qty_flyer" min="0" step="25" value="0"></label>
+          <label>Postcards <input type="number" name="qty_postcard" min="0" step="100" value="0"></label>
+          <label>Mousepads <input type="number" name="qty_mousepad" min="0" step="10" value="0"></label>
+        </div>
+
+        <h2>Delivery</h2>
+        <div class="grid2">
+          <label>Your name <input name="name" required autocomplete="name"></label>
+          <label>Email <input type="email" name="email" required autocomplete="email"></label>
+          <label>Phone <input type="tel" name="phone" autocomplete="tel"></label>
+          <label>Needed by <input type="date" name="needed_by" required></label>
+        </div>
+        <label>Ship to <textarea name="ship_to" rows="3" required placeholder="Name, street, suite, city, state ZIP"></textarea></label>
+        <label>Notes <textarea name="notes" rows="3" placeholder="Paper stock, special instructions, event this is for…"></textarea></label>
+
+        <p class="order-error" id="orderError" hidden></p>
+        <button type="submit" class="btn primary">Submit order</button>
+      </form>
+
+      <div class="order-done" id="orderDone" hidden>
+        <h2>Order received</h2>
+        <p>Thanks — the marketing team has your order and will confirm by email.</p>
+        <button type="button" class="btn ghost" id="orderAgain">Place another order</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/templates.js"></script>
+<script src="js/render.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

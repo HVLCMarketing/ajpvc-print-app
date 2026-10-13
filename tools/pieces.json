@@ -1,0 +1,41 @@
+{
+  "assets": {
+    "397c0e22cd755dac67ec59370389eeff": "logo-long.png",
+    "6cf01e9a4e45143c21a1cb15b15b5872": "logo-tall.png",
+    "48c0202744b17fe1f033a36586de7a92": "logo-long-nodivision.png",
+    "064a3171d721ea21f3f8be3d58823518": "logo-tall-nodivision.png",
+    "af1028b1f3dac8e8ffea28d4da5ec591": "logo-long-transparent.png",
+    "e8cda9ccfba49594190c5314252288c8": "logo-tall-transparent.png",
+    "f271e779cddb271ea06730445d5c5c58": "qr-testimonial.png",
+    "24295c057228c5ffb8fe39f4d7cef9e3": "dr-kumar.jpg",
+    "fd4bf9767dce22c72dc6fb09695b5920": "photo-exam.jpg",
+    "5470569c9d7085f5c5e4fd1c93ad0efc": "photo-shoulder.jpg",
+    "a55e594c64b59549d3c8560516ba8508": "illustration-joints.jpg",
+    "fde69066fb558994052d22bf69319fe4": "photo-hiking.jpg"
+  },
+  "pieces": [
+    {"id": "trifold", "title": "Trifold brochure", "size": "11 × 8.5 in, two sides", "inches": [11, 8.5],
+     "pages": [{"file": "TrifoldOutside.dc.html", "label": "Outside"}, {"file": "TrifoldInside.dc.html", "label": "Inside"}]},
+    {"id": "patient-folder", "title": "Patient folder", "size": "9 × 12 pocket folder, 18 × 12 flat", "inches": [18, 12],
+     "pages": [{"file": "FolderOutside.dc.html", "label": "Outside"}, {"file": "FolderInside.dc.html", "label": "Inside"}]},
+    {"id": "provider-folder", "title": "Provider folder", "size": "9 × 12 pocket folder, 18 × 12 flat", "inches": [18, 12],
+     "pages": [{"file": "ProviderOutside.dc.html", "label": "Outside"}, {"file": "ProviderInside.dc.html", "label": "Inside"}]},
+    {"id": "flyer", "title": "Grand opening flyer", "size": "8.5 × 11 in", "inches": [8.5, 11],
+     "pages": [{"file": "Flyer.dc.html", "label": "Front"}],
+     "tokens": {"[DATE], [TIME]": "{{OPEN_HOUSE_DATE}}, {{OPEN_HOUSE_TIME}}", "[DATE]": "{{OPEN_HOUSE_DATE}}"}},
+    {"id": "postcard", "title": "Direct mail postcard", "size": "9 × 6 in, front", "inches": [9, 6],
+     "pages": [{"file": "Postcard.dc.html", "label": "Front"}],
+     "tokens": {"[DATE]": "{{TALK_DATE}}", "[VENUE]": "{{TALK_VENUE}}"}},
+    {"id": "mousepad", "title": "Mousepad", "size": "9.25 × 7.75 in", "inches": [9.25, 7.75],
+     "pages": [{"file": "Mousepad.dc.html", "label": "Front"}]}
+  ],
+  "tokens": {
+    "Mon–Fri [HOURS]": "{{HOURS}}",
+    "[HOURS]": "{{HOURS}}",
+    "[STREET ADDRESS]": "{{STREET}}",
+    "[CITY, STATE ZIP]": "{{CITY_STATE_ZIP}}",
+    "[LOCATION NAME]": "{{LOCATION_NAME}}",
+    "[ADDRESS]": "{{FULL_ADDRESS}}",
+    "[CITY]": "{{CITY}}"
+  }
+}
