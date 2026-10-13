@@ -169,10 +169,13 @@
     data.set('location', v.LOCATION_NAME || 'Untitled');
     try {
       const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
-      if (!res.ok) throw new Error(res.status);
+      if (!res.ok) throw new Error(String(res.status));
       err.hidden = true; f.hidden = true; $('#orderDone').hidden = false; f.reset();
     } catch (x) {
-      err.textContent = 'The order could not be sent. Check your connection and try again. (Orders only work on the deployed Netlify site.)';
+      const code = /^\d+$/.test(x.message) ? x.message : '';
+      err.textContent = code === '404'
+        ? 'The order could not be sent (error 404): Netlify is not accepting this form yet. In Netlify, turn on Forms → Form detection, then redeploy the site.'
+        : `The order could not be sent${code ? ' (error ' + code + ')' : ''}. Check your connection and try again. Orders only work on the live Netlify site.`;
       err.hidden = false;
     }
   });
