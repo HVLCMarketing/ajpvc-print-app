@@ -3,13 +3,22 @@
   const T = window.AJPVC_TEMPLATES;
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const API = '/api/locations';
+  const PASS_KEY = 'ajpvc.passcode.v1';
 
-  let locations = A.loadLocations();
+  let locations = [];
   let activeId = A.getActiveId();
+  let shared = false;          // true when the site's shared location list is reachable
+  let canEdit = false;
+  let passcode = '';
+  try { passcode = localStorage.getItem(PASS_KEY) || ''; } catch (e) {}
+  const pending = new Map();   // id -> timer for debounced saves
+  let localOnly = [];          // locations found in this browser that aren't in the shared list
 
   const uid = () => 'loc-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
   const blank = () => ({ id: uid(), locationName: 'New location', street: '', city: '', state: 'CA', zip: '', hours: '', map: '', openHouseDate: '', openHouseTime: '', talkDate: '', talkVenue: '' });
   const active = () => locations.find((l) => l.id === activeId);
+  const status = (msg, warn) => { const s = $('#saveState'); s.textContent = msg; s.classList.toggle('warn', !!warn); };
 
   /* ---------- tabs ---------- */
   $$('.tab').forEach((b) => b.addEventListener('click', () => {
@@ -19,21 +28,103 @@
     else layoutAll();
   }));
 
-  /* ---------- locations ---------- */
-  function persist() {
-    const ok = A.saveLocations(locations);
-    $('#saveState').textContent = ok ? 'Saved in this browser.' : 'Could not save — the map image may be too large. Try a smaller image.';
-    $('#saveState').classList.toggle('warn', !ok);
+  /* ---------- shared storage ---------- */
+  async function api(method, body, query = '') {
+    const res = await fetch(API + query, {
+      method,
+      headers: { 'Content-Type': 'application/json', 'x-edit-passcode': passcode },
+      body: body ? JSON.stringify(body) : undefined
+    });
+    if (res.status === 204) return null;
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) { const e = new Error(data.error || 'Request failed (' + res.status + ')'); e.status = res.status; throw e; }
+    return data;
   }
 
+  function cacheLocally() { A.saveLocations(locations); }
+
+  function queueSave(loc) {
+    if (!shared) { cacheLocally(); status('Saved in this browser only.'); return; }
+    clearTimeout(pending.get(loc.id));
+    status('Saving…');
+    pending.set(loc.id, setTimeout(async () => {
+      pending.delete(loc.id);
+      try { await api('PUT', loc); cacheLocally(); if (!pending.size) status('Saved to the shared list. Everyone sees this.'); }
+      catch (err) { handleEditError(err); }
+    }, 700));
+  }
+
+  function handleEditError(err) {
+    if (err.status === 401) { lock(); status('Wrong or expired passcode. Unlock editing again.', true); }
+    else status('Not saved: ' + err.message, true);
+  }
+
+  async function loadShared() {
+    try {
+      const list = await api('GET');
+      shared = true;
+      return list.map((l) => ({ ...blank(), ...l }));
+    } catch (e) { shared = false; return null; }
+  }
+
+  /* ---------- edit lock ---------- */
+  function setEditable(on) {
+    canEdit = on;
+    $('#editFields').disabled = !on;
+    $('#newLoc').disabled = !on;
+    renderLockBar();
+    if (on && !locations.length && !localOnly.length) addLocation();
+  }
+  function lock() { passcode = ''; try { localStorage.removeItem(PASS_KEY); } catch (e) {} setEditable(!shared); }
+
+  function renderLockBar() {
+    const bar = $('#lockBar');
+    if (!shared) {
+      bar.innerHTML = '<p class="hint warn">Shared list unavailable here, so changes are saved in this browser only.</p>';
+      return;
+    }
+    const upload = canEdit && localOnly.length
+      ? `<button type="button" class="btn ghost" id="uploadLocal">Add ${localOnly.length} location${localOnly.length > 1 ? 's' : ''} from this browser to the shared list</button>` : '';
+    bar.innerHTML = canEdit
+      ? `<p class="lock-state unlocked">Editing the shared list</p><button type="button" class="btn ghost" id="lockBtn">Lock</button>${upload}`
+      : `<p class="lock-state">View only. Anyone can print and order.</p><button type="button" class="btn primary" id="unlockBtn">Unlock editing</button>`;
+    const u = $('#unlockBtn'); if (u) u.addEventListener('click', unlock);
+    const l = $('#lockBtn'); if (l) l.addEventListener('click', () => { lock(); status('Editing locked.'); });
+    const up = $('#uploadLocal'); if (up) up.addEventListener('click', uploadLocal);
+  }
+
+  async function unlock() {
+    const code = prompt('Team passcode to edit locations:');
+    if (!code) return;
+    passcode = code.trim();
+    try {
+      await api('POST', null, '?check=1');
+      try { localStorage.setItem(PASS_KEY, passcode); } catch (e) {}
+      setEditable(true); status('Editing unlocked on this device.');
+    } catch (err) { passcode = ''; status(err.status === 401 ? 'That passcode is not right.' : err.message, true); }
+  }
+
+  async function uploadLocal() {
+    status('Adding locations…');
+    try {
+      for (const loc of localOnly) { await api('PUT', loc); locations.push(loc); }
+      localOnly = [];
+      cacheLocally(); refreshPicker(); renderLockBar(); renderAll();
+      status('Added to the shared list.');
+    } catch (err) { handleEditError(err); }
+  }
+
+  /* ---------- location form ---------- */
   function refreshPicker() {
     const sel = $('#locSelect');
-    sel.innerHTML = locations.map((l) => `<option value="${l.id}">${A.esc(l.locationName || 'Untitled')}</option>`).join('');
-    sel.value = activeId;
+    sel.innerHTML = locations.length
+      ? locations.map((l) => `<option value="${l.id}">${A.esc(l.locationName || 'Untitled')}</option>`).join('')
+      : '<option value="">No locations yet</option>';
+    sel.value = activeId || '';
   }
 
   function loadForm() {
-    const loc = active();
+    const loc = active() || {};
     const f = $('#locForm');
     ['locationName', 'street', 'city', 'state', 'zip', 'hours', 'openHouseDate', 'openHouseTime', 'talkDate', 'talkVenue']
       .forEach((k) => { f.elements[k].value = loc[k] || ''; });
@@ -41,15 +132,15 @@
   }
 
   function showMap() {
-    const loc = active();
+    const loc = active() || {};
     $('#mapPreview').innerHTML = loc.map ? `<img src="${loc.map}" alt="Uploaded location map">` : '<span>No map yet</span>';
   }
 
   $('#locForm').addEventListener('input', (e) => {
     const loc = active();
-    if (!loc || !e.target.name || !(e.target.name in loc)) return;
+    if (!loc || !canEdit || !e.target.name || !(e.target.name in loc)) return;
     loc[e.target.name] = e.target.value;
-    persist();
+    queueSave(loc);
     if (e.target.name === 'locationName') refreshPicker();
     renderAll();
   });
@@ -58,24 +149,28 @@
     activeId = e.target.value; A.setActiveId(activeId); loadForm(); renderAll();
   });
 
-  $('#newLoc').addEventListener('click', () => {
+  function addLocation() {
     const loc = blank(); locations.push(loc); activeId = loc.id; A.setActiveId(activeId);
-    persist(); refreshPicker(); loadForm(); renderAll();
+    queueSave(loc); refreshPicker(); loadForm(); renderAll();
     $('#locForm').elements.locationName.select();
-  });
+  }
+  $('#newLoc').addEventListener('click', () => { if (canEdit) addLocation(); });
 
-  $('#deleteLoc').addEventListener('click', () => {
+  $('#deleteLoc').addEventListener('click', async () => {
     const loc = active();
-    if (!loc || !confirm(`Delete "${loc.locationName}" from this browser?`)) return;
-    locations = locations.filter((l) => l.id !== loc.id);
-    if (!locations.length) locations.push(blank());
-    activeId = locations[0].id; A.setActiveId(activeId);
-    persist(); refreshPicker(); loadForm(); renderAll();
+    if (!loc || !canEdit || !confirm(`Delete "${loc.locationName}"${shared ? ' for everyone' : ''}?`)) return;
+    try {
+      if (shared) { clearTimeout(pending.get(loc.id)); pending.delete(loc.id); await api('DELETE', null, '?id=' + encodeURIComponent(loc.id)); }
+      locations = locations.filter((l) => l.id !== loc.id);
+      activeId = locations[0] ? locations[0].id : ''; A.setActiveId(activeId);
+      cacheLocally(); refreshPicker(); loadForm(); renderAll();
+      status('Location deleted.');
+    } catch (err) { handleEditError(err); }
   });
 
-  // map upload: downscale so it fits comfortably in browser storage
+  // map upload: downscale so the shared list stays quick to load
   $('#mapFile').addEventListener('change', (e) => {
-    const file = e.target.files[0]; if (!file) return;
+    const file = e.target.files[0]; if (!file || !active() || !canEdit) return;
     const img = new Image();
     img.onload = () => {
       const max = 1400, s = Math.min(1, max / Math.max(img.width, img.height));
@@ -84,12 +179,12 @@
       c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
       active().map = c.toDataURL('image/jpeg', 0.85);
       URL.revokeObjectURL(img.src);
-      persist(); showMap(); renderAll();
+      queueSave(active()); showMap(); renderAll();
     };
     img.src = URL.createObjectURL(file);
     e.target.value = '';
   });
-  $('#clearMap').addEventListener('click', () => { active().map = ''; persist(); showMap(); renderAll(); });
+  $('#clearMap').addEventListener('click', () => { if (!active() || !canEdit) return; active().map = ''; queueSave(active()); showMap(); renderAll(); });
 
   $('#exportLocs').addEventListener('click', () => {
     const blob = new Blob([JSON.stringify(locations, null, 2)], { type: 'application/json' });
@@ -97,19 +192,32 @@
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   });
   $('#importLocs').addEventListener('change', async (e) => {
-    const file = e.target.files[0]; if (!file) return;
+    const file = e.target.files[0]; if (!file || !canEdit) return;
     try {
       const data = JSON.parse(await file.text());
       if (!Array.isArray(data)) throw new Error('not a list');
-      data.forEach((d) => {
-        if (!d || typeof d !== 'object') return;
-        d.id = d.id || uid();
-        const i = locations.findIndex((l) => l.id === d.id);
-        if (i >= 0) locations[i] = { ...blank(), ...d }; else locations.push({ ...blank(), ...d });
-      });
-      persist(); refreshPicker(); loadForm(); renderAll();
-    } catch (err) { alert('That file is not a locations export.'); }
+      for (const d of data) {
+        if (!d || typeof d !== 'object') continue;
+        const loc = { ...blank(), ...d, id: d.id || uid() };
+        const i = locations.findIndex((l) => l.id === loc.id);
+        if (i >= 0) locations[i] = loc; else locations.push(loc);
+        if (shared) await api('PUT', loc);
+      }
+      if (!active() && locations[0]) activeId = locations[0].id;
+      cacheLocally(); refreshPicker(); loadForm(); renderAll();
+      status(shared ? 'Imported into the shared list.' : 'Imported in this browser.');
+    } catch (err) { err.status ? handleEditError(err) : alert('That file is not a locations export.'); }
     e.target.value = '';
+  });
+
+  // pick up other people's changes when you come back to the tab
+  window.addEventListener('focus', async () => {
+    if (!shared || pending.size) return;
+    const list = await loadShared();
+    if (!list) return;
+    locations = list;
+    if (!active()) activeId = locations[0] ? locations[0].id : '';
+    cacheLocally(); refreshPicker(); loadForm(); renderAll();
   });
 
   /* ---------- gallery ---------- */
@@ -183,15 +291,24 @@
 
   /* ---------- start ---------- */
   async function start() {
-    if (!locations.length) {
-      try { const r = await fetch('locations.json', { cache: 'no-store' }); if (r.ok) locations = await r.json(); } catch (e) {}
-      if (!Array.isArray(locations) || !locations.length) locations = [blank()];
-      locations = locations.map((l) => ({ ...blank(), ...l }));
-      persist();
+    const browserLocs = A.loadLocations();
+    const list = await loadShared();
+    if (list) {
+      locations = list;
+      const ids = new Set(list.map((l) => l.id));
+      localOnly = browserLocs.filter((l) => !ids.has(l.id) && (l.street || l.city || l.hours || l.map));
+    } else {
+      locations = browserLocs.length ? browserLocs.map((l) => ({ ...blank(), ...l })) : [blank()];
     }
-    if (!active()) activeId = locations[0].id;
+    if (!active()) activeId = locations[0] ? locations[0].id : '';
     A.setActiveId(activeId);
+    if (shared && passcode) {
+      try { await api('POST', null, '?check=1'); setEditable(true); }
+      catch (e) { lock(); }
+    } else setEditable(!shared);
+    cacheLocally();
     refreshPicker(); loadForm(); renderAll();
+    status(shared ? (locations.length ? 'Showing the shared location list.' : 'No shared locations yet. Unlock editing to add one.') : 'Saved in this browser only.');
     if (document.fonts) document.fonts.ready.then(layoutAll);
   }
   start();

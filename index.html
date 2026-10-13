@@ -24,7 +24,7 @@
       <aside class="panel">
         <div class="panel-head">
           <h1>Location details</h1>
-          <p class="muted">Fill these in once. Every printable piece updates as you type.</p>
+          <p class="muted">Fill these in once. Every printable piece updates as you type, and everyone on the team sees the same list.</p>
         </div>
 
         <div class="loc-picker">
@@ -35,7 +35,10 @@
           </div>
         </div>
 
+        <div class="lock-bar" id="lockBar"></div>
+
         <form id="locForm" autocomplete="off">
+          <fieldset id="editFields" class="edit-fields">
           <label>Location name <span class="hint">shown on the brochure cover, e.g. "Bakersfield"</span>
             <input name="locationName" required></label>
           <label>Street address
@@ -67,11 +70,14 @@
           </details>
 
           <div class="row form-actions">
-            <button type="button" class="btn ghost" id="exportLocs">Export locations</button>
             <label class="btn ghost file-btn">Import<input type="file" id="importLocs" accept="application/json"></label>
             <button type="button" class="btn danger-ghost" id="deleteLoc">Delete location</button>
           </div>
-          <p class="hint" id="saveState">Saved in this browser.</p>
+          </fieldset>
+          <div class="row">
+            <button type="button" class="btn ghost" id="exportLocs">Export locations</button>
+          </div>
+          <p class="hint" id="saveState" role="status" aria-live="polite">Loading locations…</p>
         </form>
       </aside>
 

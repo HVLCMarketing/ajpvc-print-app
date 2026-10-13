@@ -2,10 +2,15 @@
   const A = window.AJPVC;
   const id = new URLSearchParams(location.search).get('piece');
   const piece = window.AJPVC_TEMPLATES.find((p) => p.id === id);
-  const locs = A.loadLocations();
-  const loc = locs.find((l) => l.id === A.getActiveId()) || locs[0] || {};
-
   if (!piece) { document.getElementById('printTitle').textContent = 'Unknown piece'; return; }
+
+  // read the shared location list, falling back to this browser's copy
+  fetch('/api/locations', { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : Promise.reject()))
+    .catch(() => A.loadLocations())
+    .then((locs) => draw((locs || []).find((l) => l.id === A.getActiveId()) || (locs || [])[0] || {}));
+
+  function draw(loc) {
 
   const [wIn, hIn] = piece.inches;
   document.getElementById('pageSize').textContent = `@page { size: ${wIn}in ${hIn}in; margin: 0; }`;
@@ -34,4 +39,5 @@
       window.print();
     });
   });
+  }
 })();

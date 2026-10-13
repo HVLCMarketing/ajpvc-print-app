@@ -72,6 +72,16 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .tab:focus-visibl
 .sheet h1 { font-size: 2em; } .sheet h2 { font-size: 1.5em; } .sheet h3 { font-size: 1.17em; }
 .sheet img { max-width: none; }
 
+/* shared-list lock */
+.lock-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 12px; border-radius: 10px; background: #EEF1F7; }
+.lock-bar:empty { display: none; }
+.lock-bar .hint { margin: 0; }
+.lock-state { margin: 0; flex: 1 1 160px; font-weight: 600; font-size: 14px; color: var(--navy); }
+.lock-state.unlocked { color: #1E6A3A; }
+.edit-fields { border: 0; padding: 0; margin: 0; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.edit-fields:disabled { opacity: .6; }
+.btn:disabled { opacity: .5; cursor: default; }
+
 /* map slot inside a design */
 .map-slot.has-map { border: 0 !important; padding: 0 !important; overflow: hidden; }
 .map-img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 8px; }
