@@ -47,6 +47,15 @@ for piece in cfg['pieces']:
                       r'<div class="map-slot" style="\1">{{MAP}}</div>', body)
         for a, b in list(piece.get('tokens', {}).items()) + list(cfg['tokens'].items()):
             body = body.replace(a, b)
+        # design tweaks ({{accent}} etc.) take their default value from the artboard's data-props
+        dp = re.search(r"data-props='([^']*)'", src)
+        props = json.loads(dp.group(1)) if dp else {}
+        def tweak(m):
+            p = props.get(m.group(1))
+            if not isinstance(p, dict) or 'default' not in p:
+                sys.exit(f'No default for {{{{{m.group(1)}}}}} in {pg["file"]}')
+            return str(p['default'])
+        body = re.sub(r'\{\{([a-z][A-Za-z0-9_]*)\}\}', tweak, body)
         pages.append({'label': pg['label'], 'w': w, 'h': h, 'html': body})
     entry = {k: piece[k] for k in ('id', 'title', 'size', 'inches')}
     entry['pages'] = pages

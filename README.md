@@ -2,7 +2,7 @@
 
 A small website for Advanced Joint Pain & Vascular Center that:
 
-- fills every printable piece (trifold, patient folder, provider folder, flyer, postcard, mousepad) with a location's **name, address, hours and map**, plus optional event dates for the flyer and postcard;
+- fills every printable piece (trifold, patient folder, provider folder, flyer, postcard, mousepad, and the Personal Injury, Workers' Comp and Correctional Health referral slick sheets) with a location's **name, address, hours and map**, plus optional event dates for the flyer and postcard;
 - prints or saves each piece as a true-size PDF;
 - takes **print orders** and emails them to the marketing team.
 

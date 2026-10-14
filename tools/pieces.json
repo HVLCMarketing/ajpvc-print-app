@@ -11,7 +11,10 @@
     "fd4bf9767dce22c72dc6fb09695b5920": "photo-exam.jpg",
     "5470569c9d7085f5c5e4fd1c93ad0efc": "photo-shoulder.jpg",
     "a55e594c64b59549d3c8560516ba8508": "illustration-joints.jpg",
-    "fde69066fb558994052d22bf69319fe4": "photo-hiking.jpg"
+    "fde69066fb558994052d22bf69319fe4": "photo-hiking.jpg",
+    "1e4ce51a5c3cb793b6317890e43e495e": "logo-hvlc.png",
+    "6a5bf2d8353e38c43dea9689b5905109": "logo-ajpvc-division.png",
+    "f23acdc2c3d9973ba28a028aab52e26a": "dr-kumar-slick.jpg"
   },
   "pieces": [
     {"id": "trifold", "title": "Trifold brochure", "size": "11 × 8.5 in, two sides", "inches": [11, 8.5],
@@ -27,7 +30,13 @@
      "pages": [{"file": "Postcard.dc.html", "label": "Front"}],
      "tokens": {"[DATE]": "{{TALK_DATE}}", "[VENUE]": "{{TALK_VENUE}}"}},
     {"id": "mousepad", "title": "Mousepad", "size": "9.25 × 7.75 in", "inches": [9.25, 7.75],
-     "pages": [{"file": "Mousepad.dc.html", "label": "Front"}]}
+     "pages": [{"file": "Mousepad.dc.html", "label": "Front"}]},
+    {"id": "slick-personal-injury", "title": "Referral slick sheet: Personal Injury", "size": "8.5 × 11 in", "inches": [8.5, 11],
+     "pages": [{"file": "SlickPersonalInjury.dc.html", "label": "Front"}]},
+    {"id": "slick-workers-comp", "title": "Referral slick sheet: Workers' Compensation", "size": "8.5 × 11 in", "inches": [8.5, 11],
+     "pages": [{"file": "SlickWorkersComp.dc.html", "label": "Front"}]},
+    {"id": "slick-corrections", "title": "Referral slick sheet: Correctional Health", "size": "8.5 × 11 in", "inches": [8.5, 11],
+     "pages": [{"file": "SlickCorrections.dc.html", "label": "Front"}]}
   ],
   "tokens": {
     "Mon–Fri [HOURS]": "{{HOURS}}",
