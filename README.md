@@ -35,7 +35,7 @@ Every order also appears under *Forms* in the Netlify dashboard and can be expor
 
 ## Using it
 
-Use the **Facility** menu at the top to switch between **Advanced Joint Pain & Vascular Center** and **Heart Vascular & Leg Center**. Each facility has its own pieces and order items. Which facility a piece belongs to is the `facility` value (`ajpvc` or `hvlc`) on that piece in `tools/pieces.json`; order items use `data-facility` on their label in `index.html`. Links can open straight to one: `?facility=hvlc`.
+Use the **Facility** menu at the top to switch between **Advanced Joint Pain & Vascular Center** and **Heart Vascular & Leg Center**. Each facility has its own pieces and order items. Which facility a piece belongs to is the `facility` value (`ajpvc`, `hvlc`, or `both` to show on both pages) on that piece in `tools/pieces.json`; order items use `data-facility` on their label in `index.html`. Links can open straight to one: `?facility=hvlc`.
 
 
 1. **Location materials** tab: pick a location (click **Unlock editing** to add or change one), then fill in the name, address, hours and upload a map image. Previews update as you type.

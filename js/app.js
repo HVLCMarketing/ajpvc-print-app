@@ -235,7 +235,7 @@
   const facOf = (id) => (T.find((p) => p.id === id) || {}).facility;
 
   let pieceFilter = params.get('piece') || read(FILTER_KEY);
-  let facility = params.get('facility') || facOf(params.get('piece')) || read(FAC_KEY);
+  let facility = params.get('facility') || read(FAC_KEY) || facOf(params.get('piece'));
   if (!FACILITIES[facility]) facility = 'ajpvc';
   const facSel = $('#facility'), filterSel = $('#pieceFilter');
 
@@ -252,13 +252,14 @@
     $('#facilityLogo').src = f.logo; $('#facilityLogo').alt = f.name;
     document.title = f.short + ' Print Materials';
     document.body.dataset.facility = facility;
-    const mine = T.filter((p) => p.facility === facility);
+    const forFac = (p) => p.facility === facility || p.facility === 'both';
+    const mine = T.filter(forFac);
     filterSel.innerHTML = '<option value="all">All pieces</option>' + mine.map((p) => `<option value="${p.id}">${A.esc(p.title)}</option>`).join('');
     if (!mine.some((p) => p.id === pieceFilter)) pieceFilter = 'all';
     filterSel.value = pieceFilter;
     // order form: only this facility's items; clear the others so they aren't ordered by mistake
     $$('#qtyGrid [data-facility]').forEach((l) => {
-      const on = l.dataset.facility === facility;
+      const on = l.dataset.facility === facility || l.dataset.facility === 'both';
       l.hidden = !on;
       if (!on) l.querySelector('input').value = 0;
     });
@@ -280,7 +281,7 @@
   function renderAll() {
     const loc = active();
     const host = $('#pieces');
-    const shown = T.filter((p) => p.facility === facility && (pieceFilter === 'all' || p.id === pieceFilter));
+    const shown = T.filter((p) => (p.facility === facility || p.facility === 'both') && (pieceFilter === 'all' || p.id === pieceFilter));
     host.innerHTML = shown.map((p) => {
       const pages = p.pages.map((pg) => ({ ...pg, filled: A.fill(pg.html, loc) }));
       const n = pages.reduce((s, pg) => s + A.countPlaceholders(pg.filled), 0);

@@ -40,7 +40,7 @@
      "tokens": {"[DATE]": "{{TALK_DATE}}", "[VENUE]": "{{TALK_VENUE}}"}},
     {"id": "mousepad", "facility": "ajpvc", "title": "Mousepad", "size": "9.25 × 7.75 in", "inches": [9.25, 7.75],
      "pages": [{"file": "Mousepad.dc.html", "label": "Front"}]},
-    {"id": "joint-guide", "facility": "ajpvc", "title": "Patient guide: Joint & tendon pain", "size": "16-page booklet, 8.5 × 11 in pages", "inches": [8.5, 11],
+    {"id": "joint-guide", "facility": "both", "title": "Patient guide: Joint & tendon pain", "size": "16-page booklet, 8.5 × 11 in pages", "inches": [8.5, 11],
      "pages": [{"file": "JointGuide01.dc.html", "label": "Front cover"}, {"file": "JointGuide02.dc.html", "label": "Page 2"}, {"file": "JointGuide03.dc.html", "label": "Page 3"}, {"file": "JointGuide04.dc.html", "label": "Page 4"}, {"file": "JointGuide05.dc.html", "label": "Page 5"}, {"file": "JointGuide06.dc.html", "label": "Page 6"}, {"file": "JointGuide07.dc.html", "label": "Page 7"}, {"file": "JointGuide08.dc.html", "label": "Page 8"}, {"file": "JointGuide09.dc.html", "label": "Page 9"}, {"file": "JointGuide10.dc.html", "label": "Page 10"}, {"file": "JointGuide11.dc.html", "label": "Page 11"}, {"file": "JointGuide12.dc.html", "label": "Page 12"}, {"file": "JointGuide13.dc.html", "label": "Page 13"}, {"file": "JointGuide14.dc.html", "label": "Page 14"}, {"file": "JointGuide15.dc.html", "label": "Page 15"}, {"file": "JointGuide16.dc.html", "label": "Back cover"}]},
     {"id": "slick-personal-injury", "facility": "hvlc", "title": "Referral slick sheet: Personal Injury", "size": "8.5 × 11 in", "inches": [8.5, 11],
      "pages": [{"file": "SlickPersonalInjury.dc.html", "label": "Front"}]},
