@@ -23,7 +23,10 @@
     "b523cba7dd4d1728133f23d0c22e062d": "render-hand.png",
     "f6d1944b8ba0d0421b9161044a47c1c5": "render-heel.png",
     "3558030534c872ead2bfe63df9676e01": "healthy-vs-painful-joint.jpg",
-    "79d5005806d35a49129ee849d8da07bf": "body-xray.png"
+    "79d5005806d35a49129ee849d8da07bf": "body-xray.png",
+    "158a101d7b421f5b9a25a229ae8a0e38": "embolization-step1.png",
+    "21e8efcc4ea944f450ae7a3b9f584fea": "embolization-step2.png",
+    "8825ac01ec25eb3cca78f7461faca33e": "embolization-step3.png"
   },
   "pieces": [
     {"id": "trifold", "facility": "ajpvc", "title": "Trifold brochure", "size": "11 × 8.5 in, two sides", "inches": [11, 8.5],
