@@ -221,10 +221,28 @@
   });
 
   /* ---------- gallery ---------- */
+  // piece picker: view one piece at a time or all of them (remembered per browser, or ?piece=id in the URL)
+  const FILTER_KEY = 'ajpvc.pieceFilter.v1';
+  const filterSel = $('#pieceFilter');
+  filterSel.insertAdjacentHTML('beforeend', T.map((p) => `<option value="${p.id}">${A.esc(p.title)}</option>`).join(''));
+  let pieceFilter = new URLSearchParams(location.search).get('piece');
+  if (!pieceFilter) { try { pieceFilter = localStorage.getItem(FILTER_KEY); } catch (e) {} }
+  if (!T.some((p) => p.id === pieceFilter)) pieceFilter = 'all';
+  filterSel.value = pieceFilter;
+  filterSel.addEventListener('change', () => {
+    pieceFilter = filterSel.value;
+    try { localStorage.setItem(FILTER_KEY, pieceFilter); } catch (e) {}
+    const u = new URL(location.href);
+    if (pieceFilter === 'all') u.searchParams.delete('piece'); else u.searchParams.set('piece', pieceFilter);
+    history.replaceState(null, '', u);
+    renderAll();
+  });
+
   function renderAll() {
     const loc = active();
     const host = $('#pieces');
-    host.innerHTML = T.map((p) => {
+    const shown = pieceFilter === 'all' ? T : T.filter((p) => p.id === pieceFilter);
+    host.innerHTML = shown.map((p) => {
       const pages = p.pages.map((pg) => ({ ...pg, filled: A.fill(pg.html, loc) }));
       const n = pages.reduce((s, pg) => s + A.countPlaceholders(pg.filled), 0);
       return `<article class="piece" data-id="${p.id}">

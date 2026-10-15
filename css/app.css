@@ -53,6 +53,8 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .tab:focus-visibl
 .form-actions { padding-top: 8px; border-top: 1px solid var(--line); }
 
 .gallery { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.piece-filter { flex-direction: row; align-items: center; gap: 10px; margin-top: 12px; max-width: 460px; }
+.piece-filter select { flex: 1; }
 .pieces { display: flex; flex-direction: column; gap: 20px; }
 .piece { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
 .piece-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; }
