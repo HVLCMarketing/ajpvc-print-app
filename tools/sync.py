@@ -60,6 +60,7 @@ for piece in cfg['pieces']:
     entry = {k: piece[k] for k in ('id', 'title', 'size', 'inches')}
     entry['facility'] = piece.get('facility', 'ajpvc')
     if piece.get('kind'): entry['kind'] = piece['kind']
+    entry['group'] = piece.get('group', 'Other')
     entry['pages'] = pages
     out.append(entry)
 

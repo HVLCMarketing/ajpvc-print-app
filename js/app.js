@@ -228,6 +228,9 @@
     ajpvc: { name: 'Advanced Joint Pain & Vascular Center', short: 'AJPVC', logo: 'assets/logo-long-transparent.png' },
     hvlc: { name: 'Heart Vascular & Leg Center', short: 'HVLC', logo: 'assets/logo-hvlc.png' }
   };
+  const GROUP_ORDER = ['Marketing materials', 'Folders', 'Patient guides', 'Newsletters', 'Referral materials'];
+  const gIdx = (g) => { const i = GROUP_ORDER.indexOf(g); return i < 0 ? 99 : i; };
+  const byGroup = (a, b) => gIdx(a.group) - gIdx(b.group);
   const FAC_KEY = 'ajpvc.facility.v1';
   const FILTER_KEY = 'ajpvc.pieceFilter.v1';
   const params = new URLSearchParams(location.search);
@@ -254,9 +257,12 @@
     document.title = f.short + ' Print Materials';
     document.body.dataset.facility = facility;
     const forFac = (p) => p.facility === facility || p.facility === 'both';
-    const mine = T.filter((p) => forFac(p) && p.kind !== 'card');
-    filterSel.innerHTML = '<option value="all">All pieces</option>' + mine.map((p) => `<option value="${p.id}">${A.esc(p.title)}</option>`).join('');
-    if (!mine.some((p) => p.id === pieceFilter)) pieceFilter = 'all';
+    const mine = T.filter((p) => forFac(p) && p.kind !== 'card').sort(byGroup);
+    const groups = [...new Set(mine.map((p) => p.group))];
+    filterSel.innerHTML = '<option value="all">All pieces</option>' + groups.map((g) => `<optgroup label="${A.esc(g)}">` +
+      mine.filter((p) => p.group === g).map((p) => `<option value="${p.id}">${A.esc(p.title)}</option>`).join('') + '</optgroup>').join('') +
+      groups.map((g) => `<option value="group:${A.esc(g)}">All ${A.esc(g.toLowerCase())}</option>`).join('');
+    if (!mine.some((p) => p.id === pieceFilter || 'group:' + p.group === pieceFilter)) pieceFilter = 'all';
     filterSel.value = pieceFilter;
     // order form: only this facility's items; clear the others so they aren't ordered by mistake
     $$('#qtyGrid [data-facility]').forEach((l) => {
@@ -282,11 +288,13 @@
   function renderAll() {
     const loc = active();
     const host = $('#pieces');
-    const shown = T.filter((p) => p.kind !== 'card' && (p.facility === facility || p.facility === 'both') && (pieceFilter === 'all' || p.id === pieceFilter));
+    const shown = T.filter((p) => p.kind !== 'card' && (p.facility === facility || p.facility === 'both') && (pieceFilter === 'all' || p.id === pieceFilter || 'group:' + p.group === pieceFilter)).sort(byGroup);
+    let lastGroup = null;
     host.innerHTML = shown.map((p) => {
       const pages = p.pages.map((pg) => ({ ...pg, filled: A.fill(pg.html, loc) }));
       const n = pages.reduce((s, pg) => s + A.countPlaceholders(pg.filled), 0);
-      return `<article class="piece" data-id="${p.id}">
+      const heading = p.group !== lastGroup ? `<h2 class="group-head">${A.esc(p.group)}</h2>` : ''; lastGroup = p.group;
+      return heading + `<article class="piece" data-id="${p.id}">
         <header class="piece-head">
           <div><h3>${A.esc(p.title)}</h3><p class="muted">${A.esc(p.size)}</p></div>
           <div class="piece-actions">
