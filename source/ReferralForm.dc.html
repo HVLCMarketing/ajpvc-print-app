@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Physician order form</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 816px; height: 1056px; box-sizing: border-box; background: #FFFFFF; color: #1B2230; font-family: 'Public Sans', sans-serif; padding: 72px 45px 40px; display: flex; flex-direction: column; gap: 0">
+
+<header style="display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 72px">
+<img src="/_blob/1e4ce51a5c3cb793b6317890e43e495e" alt="Heart Vascular &amp; Leg Center logo" style="width: 130px; height: 64px; object-fit: contain; object-position: left center">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+<h1 style="margin: 0; font-size: 21px; font-weight: 700; color: #1F3F7A; letter-spacing: 0.01em">PHYSICIAN ORDER FORM</h1>
+<p style="margin: 0; font-size: 12.5px; font-weight: 700; font-style: italic; color: #B3202A">Se Habla Español</p>
+</div>
+<img src="/_blob/6a5bf2d8353e38c43dea9689b5905109" alt="Advanced Joint Pain &amp; Vascular Center logo" style="width: 210px; height: 64px; object-fit: contain; object-position: right center">
+</header>
+
+<div style="margin-top: 20px; background: #A51C30; color: #FFFFFF; height: 27px; display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 14px; font-weight: 700; letter-spacing: 0.01em">
+<span>FAX COMPLETED FORM TO: 661-324-4600</span><span>•</span><span>REFERRAL COORDINATOR DIRECT LINE: (661) 459-9010</span>
+</div>
+
+<h2 style="margin: 10px 0 0; background: #1F5FAD; color: #FFFFFF; height: 23px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">REFERRING PROVIDER</h2>
+<div style="padding: 8px 4px 0; display: grid; grid-template-columns: 160px 1fr 104px 1.15fr; column-gap: 12px; row-gap: 12px; align-items: end; font-size: 11px">
+<span style="font-weight: 700; color: #1F3F7A">PHYSICIAN / PA / NP NAME:</span><span style="border-bottom: 1px solid #8A93A6; height: 16px"></span>
+<span style="font-weight: 700; color: #1F3F7A">DATE ORDERED:</span><span style="border-bottom: 1px solid #8A93A6; height: 16px"></span>
+<span style="font-weight: 700; color: #1F3F7A">DIRECT LINE:</span><span style="border-bottom: 1px solid #8A93A6; height: 16px"></span>
+<span style="font-weight: 700; color: #1F3F7A">OFFICE CONTACT:</span><span style="border-bottom: 1px solid #8A93A6; height: 16px"></span>
+</div>
+<div style="padding: 10px 4px 0; display: flex; align-items: center; gap: 12px; font-size: 11px">
+<span style="font-weight: 700; color: #1F3F7A; width: 160px; flex: none">PREFERRED LOCATION:</span>
+<span style="display: flex; align-items: center; gap: 6px; width: 140px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Bakersfield (Main)</span>
+<span style="display: flex; align-items: center; gap: 6px; width: 150px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Nearest to patient</span>
+<span style="display: flex; align-items: flex-end; gap: 6px; flex: 1"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Other:<span style="flex: 1; border-bottom: 1px solid #8A93A6; height: 12px"></span></span>
+</div>
+
+<h2 style="margin: 16px 0 0; background: #1F5FAD; color: #FFFFFF; height: 23px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">PATIENT INFORMATION</h2>
+<div style="padding: 8px 4px 0; display: grid; grid-template-columns: 160px 1fr 104px 1.15fr; column-gap: 12px; row-gap: 14px; align-items: end; font-size: 11px">
+<span style="font-weight: 700; color: #1F3F7A">PATIENT NAME:</span><span style="border-bottom: 1px solid #8A93A6; height: 16px"></span>
+<span style="font-weight: 700; color: #1F3F7A">DATE OF BIRTH:</span><span style="border-bottom: 1px solid #8A93A6; height: 16px"></span>
+<span style="font-weight: 700; color: #1F3F7A">CELL PHONE:</span><span style="border-bottom: 1px solid #8A93A6; height: 16px"></span>
+<span style="font-weight: 700; color: #1F3F7A">HOME PHONE:</span><span style="border-bottom: 1px solid #8A93A6; height: 16px"></span>
+<span style="font-weight: 700; color: #1F3F7A">EMAIL:</span><span style="border-bottom: 1px solid #8A93A6; height: 16px"></span>
+<span style="font-weight: 700; color: #1F3F7A">LANGUAGE:</span>
+<span style="display: flex; align-items: flex-end; gap: 5px; white-space: nowrap"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>English<span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none; margin-left: 6px"></span>Spanish<span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none; margin-left: 6px"></span>Other:<span style="flex: 1; border-bottom: 1px solid #8A93A6; height: 12px"></span></span>
+</div>
+<div style="padding: 14px 4px 0; display: flex; align-items: flex-end; gap: 12px; font-size: 11px">
+<span style="font-weight: 700; color: #1F3F7A; width: 160px; flex: none">INSURANCE:</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Medicare</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>KHS</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>PPO</span>
+<span style="display: flex; align-items: flex-end; gap: 6px; flex: 1"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Other:<span style="flex: 1; border-bottom: 1px solid #8A93A6; height: 12px"></span></span>
+<span style="font-weight: 700; color: #1F3F7A">ID #:</span><span style="width: 100px; border-bottom: 1px solid #8A93A6; height: 12px"></span>
+</div>
+
+<h2 style="margin: 16px 0 0; background: #1F5FAD; color: #FFFFFF; height: 23px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">REASON FOR REFERRAL — CHECK ALL THAT APPLY</h2>
+<div style="padding: 10px 4px 0; display: flex; align-items: center; gap: 16px; font-size: 11.5px">
+<span style="font-weight: 700; color: #1F3F7A; width: 70px; flex: none; font-size: 11px">CONSULT:</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Vascular</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Cardiology</span>
+<span style="display: flex; align-items: center; gap: 6px; font-weight: 700"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Joint / MSK Pain (GAE • TAME • PFE)</span>
+<span style="display: flex; align-items: center; gap: 6px; font-weight: 700"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Hemorrhoids (HAE)</span>
+</div>
+<div style="padding: 10px 4px 0; display: flex; align-items: flex-end; gap: 14px; font-size: 11.5px">
+<span style="font-weight: 700; color: #1F3F7A; flex: none; font-size: 11px">VASCULAR ORDER:</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Consultation with Duplex Study</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Same-Day DVT Rule Out</span>
+<span style="font-weight: 700; color: #1F3F7A; font-size: 11px">TESTING ONLY:</span><span style="flex: 1; border-bottom: 1px solid #8A93A6; height: 12px"></span>
+</div>
+
+<h2 style="margin: 12px 0 0; background: #1F5FAD; color: #FFFFFF; height: 23px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">SYMPTOMS TO EVALUATE — CHECK ALL THAT APPLY</h2>
+<div style="padding: 10px 4px 0; display: grid; grid-template-columns: 0.95fr 0.95fr 1.2fr; column-gap: 16px; font-size: 11.5px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0 0 1px; font-weight: 700; font-size: 11.5px; color: #1F3F7A">LEG, VEIN &amp; CIRCULATION</p>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Leg / Foot Pain</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Heaviness</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Leg Swelling</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Leg Cramps</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Restless Legs</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Itching / Burning</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0 0 1px; font-size: 11.5px; visibility: hidden">&nbsp;</p>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Varicose / Spider Veins</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Skin Discoloration</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Poor Circulation</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Ulcers / Gangrene</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Non-Healing Wounds</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0 0 1px; font-weight: 700; font-size: 10.5px; color: #B3202A; display: flex; align-items: center; gap: 4px; white-space: nowrap"><img src="/_blob/375a18f69697d3ba21fa09a7d6f52e10" alt="" style="width: 18px; height: 16px; object-fit: contain">JOINT &amp; TENDON PAIN (GAE / TAME / PFE)</p>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Knee Pain / Knee Arthritis</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Hip Pain</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Shoulder Pain</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Hand / Thumb Arthritis and Pain</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Heel Pain / Plantar Fasciitis</span>
+<p style="margin: 2px 0 1px; font-weight: 700; font-size: 11.5px; color: #B3202A">HEMORRHOIDS (HAE)</p>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Internal Hemorrhoids</span>
+</div>
+</div>
+
+<h2 style="margin: 24px 0 0; background: #1F5FAD; color: #FFFFFF; height: 23px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">ADDITIONAL SYMPTOMS / DIAGNOSIS / SPECIAL INSTRUCTIONS</h2>
+<div style="padding: 0 4px; display: flex; flex-direction: column">
+<span style="height: 34px; border-bottom: 1px solid #8A93A6"></span>
+<span style="height: 34px; border-bottom: 1px solid #8A93A6"></span>
+<span style="height: 34px; border-bottom: 1px solid #8A93A6"></span>
+</div>
+<div style="padding: 16px 4px 0; display: flex; align-items: center; gap: 48px; font-size: 11.5px">
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Clinical notes attached</span>
+<span style="display: flex; align-items: center; gap: 7px"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>Imaging / labs attached</span>
+<span style="display: flex; align-items: center; gap: 7px; font-weight: 700"><span style="width: 12px; height: 12px; border: 1.4px solid #2D3340; flex: none"></span>URGENT — please expedite</span>
+</div>
+
+<div style="flex: 1"></div>
+<footer style="background: #183A6B; color: #FFFFFF; height: 30px; display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 12.5px; font-weight: 700">
+<span>APPOINTMENT LINE: 661-324-4100</span><span>•</span><span>REFERRAL FAX: 661-324-4600</span><span>•</span><span>www.heartandleg.com</span>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":816,"height":1056}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

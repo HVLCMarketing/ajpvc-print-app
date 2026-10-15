@@ -14,7 +14,9 @@
     "fde69066fb558994052d22bf69319fe4": "photo-hiking.jpg",
     "1e4ce51a5c3cb793b6317890e43e495e": "logo-hvlc.png",
     "6a5bf2d8353e38c43dea9689b5905109": "logo-ajpvc-division.png",
-    "f23acdc2c3d9973ba28a028aab52e26a": "dr-kumar-slick.jpg"
+    "f23acdc2c3d9973ba28a028aab52e26a": "dr-kumar-slick.jpg",
+    "e7b35a1b160b8d278b5d4bdc77dc8c14": "qr-refer-online.png",
+    "375a18f69697d3ba21fa09a7d6f52e10": "joint-icon.png"
   },
   "pieces": [
     {"id": "trifold", "title": "Trifold brochure", "size": "11 × 8.5 in, two sides", "inches": [11, 8.5],
@@ -36,7 +38,9 @@
     {"id": "slick-workers-comp", "title": "Referral slick sheet: Workers' Compensation", "size": "8.5 × 11 in", "inches": [8.5, 11],
      "pages": [{"file": "SlickWorkersComp.dc.html", "label": "Front"}]},
     {"id": "slick-corrections", "title": "Referral slick sheet: Correctional Health", "size": "8.5 × 11 in", "inches": [8.5, 11],
-     "pages": [{"file": "SlickCorrections.dc.html", "label": "Front"}]}
+     "pages": [{"file": "SlickCorrections.dc.html", "label": "Front"}]},
+    {"id": "referral-form", "title": "Physician referral (order) form", "size": "8.5 × 11 in, two sides", "inches": [8.5, 11],
+     "pages": [{"file": "ReferralForm.dc.html", "label": "Front: order form"}, {"file": "ReferralFormBack.dc.html", "label": "Back: insurance, services & location"}]}
   ],
   "tokens": {
     "Mon–Fri [HOURS]": "{{HOURS}}",
