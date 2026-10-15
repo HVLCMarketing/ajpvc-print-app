@@ -58,6 +58,7 @@ for piece in cfg['pieces']:
         body = re.sub(r'\{\{([a-z][A-Za-z0-9_]*)\}\}', tweak, body)
         pages.append({'label': pg['label'], 'w': w, 'h': h, 'html': body})
     entry = {k: piece[k] for k in ('id', 'title', 'size', 'inches')}
+    entry['facility'] = piece.get('facility', 'ajpvc')
     entry['pages'] = pages
     out.append(entry)
 

@@ -3,14 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AJPVC Print Materials</title>
+<title>Print Materials</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
 <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 <header class="topbar">
-  <img src="assets/logo-long-transparent.png" alt="Advanced Joint Pain &amp; Vascular Center" class="topbar-logo">
+  <div class="topbar-brand">
+    <img src="assets/logo-long-transparent.png" alt="Advanced Joint Pain &amp; Vascular Center" class="topbar-logo" id="facilityLogo">
+    <label class="facility-pick">Facility
+      <select id="facility">
+        <option value="ajpvc">Advanced Joint Pain &amp; Vascular Center</option>
+        <option value="hvlc">Heart Vascular &amp; Leg Center</option>
+      </select></label>
+  </div>
   <nav class="tabs" aria-label="Sections">
     <button type="button" class="tab is-active" data-tab="materials">Location materials</button>
     <button type="button" class="tab" data-tab="order">Place an order</button>
@@ -107,19 +114,20 @@
         <label>Location
           <select name="location" id="orderLocation" required></select></label>
         <input type="hidden" name="location_details" id="orderLocationDetails">
+        <input type="hidden" name="facility" id="orderFacility" value="Advanced Joint Pain & Vascular Center">
 
         <h2>Quantities</h2>
         <div class="qty-grid" id="qtyGrid">
-          <label>Trifold brochures <input type="number" name="qty_trifold" min="0" step="50" value="0"></label>
-          <label>Patient folders <input type="number" name="qty_patient_folder" min="0" step="25" value="0"></label>
-          <label>Provider folders <input type="number" name="qty_provider_folder" min="0" step="25" value="0"></label>
-          <label>Grand opening flyers <input type="number" name="qty_flyer" min="0" step="25" value="0"></label>
-          <label>Postcards <input type="number" name="qty_postcard" min="0" step="100" value="0"></label>
-          <label>Mousepads <input type="number" name="qty_mousepad" min="0" step="10" value="0"></label>
-          <label>Slick sheets: Personal Injury <input type="number" name="qty_slick_personal_injury" min="0" step="25" value="0"></label>
-          <label>Slick sheets: Workers' Comp <input type="number" name="qty_slick_workers_comp" min="0" step="25" value="0"></label>
-          <label>Slick sheets: Correctional Health <input type="number" name="qty_slick_corrections" min="0" step="25" value="0"></label>
-          <label>Physician referral forms <input type="number" name="qty_referral_form" min="0" step="50" value="0"></label>
+          <label data-facility="ajpvc">Trifold brochures <input type="number" name="qty_trifold" min="0" step="50" value="0"></label>
+          <label data-facility="ajpvc">Patient folders <input type="number" name="qty_patient_folder" min="0" step="25" value="0"></label>
+          <label data-facility="ajpvc">Provider folders <input type="number" name="qty_provider_folder" min="0" step="25" value="0"></label>
+          <label data-facility="ajpvc">Grand opening flyers <input type="number" name="qty_flyer" min="0" step="25" value="0"></label>
+          <label data-facility="ajpvc">Postcards <input type="number" name="qty_postcard" min="0" step="100" value="0"></label>
+          <label data-facility="ajpvc">Mousepads <input type="number" name="qty_mousepad" min="0" step="10" value="0"></label>
+          <label data-facility="hvlc">Slick sheets: Personal Injury <input type="number" name="qty_slick_personal_injury" min="0" step="25" value="0"></label>
+          <label data-facility="hvlc">Slick sheets: Workers' Comp <input type="number" name="qty_slick_workers_comp" min="0" step="25" value="0"></label>
+          <label data-facility="hvlc">Slick sheets: Correctional Health <input type="number" name="qty_slick_corrections" min="0" step="25" value="0"></label>
+          <label data-facility="hvlc">Physician referral forms <input type="number" name="qty_referral_form" min="0" step="50" value="0"></label>
         </div>
 
         <h2>Delivery</h2>

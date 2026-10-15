@@ -14,7 +14,11 @@ mark.ph { background: var(--warn); color: #1B2440 !important; padding: 0 2px; bo
 
 /* top bar */
 .topbar { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding: 10px 24px; background: var(--card); border-bottom: 1px solid var(--line); border-top: 4px solid var(--red); }
-.topbar-logo { height: 48px; width: auto; }
+.topbar-logo { height: 48px; width: auto; max-width: 240px; object-fit: contain; object-position: left center; }
+.topbar-brand { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; min-width: 0; max-width: 100%; }
+.facility-pick { flex-direction: row; align-items: center; gap: 8px; min-width: 0; max-width: 100%; }
+.facility-pick select { width: 300px; min-width: 0; flex: 0 1 auto; font-weight: 600; color: var(--navy); }
+[hidden] { display: none !important; }
 .tabs { display: flex; gap: 4px; }
 .tab { font: 600 15px 'Public Sans', sans-serif; color: var(--muted); background: none; border: 0; padding: 12px 16px; min-height: 44px; border-radius: 8px; cursor: pointer; }
 .tab:hover { background: var(--bg); color: var(--ink); }

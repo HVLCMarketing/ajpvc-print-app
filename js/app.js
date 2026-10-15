@@ -222,26 +222,65 @@
 
   /* ---------- gallery ---------- */
   // piece picker: view one piece at a time or all of them (remembered per browser, or ?piece=id in the URL)
+  // facility switcher: AJPVC and HVLC each get their own set of pieces (?facility=hvlc in the URL, or remembered per browser)
+  const FACILITIES = {
+    ajpvc: { name: 'Advanced Joint Pain & Vascular Center', short: 'AJPVC', logo: 'assets/logo-long-transparent.png' },
+    hvlc: { name: 'Heart Vascular & Leg Center', short: 'HVLC', logo: 'assets/logo-hvlc.png' }
+  };
+  const FAC_KEY = 'ajpvc.facility.v1';
   const FILTER_KEY = 'ajpvc.pieceFilter.v1';
-  const filterSel = $('#pieceFilter');
-  filterSel.insertAdjacentHTML('beforeend', T.map((p) => `<option value="${p.id}">${A.esc(p.title)}</option>`).join(''));
-  let pieceFilter = new URLSearchParams(location.search).get('piece');
-  if (!pieceFilter) { try { pieceFilter = localStorage.getItem(FILTER_KEY); } catch (e) {} }
-  if (!T.some((p) => p.id === pieceFilter)) pieceFilter = 'all';
-  filterSel.value = pieceFilter;
-  filterSel.addEventListener('change', () => {
-    pieceFilter = filterSel.value;
-    try { localStorage.setItem(FILTER_KEY, pieceFilter); } catch (e) {}
+  const params = new URLSearchParams(location.search);
+  const read = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+  const write = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+  const facOf = (id) => (T.find((p) => p.id === id) || {}).facility;
+
+  let pieceFilter = params.get('piece') || read(FILTER_KEY);
+  let facility = params.get('facility') || facOf(params.get('piece')) || read(FAC_KEY);
+  if (!FACILITIES[facility]) facility = 'ajpvc';
+  const facSel = $('#facility'), filterSel = $('#pieceFilter');
+
+  function syncUrl() {
     const u = new URL(location.href);
+    u.searchParams.set('facility', facility);
     if (pieceFilter === 'all') u.searchParams.delete('piece'); else u.searchParams.set('piece', pieceFilter);
     history.replaceState(null, '', u);
-    renderAll();
+  }
+
+  function applyFacility() {
+    const f = FACILITIES[facility];
+    facSel.value = facility;
+    $('#facilityLogo').src = f.logo; $('#facilityLogo').alt = f.name;
+    document.title = f.short + ' Print Materials';
+    document.body.dataset.facility = facility;
+    const mine = T.filter((p) => p.facility === facility);
+    filterSel.innerHTML = '<option value="all">All pieces</option>' + mine.map((p) => `<option value="${p.id}">${A.esc(p.title)}</option>`).join('');
+    if (!mine.some((p) => p.id === pieceFilter)) pieceFilter = 'all';
+    filterSel.value = pieceFilter;
+    // order form: only this facility's items; clear the others so they aren't ordered by mistake
+    $$('#qtyGrid [data-facility]').forEach((l) => {
+      const on = l.dataset.facility === facility;
+      l.hidden = !on;
+      if (!on) l.querySelector('input').value = 0;
+    });
+    $('#orderFacility').value = f.name;
+    syncUrl();
+  }
+
+  facSel.addEventListener('change', () => {
+    facility = facSel.value; write(FAC_KEY, facility);
+    pieceFilter = 'all'; write(FILTER_KEY, pieceFilter);
+    applyFacility(); renderAll();
   });
+  filterSel.addEventListener('change', () => {
+    pieceFilter = filterSel.value; write(FILTER_KEY, pieceFilter);
+    syncUrl(); renderAll();
+  });
+  applyFacility();
 
   function renderAll() {
     const loc = active();
     const host = $('#pieces');
-    const shown = pieceFilter === 'all' ? T : T.filter((p) => p.id === pieceFilter);
+    const shown = T.filter((p) => p.facility === facility && (pieceFilter === 'all' || p.id === pieceFilter));
     host.innerHTML = shown.map((p) => {
       const pages = p.pages.map((pg) => ({ ...pg, filled: A.fill(pg.html, loc) }));
       const n = pages.reduce((s, pg) => s + A.countPlaceholders(pg.filled), 0);

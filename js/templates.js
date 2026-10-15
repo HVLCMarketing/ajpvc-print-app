@@ -8,6 +8,7 @@ window.AJPVC_TEMPLATES = [
    11,
    8.5
   ],
+  "facility": "ajpvc",
   "pages": [
    {
     "label": "Outside",
@@ -31,6 +32,7 @@ window.AJPVC_TEMPLATES = [
    18,
    12
   ],
+  "facility": "ajpvc",
   "pages": [
    {
     "label": "Outside",
@@ -54,6 +56,7 @@ window.AJPVC_TEMPLATES = [
    18,
    12
   ],
+  "facility": "ajpvc",
   "pages": [
    {
     "label": "Outside",
@@ -77,6 +80,7 @@ window.AJPVC_TEMPLATES = [
    8.5,
    11
   ],
+  "facility": "ajpvc",
   "pages": [
    {
     "label": "Front",
@@ -94,6 +98,7 @@ window.AJPVC_TEMPLATES = [
    9,
    6
   ],
+  "facility": "ajpvc",
   "pages": [
    {
     "label": "Front",
@@ -111,6 +116,7 @@ window.AJPVC_TEMPLATES = [
    9.25,
    7.75
   ],
+  "facility": "ajpvc",
   "pages": [
    {
     "label": "Front",
@@ -128,6 +134,7 @@ window.AJPVC_TEMPLATES = [
    8.5,
    11
   ],
+  "facility": "hvlc",
   "pages": [
    {
     "label": "Front",
@@ -145,6 +152,7 @@ window.AJPVC_TEMPLATES = [
    8.5,
    11
   ],
+  "facility": "hvlc",
   "pages": [
    {
     "label": "Front",
@@ -162,6 +170,7 @@ window.AJPVC_TEMPLATES = [
    8.5,
    11
   ],
+  "facility": "hvlc",
   "pages": [
    {
     "label": "Front",
@@ -179,6 +188,7 @@ window.AJPVC_TEMPLATES = [
    8.5,
    11
   ],
+  "facility": "hvlc",
   "pages": [
    {
     "label": "Front: order form",
