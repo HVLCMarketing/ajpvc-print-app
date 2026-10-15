@@ -10,17 +10,22 @@
     .catch(() => A.loadLocations())
     .then((locs) => draw((locs || []).find((l) => l.id === A.getActiveId()) || (locs || [])[0] || {}));
 
+  let card = null;
+  if (piece.kind === 'card') { try { card = JSON.parse(localStorage.getItem('ajpvc.card.v1')) || {}; } catch (e) { card = {}; } }
+
   function draw(loc) {
+  if (card) loc = card.office || {};
+  const extra = card ? A.cardValues(card) : null;
 
   const [wIn, hIn] = piece.inches;
   document.getElementById('pageSize').textContent = `@page { size: ${wIn}in ${hIn}in; margin: 0; }`;
-  document.title = `${piece.title} · ${A.values(loc).LOCATION_NAME || 'AJPVC'}`;
+  document.title = card ? `${piece.title} · ${card.name || 'No name'}` : `${piece.title} · ${A.values(loc).LOCATION_NAME || 'AJPVC'}`;
   document.getElementById('printTitle').textContent = piece.title;
-  document.getElementById('printMeta').textContent = ` · ${A.values(loc).LOCATION_NAME || 'No location'} · ${piece.size}`;
+  document.getElementById('printMeta').textContent = ` · ${card ? (card.name || 'No name') : (A.values(loc).LOCATION_NAME || 'No location')} · ${piece.size}`;
 
   let left = 0;
   document.getElementById('sheets').innerHTML = piece.pages.map((pg) => {
-    const html = A.fill(pg.html, loc); left += A.countPlaceholders(html);
+    const html = A.fill(pg.html, loc, extra); left += A.countPlaceholders(html);
     // each sheet is drawn at 96 px per inch, so it prints at true size
     return `<div class="print-sheet" style="width:${wIn}in;height:${hIn}in"><div class="sheet" style="width:${pg.w}px;height:${pg.h}px;transform:scale(${(wIn * 96) / pg.w})">${html}</div></div>`;
   }).join('');

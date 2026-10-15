@@ -59,6 +59,7 @@ for piece in cfg['pieces']:
         pages.append({'label': pg['label'], 'w': w, 'h': h, 'html': body})
     entry = {k: piece[k] for k in ('id', 'title', 'size', 'inches')}
     entry['facility'] = piece.get('facility', 'ajpvc')
+    if piece.get('kind'): entry['kind'] = piece['kind']
     entry['pages'] = pages
     out.append(entry)
 

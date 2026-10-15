@@ -7,7 +7,8 @@
     LOCATION_NAME: '[LOCATION NAME]', STREET: '[STREET ADDRESS]', CITY: '[CITY]',
     CITY_STATE_ZIP: '[CITY, STATE ZIP]', FULL_ADDRESS: '[ADDRESS]', HOURS: '[HOURS]',
     OPEN_HOUSE_DATE: '[OPEN HOUSE DATE]', OPEN_HOUSE_TIME: '[TIME]',
-    TALK_DATE: '[TALK DATE]', TALK_VENUE: '[VENUE]', MAP: '[LOCATION MAP]'
+    TALK_DATE: '[TALK DATE]', TALK_VENUE: '[VENUE]', MAP: '[LOCATION MAP]',
+    CARD_NAME: '[FULL NAME]', CARD_TITLE: '[TITLE]', CARD_DIRECT: '[DIRECT PHONE]', CARD_CELL: '[CELL PHONE]', CARD_EMAIL: '[EMAIL]'
   };
 
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -33,8 +34,17 @@
 
   const PH = /\[[A-Z0-9][A-Za-z0-9 ,:&;/\-]*\]/g;
 
-  function fill(html, loc) {
-    const v = values(loc);
+  // business card fields; optional lines (data-opt) are dropped when left blank
+  function cardValues(card) {
+    card = card || {};
+    return { CARD_NAME: clean(card.name), CARD_TITLE: clean(card.title), CARD_DIRECT: clean(card.direct), CARD_CELL: clean(card.cell), CARD_EMAIL: clean(card.email) };
+  }
+
+  function fill(html, loc, extra) {
+    const v = Object.assign(values(loc), extra || {});
+    if (extra) {
+      html = html.replace(/<p data-opt="([A-Z_]+)"[^>]*>[\s\S]*?<\/p>/g, (m, k) => (v[k] ? m : ''));
+    }
     let out = html.replace(/\{\{([A-Z_]+)\}\}/g, (m, k) => {
       if (k === 'MAP') {
         return loc && loc.map
@@ -62,5 +72,5 @@
   function getActiveId() { try { return localStorage.getItem(ACTIVE); } catch (e) { return null; } }
   function setActiveId(id) { try { localStorage.setItem(ACTIVE, id); } catch (e) {} }
 
-  window.AJPVC = { fill, values, countPlaceholders, loadLocations, saveLocations, getActiveId, setActiveId, esc };
+  window.AJPVC = { fill, values, cardValues, countPlaceholders, loadLocations, saveLocations, getActiveId, setActiveId, esc };
 })();

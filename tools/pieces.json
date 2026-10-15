@@ -52,7 +52,13 @@
     {"id": "slick-corrections", "facility": "hvlc", "title": "Referral slick sheet: Correctional Health", "size": "8.5 × 11 in", "inches": [8.5, 11],
      "pages": [{"file": "SlickCorrections.dc.html", "label": "Front"}]},
     {"id": "referral-form", "facility": "hvlc", "title": "Physician referral (order) form", "size": "8.5 × 11 in, two sides", "inches": [8.5, 11],
-     "pages": [{"file": "ReferralForm.dc.html", "label": "Front: order form"}, {"file": "ReferralFormBack.dc.html", "label": "Back: insurance, services & location"}]}
+     "pages": [{"file": "ReferralForm.dc.html", "label": "Front: order form"}, {"file": "ReferralFormBack.dc.html", "label": "Back: insurance, services & location"}]},
+    {"id": "card-ajpvc", "facility": "ajpvc", "kind": "card", "title": "Business card: AJPVC", "size": "3.5 × 2 in, two sides", "inches": [3.5, 2],
+     "pages": [{"file": "CardAJPVCFront.dc.html", "label": "Front"}, {"file": "CardAJPVCBack.dc.html", "label": "Back"}],
+     "tokens": {"[FULL NAME]": "{{CARD_NAME}}", "[TITLE]": "{{CARD_TITLE}}", "[DIRECT PHONE]": "{{CARD_DIRECT}}", "[CELL PHONE]": "{{CARD_CELL}}", "[EMAIL]": "{{CARD_EMAIL}}"}},
+    {"id": "card-hvlc", "facility": "hvlc", "kind": "card", "title": "Business card: HVLC", "size": "3.5 × 2 in, two sides", "inches": [3.5, 2],
+     "pages": [{"file": "CardHVLCFront.dc.html", "label": "Front"}, {"file": "CardHVLCBack.dc.html", "label": "Back"}],
+     "tokens": {"[FULL NAME]": "{{CARD_NAME}}", "[TITLE]": "{{CARD_TITLE}}", "[DIRECT PHONE]": "{{CARD_DIRECT}}", "[CELL PHONE]": "{{CARD_CELL}}", "[EMAIL]": "{{CARD_EMAIL}}"}}
   ],
   "tokens": {
     "Mon–Fri [HOURS]": "{{HOURS}}",

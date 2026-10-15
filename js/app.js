@@ -25,6 +25,7 @@
     $$('.tab').forEach((x) => x.classList.toggle('is-active', x === b));
     $$('.tab-panel').forEach((p) => { p.hidden = p.id !== 'tab-' + b.dataset.tab; });
     if (b.dataset.tab === 'order') fillOrderLocations();
+    else if (b.dataset.tab === 'cards') renderCard();
     else layoutAll();
   }));
 
@@ -253,7 +254,7 @@
     document.title = f.short + ' Print Materials';
     document.body.dataset.facility = facility;
     const forFac = (p) => p.facility === facility || p.facility === 'both';
-    const mine = T.filter(forFac);
+    const mine = T.filter((p) => forFac(p) && p.kind !== 'card');
     filterSel.innerHTML = '<option value="all">All pieces</option>' + mine.map((p) => `<option value="${p.id}">${A.esc(p.title)}</option>`).join('');
     if (!mine.some((p) => p.id === pieceFilter)) pieceFilter = 'all';
     filterSel.value = pieceFilter;
@@ -270,7 +271,7 @@
   facSel.addEventListener('change', () => {
     facility = facSel.value; write(FAC_KEY, facility);
     pieceFilter = 'all'; write(FILTER_KEY, pieceFilter);
-    applyFacility(); renderAll();
+    applyFacility(); renderAll(); renderCard();
   });
   filterSel.addEventListener('change', () => {
     pieceFilter = filterSel.value; write(FILTER_KEY, pieceFilter);
@@ -281,7 +282,7 @@
   function renderAll() {
     const loc = active();
     const host = $('#pieces');
-    const shown = T.filter((p) => (p.facility === facility || p.facility === 'both') && (pieceFilter === 'all' || p.id === pieceFilter));
+    const shown = T.filter((p) => p.kind !== 'card' && (p.facility === facility || p.facility === 'both') && (pieceFilter === 'all' || p.id === pieceFilter));
     host.innerHTML = shown.map((p) => {
       const pages = p.pages.map((pg) => ({ ...pg, filled: A.fill(pg.html, loc) }));
       const n = pages.reduce((s, pg) => s + A.countPlaceholders(pg.filled), 0);
@@ -313,6 +314,50 @@
   }
   new ResizeObserver(() => layoutAll()).observe(document.body);
 
+  /* ---------- business cards ---------- */
+  // one person's card, saved in this browser; the print page reads the same key
+  const CARD_KEY = 'ajpvc.card.v1';
+  const MAIN_OFFICE = { id: 'main', locationName: 'Bakersfield (Main)', street: '5020 Commerce Drive', city: 'Bakersfield', state: 'CA', zip: '93309' };
+  let card = {};
+  try { card = JSON.parse(localStorage.getItem(CARD_KEY)) || {}; } catch (e) {}
+  const cardPiece = () => T.find((p) => p.id === 'card-' + facility);
+  const offices = () => [MAIN_OFFICE, ...locations.filter((l) => l.street)];
+  function saveCard() {
+    const o = offices().find((x) => x.id === card.officeId) || MAIN_OFFICE;
+    card.office = { locationName: o.locationName, street: o.street, city: o.city, state: o.state, zip: o.zip };
+    write(CARD_KEY, JSON.stringify(card));
+  }
+  function renderCard() {
+    const f = $('#cardForm'), sel = $('#cardOffice');
+    sel.innerHTML = offices().map((o) => `<option value="${A.esc(o.id)}">${A.esc(o.locationName || 'Untitled')} · ${A.esc([o.street, o.city].filter(Boolean).join(', '))}</option>`).join('');
+    if (!offices().some((o) => o.id === card.officeId)) card.officeId = 'main';
+    sel.value = card.officeId;
+    ['name', 'title', 'direct', 'cell', 'email'].forEach((k) => { if (document.activeElement !== f.elements[k]) f.elements[k].value = card[k] || ''; });
+    saveCard();
+    const p = cardPiece(); if (!p) return;
+    $('#cardTitle').textContent = p.title;
+    $('#cardPrint').href = 'print.html?piece=' + p.id;
+    const extra = A.cardValues(card);
+    $('#cardPreview').innerHTML = '<div class="card-pages">' + p.pages.map((pg) =>
+      `<figure class="page"><div class="page-frame" data-w="${pg.w}" data-h="${pg.h}"><div class="sheet" style="width:${pg.w}px;height:${pg.h}px">${A.fill(pg.html, card.office, extra)}</div></div><figcaption>${A.esc(pg.label)}</figcaption></figure>`).join('') + '</div>';
+    layoutAll();
+  }
+  $('#cardForm').addEventListener('input', (e) => {
+    const k = e.target.name; if (!k) return;
+    if (k === 'office') card.officeId = e.target.value; else card[k] = e.target.value;
+    renderCard();
+  });
+  $('#cardOrder').addEventListener('click', () => {
+    document.querySelector('.tab[data-tab="order"]').click();
+    const q = document.querySelector('#qtyGrid input[name="qty_business_cards"]');
+    if (q) { if (!+q.value) q.value = 1; q.focus(); }
+  });
+  function cardDetails() {
+    const o = card.office || {};
+    return [`Card style: ${cardPiece() ? cardPiece().title : ''}`, `Name: ${card.name || ''}`, `Title: ${card.title || ''}`, `Direct: ${card.direct || ''}`,
+      `Cell: ${card.cell || ''}`, `Email: ${card.email || ''}`, `Office: ${[o.street, [o.city, o.state].filter(Boolean).join(', '), o.zip].filter(Boolean).join(' ')}`].join('\n');
+  }
+
   /* ---------- orders ---------- */
   function fillOrderLocations() {
     const sel = $('#orderLocation');
@@ -331,6 +376,8 @@
       `Location: ${v.LOCATION_NAME}`, `Address: ${v.FULL_ADDRESS}`, `Hours: ${v.HOURS}`,
       `Open house: ${v.OPEN_HOUSE_DATE} ${v.OPEN_HOUSE_TIME}`.trim(), `Community talk: ${v.TALK_DATE} at ${v.TALK_VENUE}`
     ].join('\n');
+    const cq = f.elements.qty_business_cards;
+    $('#orderCardDetails').value = cq && +cq.value ? cardDetails() : '';
     const data = new FormData(f);
     data.set('location', v.LOCATION_NAME || 'Untitled');
     try {

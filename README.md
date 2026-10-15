@@ -41,7 +41,8 @@ Use the **Facility** menu at the top to switch between **Advanced Joint Pain & V
 1. **Location materials** tab: pick a location (click **Unlock editing** to add or change one), then fill in the name, address, hours and upload a map image. Previews update as you type.
 2. Anything still **highlighted in yellow** is a placeholder (in the design or not filled in yet).
 3. Click **Print / PDF** on a piece. In the print dialog choose *Save as PDF* (or a printer), margins *None*, and turn on *Background graphics*.
-4. **Place an order** tab: choose the location, enter quantities and delivery details, and submit.
+4. **Business cards** tab: type a person's name, title, phone numbers and email and pick the office address. The card style follows the Facility menu. Click **Print / PDF** for a true-size 3.5 × 2 in card, or **Order these cards** to add them to an order (the card details are sent with the order).
+5. **Place an order** tab: choose the location, enter quantities and delivery details, and submit.
 
 Locations are shared: changes are saved to the site and appear for everyone (others see them the next time they open or return to the page). **Export locations** downloads a backup; **Import** loads one back in. If the site was used before shared locations were turned on, unlocking shows a button to add the locations saved in that browser to the shared list.
 
