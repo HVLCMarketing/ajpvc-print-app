@@ -21,7 +21,8 @@
     "6a1178db043887f6bc261d392b2171ff": "render-hip.png",
     "4155782b7fd17a2d2b64b03c817bea58": "render-shoulder.png",
     "b523cba7dd4d1728133f23d0c22e062d": "render-hand.png",
-    "f6d1944b8ba0d0421b9161044a47c1c5": "render-heel.png"
+    "f6d1944b8ba0d0421b9161044a47c1c5": "render-heel.png",
+    "3558030534c872ead2bfe63df9676e01": "healthy-vs-painful-joint.jpg"
   },
   "pieces": [
     {"id": "trifold", "facility": "ajpvc", "title": "Trifold brochure", "size": "11 × 8.5 in, two sides", "inches": [11, 8.5],
