@@ -38,7 +38,10 @@
     "4ea353d852b9f4c65030c6aeb3b061eb": "vein-valves.jpg",
     "f28a348d1ac4f9d33391b50a48f4fa0e": "circulation.jpg",
     "db6e4aa2143060ca68f2305e0fdfdd93": "vein-closure.jpg",
-    "84fa373e8e530fcfccf6dcf61035b46b": "angio.jpg"
+    "84fa373e8e530fcfccf6dcf61035b46b": "angio.jpg",
+    "280319eaa8e4fbabcee63c8a0369bbf7": "circulation-es.jpg",
+    "a8ad252279d92c52adf45bc2eb87542d": "angio-es.jpg",
+    "063ee20945171f01440fc9cf978b4053": "vein-closure-es.jpg"
   },
   "pieces": [
     {
@@ -241,6 +244,83 @@
       ]
     },
     {
+      "id": "joint-guide-es",
+      "group": "Patient guides",
+      "facility": "both",
+      "title": "Patient guide (Spanish): Joint & tendon pain",
+      "size": "16-page booklet, 8.5 × 11 in pages",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "JointGuideES01.dc.html",
+          "label": "Front cover"
+        },
+        {
+          "file": "JointGuideES02.dc.html",
+          "label": "Page 2"
+        },
+        {
+          "file": "JointGuideES03.dc.html",
+          "label": "Page 3"
+        },
+        {
+          "file": "JointGuideES04.dc.html",
+          "label": "Page 4"
+        },
+        {
+          "file": "JointGuideES05.dc.html",
+          "label": "Page 5"
+        },
+        {
+          "file": "JointGuideES06.dc.html",
+          "label": "Page 6"
+        },
+        {
+          "file": "JointGuideES07.dc.html",
+          "label": "Page 7"
+        },
+        {
+          "file": "JointGuideES08.dc.html",
+          "label": "Page 8"
+        },
+        {
+          "file": "JointGuideES09.dc.html",
+          "label": "Page 9"
+        },
+        {
+          "file": "JointGuideES10.dc.html",
+          "label": "Page 10"
+        },
+        {
+          "file": "JointGuideES11.dc.html",
+          "label": "Page 11"
+        },
+        {
+          "file": "JointGuideES12.dc.html",
+          "label": "Page 12"
+        },
+        {
+          "file": "JointGuideES13.dc.html",
+          "label": "Page 13"
+        },
+        {
+          "file": "JointGuideES14.dc.html",
+          "label": "Page 14"
+        },
+        {
+          "file": "JointGuideES15.dc.html",
+          "label": "Page 15"
+        },
+        {
+          "file": "JointGuideES16.dc.html",
+          "label": "Back cover"
+        }
+      ]
+    },
+    {
       "id": "slick-personal-injury",
       "group": "Referral materials",
       "facility": "hvlc",
@@ -385,6 +465,83 @@
         },
         {
           "file": "VascGuide16.dc.html",
+          "label": "Back cover"
+        }
+      ]
+    },
+    {
+      "id": "vasc-guide-es",
+      "group": "Patient guides",
+      "facility": "both",
+      "title": "Patient guide (Spanish): Arteries & veins",
+      "size": "16-page booklet, 8.5 × 11 in pages",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "VascGuideES01.dc.html",
+          "label": "Front cover"
+        },
+        {
+          "file": "VascGuideES02.dc.html",
+          "label": "Page 2"
+        },
+        {
+          "file": "VascGuideES03.dc.html",
+          "label": "Page 3"
+        },
+        {
+          "file": "VascGuideES04.dc.html",
+          "label": "Page 4"
+        },
+        {
+          "file": "VascGuideES05.dc.html",
+          "label": "Page 5"
+        },
+        {
+          "file": "VascGuideES06.dc.html",
+          "label": "Page 6"
+        },
+        {
+          "file": "VascGuideES07.dc.html",
+          "label": "Page 7"
+        },
+        {
+          "file": "VascGuideES08.dc.html",
+          "label": "Page 8"
+        },
+        {
+          "file": "VascGuideES09.dc.html",
+          "label": "Page 9"
+        },
+        {
+          "file": "VascGuideES10.dc.html",
+          "label": "Page 10"
+        },
+        {
+          "file": "VascGuideES11.dc.html",
+          "label": "Page 11"
+        },
+        {
+          "file": "VascGuideES12.dc.html",
+          "label": "Page 12"
+        },
+        {
+          "file": "VascGuideES13.dc.html",
+          "label": "Page 13"
+        },
+        {
+          "file": "VascGuideES14.dc.html",
+          "label": "Page 14"
+        },
+        {
+          "file": "VascGuideES15.dc.html",
+          "label": "Page 15"
+        },
+        {
+          "file": "VascGuideES16.dc.html",
           "label": "Back cover"
         }
       ]
