@@ -228,7 +228,7 @@
     ajpvc: { name: 'Advanced Joint Pain & Vascular Center', short: 'AJPVC', logo: 'assets/logo-long-transparent.png' },
     hvlc: { name: 'Heart Vascular & Leg Center', short: 'HVLC', logo: 'assets/logo-hvlc.png' }
   };
-  const GROUP_ORDER = ['Marketing materials', 'Folders', 'Patient guides', 'Newsletters', 'Waiting room art', 'Referral materials'];
+  const GROUP_ORDER = ['Marketing materials', 'Folders', 'Patient guides', 'Newsletters', 'Posters', 'Waiting room art', 'Referral materials'];
   const gIdx = (g) => { const i = GROUP_ORDER.indexOf(g); return i < 0 ? 99 : i; };
   const byGroup = (a, b) => gIdx(a.group) - gIdx(b.group);
   const FAC_KEY = 'ajpvc.facility.v1';
@@ -291,6 +291,20 @@
     const shown = T.filter((p) => p.kind !== 'card' && (p.facility === facility || p.facility === 'both') && (pieceFilter === 'all' || p.id === pieceFilter || 'group:' + p.group === pieceFilter)).sort(byGroup);
     let lastGroup = null;
     host.innerHTML = shown.map((p) => {
+      if (p.kind === 'file') {
+        const head = p.group !== lastGroup ? `<h2 class="group-head">${A.esc(p.group)}</h2>` : ''; lastGroup = p.group;
+        return head + `<article class="piece" data-id="${p.id}">
+        <header class="piece-head">
+          <div><h3>${A.esc(p.title)}</h3><p class="muted">${A.esc(p.size)}</p></div>
+          <div class="piece-actions">
+            <span class="badge badge-ok">Print-ready file</span>
+            <a class="btn primary" href="${p.pdf}" download>Download PDF</a>
+          </div>
+        </header>
+        <figure class="page file-preview"><a href="${p.pdf}" target="_blank" rel="noopener"><img src="${p.preview}" alt="Preview of ${A.esc(p.title)}" loading="lazy"></a>
+        <figcaption>Finished design supplied as a PDF. Send it to the printer as-is.</figcaption></figure>
+      </article>`;
+      }
       const pages = p.pages.map((pg) => ({ ...pg, filled: A.fill(pg.html, loc) }));
       const n = pages.reduce((s, pg) => s + A.countPlaceholders(pg.filled), 0);
       const heading = p.group !== lastGroup ? `<h2 class="group-head">${A.esc(p.group)}</h2>` : ''; lastGroup = p.group;

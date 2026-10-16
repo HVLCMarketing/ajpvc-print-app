@@ -447,6 +447,21 @@ window.AJPVC_TEMPLATES = [
   ]
  },
  {
+  "id": "poster-hvlc-joint-pain",
+  "title": "Joint pain poster: 24 × 36",
+  "size": "24 × 36 in, print-ready PDF",
+  "inches": [
+   24,
+   36
+  ],
+  "kind": "file",
+  "pdf": "files/HVLC_Joint_Pain_Poster_24x36.pdf",
+  "preview": "files/HVLC_Joint_Pain_Poster_24x36-preview.webp",
+  "facility": "hvlc",
+  "group": "Posters",
+  "pages": []
+ },
+ {
   "id": "card-ajpvc",
   "title": "Business card: AJPVC",
   "size": "3.5 × 2 in, two sides",

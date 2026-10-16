@@ -64,6 +64,8 @@
      "pages": [{"file": "ArtKnee18x24.dc.html", "label": "Knee"}, {"file": "ArtHip18x24.dc.html", "label": "Hip"}, {"file": "ArtShoulder18x24.dc.html", "label": "Shoulder"}, {"file": "ArtHand18x24.dc.html", "label": "Hand"}, {"file": "ArtHeel18x24.dc.html", "label": "Heel"}]},
     {"id": "art-24x36", "group": "Waiting room art", "facility": "ajpvc", "title": "Waiting room art: 24 × 36 prints (set of 5)", "size": "24 × 36 in, one print per page", "inches": [24, 36],
      "pages": [{"file": "ArtKnee24x36.dc.html", "label": "Knee"}, {"file": "ArtHip24x36.dc.html", "label": "Hip"}, {"file": "ArtShoulder24x36.dc.html", "label": "Shoulder"}, {"file": "ArtHand24x36.dc.html", "label": "Hand"}, {"file": "ArtHeel24x36.dc.html", "label": "Heel"}]},
+    {"id": "poster-hvlc-joint-pain", "group": "Posters", "facility": "hvlc", "kind": "file", "title": "Joint pain poster: 24 × 36", "size": "24 × 36 in, print-ready PDF", "inches": [24, 36],
+     "pdf": "files/HVLC_Joint_Pain_Poster_24x36.pdf", "preview": "files/HVLC_Joint_Pain_Poster_24x36-preview.webp"},
     {"id": "card-ajpvc", "group": "Business cards", "facility": "ajpvc", "kind": "card", "title": "Business card: AJPVC", "size": "3.5 × 2 in, two sides", "inches": [3.5, 2],
      "pages": [{"file": "CardAJPVCFront.dc.html", "label": "Front"}, {"file": "CardAJPVCBack.dc.html", "label": "Back"}],
      "tokens": {"[FULL NAME]": "{{CARD_NAME}}", "[TITLE]": "{{CARD_TITLE}}", "[DIRECT PHONE]": "{{CARD_DIRECT}}", "[CELL PHONE]": "{{CARD_CELL}}", "[EMAIL]": "{{CARD_EMAIL}}"}},

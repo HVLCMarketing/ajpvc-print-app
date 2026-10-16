@@ -37,6 +37,11 @@ def map_assets(body, fname):
 
 out = []
 for piece in cfg['pieces']:
+    if piece.get('kind') == 'file':      # a finished, print-ready file supplied as-is
+        entry = {k: piece[k] for k in ('id', 'title', 'size', 'inches', 'kind', 'pdf', 'preview') if k in piece}
+        entry.update({'facility': piece.get('facility', 'ajpvc'), 'group': piece.get('group', 'Other'), 'pages': []})
+        out.append(entry)
+        continue
     pages = []
     for pg in piece['pages']:
         src = open(os.path.join(ROOT, 'source', pg['file']), encoding='utf-8').read()
