@@ -32,49 +32,524 @@
     "c70bf890c51e43252dd7aec1e7f53692": "art-shoulder.webp",
     "701cb436963a4832a0ead1dee88667d9": "art-hand.webp",
     "116c16179869ca419469284512af802c": "art-heel.webp",
-    "5bcc64533ee174c4b726a1e59642f25b": "body-blue-cover.jpg"
+    "43c89664d6586ffd787fed8af77cd18e": "vasc-cover-body.jpg"
   },
   "pieces": [
-    {"id": "trifold", "group": "Marketing materials", "facility": "ajpvc", "title": "Trifold brochure", "size": "11 × 8.5 in, two sides", "inches": [11, 8.5],
-     "pages": [{"file": "TrifoldOutside.dc.html", "label": "Outside"}, {"file": "TrifoldInside.dc.html", "label": "Inside"}]},
-    {"id": "patient-folder", "group": "Folders", "facility": "ajpvc", "title": "Patient folder", "size": "9 × 12 pocket folder, 18 × 12 flat", "inches": [18, 12],
-     "pages": [{"file": "FolderOutside.dc.html", "label": "Outside"}, {"file": "FolderInside.dc.html", "label": "Inside"}]},
-    {"id": "provider-folder", "group": "Folders", "facility": "ajpvc", "title": "Provider folder", "size": "9 × 12 pocket folder, 18 × 12 flat", "inches": [18, 12],
-     "pages": [{"file": "ProviderOutside.dc.html", "label": "Outside"}, {"file": "ProviderInside.dc.html", "label": "Inside"}]},
-    {"id": "flyer", "group": "Marketing materials", "facility": "ajpvc", "title": "Grand opening flyer", "size": "8.5 × 11 in", "inches": [8.5, 11],
-     "pages": [{"file": "Flyer.dc.html", "label": "Front"}],
-     "tokens": {"[DATE], [TIME]": "{{OPEN_HOUSE_DATE}}, {{OPEN_HOUSE_TIME}}", "[DATE]": "{{OPEN_HOUSE_DATE}}"}},
-    {"id": "postcard", "group": "Marketing materials", "facility": "ajpvc", "title": "Direct mail postcard", "size": "9 × 6 in, front", "inches": [9, 6],
-     "pages": [{"file": "Postcard.dc.html", "label": "Front"}],
-     "tokens": {"[DATE]": "{{TALK_DATE}}", "[VENUE]": "{{TALK_VENUE}}"}},
-    {"id": "mousepad", "group": "Marketing materials", "facility": "ajpvc", "title": "Mousepad", "size": "9.25 × 7.75 in", "inches": [9.25, 7.75],
-     "pages": [{"file": "Mousepad.dc.html", "label": "Front"}]},
-    {"id": "joint-guide", "group": "Patient guides", "facility": "both", "title": "Patient guide: Joint & tendon pain", "size": "16-page booklet, 8.5 × 11 in pages", "inches": [8.5, 11],
-     "pages": [{"file": "JointGuide01.dc.html", "label": "Front cover"}, {"file": "JointGuide02.dc.html", "label": "Page 2"}, {"file": "JointGuide03.dc.html", "label": "Page 3"}, {"file": "JointGuide04.dc.html", "label": "Page 4"}, {"file": "JointGuide05.dc.html", "label": "Page 5"}, {"file": "JointGuide06.dc.html", "label": "Page 6"}, {"file": "JointGuide07.dc.html", "label": "Page 7"}, {"file": "JointGuide08.dc.html", "label": "Page 8"}, {"file": "JointGuide09.dc.html", "label": "Page 9"}, {"file": "JointGuide10.dc.html", "label": "Page 10"}, {"file": "JointGuide11.dc.html", "label": "Page 11"}, {"file": "JointGuide12.dc.html", "label": "Page 12"}, {"file": "JointGuide13.dc.html", "label": "Page 13"}, {"file": "JointGuide14.dc.html", "label": "Page 14"}, {"file": "JointGuide15.dc.html", "label": "Page 15"}, {"file": "JointGuide16.dc.html", "label": "Back cover"}]},
-    {"id": "slick-personal-injury", "group": "Referral materials", "facility": "hvlc", "title": "Referral slick sheet: Personal Injury", "size": "8.5 × 11 in", "inches": [8.5, 11],
-     "pages": [{"file": "SlickPersonalInjury.dc.html", "label": "Front"}]},
-    {"id": "slick-workers-comp", "group": "Referral materials", "facility": "hvlc", "title": "Referral slick sheet: Workers' Compensation", "size": "8.5 × 11 in", "inches": [8.5, 11],
-     "pages": [{"file": "SlickWorkersComp.dc.html", "label": "Front"}]},
-    {"id": "slick-corrections", "group": "Referral materials", "facility": "hvlc", "title": "Referral slick sheet: Correctional Health", "size": "8.5 × 11 in", "inches": [8.5, 11],
-     "pages": [{"file": "SlickCorrections.dc.html", "label": "Front"}]},
-    {"id": "referral-form", "group": "Referral materials", "facility": "hvlc", "title": "Physician referral (order) form", "size": "8.5 × 11 in, two sides", "inches": [8.5, 11],
-     "pages": [{"file": "ReferralForm.dc.html", "label": "Front: order form"}, {"file": "ReferralFormBack.dc.html", "label": "Back: insurance, services & location"}]},
-    {"id": "vasc-guide", "group": "Patient guides", "facility": "both", "title": "Patient guide: Arteries & veins", "size": "16-page booklet, 8.5 × 11 in pages", "inches": [8.5, 11],
-     "pages": [{"file": "VascGuide01.dc.html", "label": "Front cover"}, {"file": "VascGuide02.dc.html", "label": "Page 2"}, {"file": "VascGuide03.dc.html", "label": "Page 3"}, {"file": "VascGuide04.dc.html", "label": "Page 4"}, {"file": "VascGuide05.dc.html", "label": "Page 5"}, {"file": "VascGuide06.dc.html", "label": "Page 6"}, {"file": "VascGuide07.dc.html", "label": "Page 7"}, {"file": "VascGuide08.dc.html", "label": "Page 8"}, {"file": "VascGuide09.dc.html", "label": "Page 9"}, {"file": "VascGuide10.dc.html", "label": "Page 10"}, {"file": "VascGuide11.dc.html", "label": "Page 11"}, {"file": "VascGuide12.dc.html", "label": "Page 12"}, {"file": "VascGuide13.dc.html", "label": "Page 13"}, {"file": "VascGuide14.dc.html", "label": "Page 14"}, {"file": "VascGuide15.dc.html", "label": "Page 15"}, {"file": "VascGuide16.dc.html", "label": "Back cover"}]},
-    {"id": "newsletter-2026-11", "group": "Newsletters", "facility": "both", "title": "Patient newsletter: November 2026", "size": "4 pages, 8.5 × 11 in", "inches": [8.5, 11],
-     "pages": [{"file": "NewsletterNov2026p1.dc.html", "label": "Page 1"}, {"file": "NewsletterNov2026p2.dc.html", "label": "Page 2"}, {"file": "NewsletterNov2026p3.dc.html", "label": "Page 3"}, {"file": "NewsletterNov2026p4.dc.html", "label": "Page 4"}]},
-    {"id": "art-18x24", "group": "Waiting room art", "facility": "ajpvc", "title": "Waiting room art: 18 × 24 prints (set of 5)", "size": "18 × 24 in, one print per page", "inches": [18, 24],
-     "pages": [{"file": "ArtKnee18x24.dc.html", "label": "Knee"}, {"file": "ArtHip18x24.dc.html", "label": "Hip"}, {"file": "ArtShoulder18x24.dc.html", "label": "Shoulder"}, {"file": "ArtHand18x24.dc.html", "label": "Hand"}, {"file": "ArtHeel18x24.dc.html", "label": "Heel"}]},
-    {"id": "art-24x36", "group": "Waiting room art", "facility": "ajpvc", "title": "Waiting room art: 24 × 36 prints (set of 5)", "size": "24 × 36 in, one print per page", "inches": [24, 36],
-     "pages": [{"file": "ArtKnee24x36.dc.html", "label": "Knee"}, {"file": "ArtHip24x36.dc.html", "label": "Hip"}, {"file": "ArtShoulder24x36.dc.html", "label": "Shoulder"}, {"file": "ArtHand24x36.dc.html", "label": "Hand"}, {"file": "ArtHeel24x36.dc.html", "label": "Heel"}]},
-    {"id": "poster-hvlc-joint-pain", "group": "Posters", "facility": "hvlc", "kind": "file", "title": "Joint pain poster: 24 × 36", "size": "24 × 36 in, print-ready PDF", "inches": [24, 36],
-     "pdf": "files/HVLC_Joint_Pain_Poster_24x36.pdf", "preview": "files/HVLC_Joint_Pain_Poster_24x36-preview.webp"},
-    {"id": "card-ajpvc", "group": "Business cards", "facility": "ajpvc", "kind": "card", "title": "Business card: AJPVC", "size": "3.5 × 2 in, two sides", "inches": [3.5, 2],
-     "pages": [{"file": "CardAJPVCFront.dc.html", "label": "Front"}, {"file": "CardAJPVCBack.dc.html", "label": "Back"}],
-     "tokens": {"[FULL NAME]": "{{CARD_NAME}}", "[TITLE]": "{{CARD_TITLE}}", "[DIRECT PHONE]": "{{CARD_DIRECT}}", "[CELL PHONE]": "{{CARD_CELL}}", "[EMAIL]": "{{CARD_EMAIL}}"}},
-    {"id": "card-hvlc", "group": "Business cards", "facility": "hvlc", "kind": "card", "title": "Business card: HVLC", "size": "3.5 × 2 in, two sides", "inches": [3.5, 2],
-     "pages": [{"file": "CardHVLCFront.dc.html", "label": "Front"}, {"file": "CardHVLCBack.dc.html", "label": "Back"}],
-     "tokens": {"[FULL NAME]": "{{CARD_NAME}}", "[TITLE]": "{{CARD_TITLE}}", "[DIRECT PHONE]": "{{CARD_DIRECT}}", "[CELL PHONE]": "{{CARD_CELL}}", "[EMAIL]": "{{CARD_EMAIL}}"}}
+    {
+      "id": "trifold",
+      "group": "Marketing materials",
+      "facility": "ajpvc",
+      "title": "Trifold brochure",
+      "size": "11 × 8.5 in, two sides",
+      "inches": [
+        11,
+        8.5
+      ],
+      "pages": [
+        {
+          "file": "TrifoldOutside.dc.html",
+          "label": "Outside"
+        },
+        {
+          "file": "TrifoldInside.dc.html",
+          "label": "Inside"
+        }
+      ]
+    },
+    {
+      "id": "patient-folder",
+      "group": "Folders",
+      "facility": "ajpvc",
+      "title": "Patient folder",
+      "size": "9 × 12 pocket folder, 18 × 12 flat",
+      "inches": [
+        18,
+        12
+      ],
+      "pages": [
+        {
+          "file": "FolderOutside.dc.html",
+          "label": "Outside"
+        },
+        {
+          "file": "FolderInside.dc.html",
+          "label": "Inside"
+        }
+      ]
+    },
+    {
+      "id": "provider-folder",
+      "group": "Folders",
+      "facility": "ajpvc",
+      "title": "Provider folder",
+      "size": "9 × 12 pocket folder, 18 × 12 flat",
+      "inches": [
+        18,
+        12
+      ],
+      "pages": [
+        {
+          "file": "ProviderOutside.dc.html",
+          "label": "Outside"
+        },
+        {
+          "file": "ProviderInside.dc.html",
+          "label": "Inside"
+        }
+      ]
+    },
+    {
+      "id": "flyer",
+      "group": "Marketing materials",
+      "facility": "ajpvc",
+      "title": "Grand opening flyer",
+      "size": "8.5 × 11 in",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "Flyer.dc.html",
+          "label": "Front"
+        }
+      ],
+      "tokens": {
+        "[DATE], [TIME]": "{{OPEN_HOUSE_DATE}}, {{OPEN_HOUSE_TIME}}",
+        "[DATE]": "{{OPEN_HOUSE_DATE}}"
+      }
+    },
+    {
+      "id": "postcard",
+      "group": "Marketing materials",
+      "facility": "ajpvc",
+      "title": "Direct mail postcard",
+      "size": "9 × 6 in, front",
+      "inches": [
+        9,
+        6
+      ],
+      "pages": [
+        {
+          "file": "Postcard.dc.html",
+          "label": "Front"
+        }
+      ],
+      "tokens": {
+        "[DATE]": "{{TALK_DATE}}",
+        "[VENUE]": "{{TALK_VENUE}}"
+      }
+    },
+    {
+      "id": "mousepad",
+      "group": "Marketing materials",
+      "facility": "ajpvc",
+      "title": "Mousepad",
+      "size": "9.25 × 7.75 in",
+      "inches": [
+        9.25,
+        7.75
+      ],
+      "pages": [
+        {
+          "file": "Mousepad.dc.html",
+          "label": "Front"
+        }
+      ]
+    },
+    {
+      "id": "joint-guide",
+      "group": "Patient guides",
+      "facility": "both",
+      "title": "Patient guide: Joint & tendon pain",
+      "size": "16-page booklet, 8.5 × 11 in pages",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "JointGuide01.dc.html",
+          "label": "Front cover"
+        },
+        {
+          "file": "JointGuide02.dc.html",
+          "label": "Page 2"
+        },
+        {
+          "file": "JointGuide03.dc.html",
+          "label": "Page 3"
+        },
+        {
+          "file": "JointGuide04.dc.html",
+          "label": "Page 4"
+        },
+        {
+          "file": "JointGuide05.dc.html",
+          "label": "Page 5"
+        },
+        {
+          "file": "JointGuide06.dc.html",
+          "label": "Page 6"
+        },
+        {
+          "file": "JointGuide07.dc.html",
+          "label": "Page 7"
+        },
+        {
+          "file": "JointGuide08.dc.html",
+          "label": "Page 8"
+        },
+        {
+          "file": "JointGuide09.dc.html",
+          "label": "Page 9"
+        },
+        {
+          "file": "JointGuide10.dc.html",
+          "label": "Page 10"
+        },
+        {
+          "file": "JointGuide11.dc.html",
+          "label": "Page 11"
+        },
+        {
+          "file": "JointGuide12.dc.html",
+          "label": "Page 12"
+        },
+        {
+          "file": "JointGuide13.dc.html",
+          "label": "Page 13"
+        },
+        {
+          "file": "JointGuide14.dc.html",
+          "label": "Page 14"
+        },
+        {
+          "file": "JointGuide15.dc.html",
+          "label": "Page 15"
+        },
+        {
+          "file": "JointGuide16.dc.html",
+          "label": "Back cover"
+        }
+      ]
+    },
+    {
+      "id": "slick-personal-injury",
+      "group": "Referral materials",
+      "facility": "hvlc",
+      "title": "Referral slick sheet: Personal Injury",
+      "size": "8.5 × 11 in",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "SlickPersonalInjury.dc.html",
+          "label": "Front"
+        }
+      ]
+    },
+    {
+      "id": "slick-workers-comp",
+      "group": "Referral materials",
+      "facility": "hvlc",
+      "title": "Referral slick sheet: Workers' Compensation",
+      "size": "8.5 × 11 in",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "SlickWorkersComp.dc.html",
+          "label": "Front"
+        }
+      ]
+    },
+    {
+      "id": "slick-corrections",
+      "group": "Referral materials",
+      "facility": "hvlc",
+      "title": "Referral slick sheet: Correctional Health",
+      "size": "8.5 × 11 in",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "SlickCorrections.dc.html",
+          "label": "Front"
+        }
+      ]
+    },
+    {
+      "id": "referral-form",
+      "group": "Referral materials",
+      "facility": "hvlc",
+      "title": "Physician referral (order) form",
+      "size": "8.5 × 11 in, two sides",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "ReferralForm.dc.html",
+          "label": "Front: order form"
+        },
+        {
+          "file": "ReferralFormBack.dc.html",
+          "label": "Back: insurance, services & location"
+        }
+      ]
+    },
+    {
+      "id": "vasc-guide",
+      "group": "Patient guides",
+      "facility": "both",
+      "title": "Patient guide: Arteries & veins",
+      "size": "16-page booklet, 8.5 × 11 in pages",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "VascGuide01.dc.html",
+          "label": "Front cover"
+        },
+        {
+          "file": "VascGuide02.dc.html",
+          "label": "Page 2"
+        },
+        {
+          "file": "VascGuide03.dc.html",
+          "label": "Page 3"
+        },
+        {
+          "file": "VascGuide04.dc.html",
+          "label": "Page 4"
+        },
+        {
+          "file": "VascGuide05.dc.html",
+          "label": "Page 5"
+        },
+        {
+          "file": "VascGuide06.dc.html",
+          "label": "Page 6"
+        },
+        {
+          "file": "VascGuide07.dc.html",
+          "label": "Page 7"
+        },
+        {
+          "file": "VascGuide08.dc.html",
+          "label": "Page 8"
+        },
+        {
+          "file": "VascGuide09.dc.html",
+          "label": "Page 9"
+        },
+        {
+          "file": "VascGuide10.dc.html",
+          "label": "Page 10"
+        },
+        {
+          "file": "VascGuide11.dc.html",
+          "label": "Page 11"
+        },
+        {
+          "file": "VascGuide12.dc.html",
+          "label": "Page 12"
+        },
+        {
+          "file": "VascGuide13.dc.html",
+          "label": "Page 13"
+        },
+        {
+          "file": "VascGuide14.dc.html",
+          "label": "Page 14"
+        },
+        {
+          "file": "VascGuide15.dc.html",
+          "label": "Page 15"
+        },
+        {
+          "file": "VascGuide16.dc.html",
+          "label": "Back cover"
+        }
+      ]
+    },
+    {
+      "id": "newsletter-2026-11",
+      "group": "Newsletters",
+      "facility": "both",
+      "title": "Patient newsletter: November 2026",
+      "size": "4 pages, 8.5 × 11 in",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "NewsletterNov2026p1.dc.html",
+          "label": "Page 1"
+        },
+        {
+          "file": "NewsletterNov2026p2.dc.html",
+          "label": "Page 2"
+        },
+        {
+          "file": "NewsletterNov2026p3.dc.html",
+          "label": "Page 3"
+        },
+        {
+          "file": "NewsletterNov2026p4.dc.html",
+          "label": "Page 4"
+        }
+      ]
+    },
+    {
+      "id": "art-18x24",
+      "group": "Waiting room art",
+      "facility": "ajpvc",
+      "title": "Waiting room art: 18 × 24 prints (set of 5)",
+      "size": "18 × 24 in, one print per page",
+      "inches": [
+        18,
+        24
+      ],
+      "pages": [
+        {
+          "file": "ArtKnee18x24.dc.html",
+          "label": "Knee"
+        },
+        {
+          "file": "ArtHip18x24.dc.html",
+          "label": "Hip"
+        },
+        {
+          "file": "ArtShoulder18x24.dc.html",
+          "label": "Shoulder"
+        },
+        {
+          "file": "ArtHand18x24.dc.html",
+          "label": "Hand"
+        },
+        {
+          "file": "ArtHeel18x24.dc.html",
+          "label": "Heel"
+        }
+      ]
+    },
+    {
+      "id": "art-24x36",
+      "group": "Waiting room art",
+      "facility": "ajpvc",
+      "title": "Waiting room art: 24 × 36 prints (set of 5)",
+      "size": "24 × 36 in, one print per page",
+      "inches": [
+        24,
+        36
+      ],
+      "pages": [
+        {
+          "file": "ArtKnee24x36.dc.html",
+          "label": "Knee"
+        },
+        {
+          "file": "ArtHip24x36.dc.html",
+          "label": "Hip"
+        },
+        {
+          "file": "ArtShoulder24x36.dc.html",
+          "label": "Shoulder"
+        },
+        {
+          "file": "ArtHand24x36.dc.html",
+          "label": "Hand"
+        },
+        {
+          "file": "ArtHeel24x36.dc.html",
+          "label": "Heel"
+        }
+      ]
+    },
+    {
+      "id": "poster-hvlc-joint-pain",
+      "group": "Posters",
+      "facility": "hvlc",
+      "kind": "file",
+      "title": "Joint pain poster: 24 × 36",
+      "size": "24 × 36 in, print-ready PDF",
+      "inches": [
+        24,
+        36
+      ],
+      "pdf": "files/HVLC_Joint_Pain_Poster_24x36.pdf",
+      "preview": "files/HVLC_Joint_Pain_Poster_24x36-preview.webp"
+    },
+    {
+      "id": "card-ajpvc",
+      "group": "Business cards",
+      "facility": "ajpvc",
+      "kind": "card",
+      "title": "Business card: AJPVC",
+      "size": "3.5 × 2 in, two sides",
+      "inches": [
+        3.5,
+        2
+      ],
+      "pages": [
+        {
+          "file": "CardAJPVCFront.dc.html",
+          "label": "Front"
+        },
+        {
+          "file": "CardAJPVCBack.dc.html",
+          "label": "Back"
+        }
+      ],
+      "tokens": {
+        "[FULL NAME]": "{{CARD_NAME}}",
+        "[TITLE]": "{{CARD_TITLE}}",
+        "[DIRECT PHONE]": "{{CARD_DIRECT}}",
+        "[CELL PHONE]": "{{CARD_CELL}}",
+        "[EMAIL]": "{{CARD_EMAIL}}"
+      }
+    },
+    {
+      "id": "card-hvlc",
+      "group": "Business cards",
+      "facility": "hvlc",
+      "kind": "card",
+      "title": "Business card: HVLC",
+      "size": "3.5 × 2 in, two sides",
+      "inches": [
+        3.5,
+        2
+      ],
+      "pages": [
+        {
+          "file": "CardHVLCFront.dc.html",
+          "label": "Front"
+        },
+        {
+          "file": "CardHVLCBack.dc.html",
+          "label": "Back"
+        }
+      ],
+      "tokens": {
+        "[FULL NAME]": "{{CARD_NAME}}",
+        "[TITLE]": "{{CARD_TITLE}}",
+        "[DIRECT PHONE]": "{{CARD_DIRECT}}",
+        "[CELL PHONE]": "{{CARD_CELL}}",
+        "[EMAIL]": "{{CARD_EMAIL}}"
+      }
+    }
   ],
   "tokens": {
     "Mon–Fri [HOURS]": "{{HOURS}}",
