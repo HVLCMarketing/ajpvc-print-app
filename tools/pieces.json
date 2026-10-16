@@ -26,7 +26,12 @@
     "79d5005806d35a49129ee849d8da07bf": "body-xray.png",
     "158a101d7b421f5b9a25a229ae8a0e38": "embolization-step1.png",
     "21e8efcc4ea944f450ae7a3b9f584fea": "embolization-step2.png",
-    "8825ac01ec25eb3cca78f7461faca33e": "embolization-step3.png"
+    "8825ac01ec25eb3cca78f7461faca33e": "embolization-step3.png",
+    "20f8c9fd34f269f4024713d550cd27ef": "art-knee.webp",
+    "4509018806337624381f13e0837ae6b8": "art-hip.webp",
+    "c70bf890c51e43252dd7aec1e7f53692": "art-shoulder.webp",
+    "701cb436963a4832a0ead1dee88667d9": "art-hand.webp",
+    "116c16179869ca419469284512af802c": "art-heel.webp"
   },
   "pieces": [
     {"id": "trifold", "group": "Marketing materials", "facility": "ajpvc", "title": "Trifold brochure", "size": "11 × 8.5 in, two sides", "inches": [11, 8.5],
@@ -55,6 +60,10 @@
      "pages": [{"file": "ReferralForm.dc.html", "label": "Front: order form"}, {"file": "ReferralFormBack.dc.html", "label": "Back: insurance, services & location"}]},
     {"id": "newsletter-2026-11", "group": "Newsletters", "facility": "both", "title": "Patient newsletter: November 2026", "size": "4 pages, 8.5 × 11 in", "inches": [8.5, 11],
      "pages": [{"file": "NewsletterNov2026p1.dc.html", "label": "Page 1"}, {"file": "NewsletterNov2026p2.dc.html", "label": "Page 2"}, {"file": "NewsletterNov2026p3.dc.html", "label": "Page 3"}, {"file": "NewsletterNov2026p4.dc.html", "label": "Page 4"}]},
+    {"id": "art-18x24", "group": "Waiting room art", "facility": "ajpvc", "title": "Waiting room art: 18 × 24 prints (set of 5)", "size": "18 × 24 in, one print per page", "inches": [18, 24],
+     "pages": [{"file": "ArtKnee18x24.dc.html", "label": "Knee"}, {"file": "ArtHip18x24.dc.html", "label": "Hip"}, {"file": "ArtShoulder18x24.dc.html", "label": "Shoulder"}, {"file": "ArtHand18x24.dc.html", "label": "Hand"}, {"file": "ArtHeel18x24.dc.html", "label": "Heel"}]},
+    {"id": "art-24x36", "group": "Waiting room art", "facility": "ajpvc", "title": "Waiting room art: 24 × 36 prints (set of 5)", "size": "24 × 36 in, one print per page", "inches": [24, 36],
+     "pages": [{"file": "ArtKnee24x36.dc.html", "label": "Knee"}, {"file": "ArtHip24x36.dc.html", "label": "Hip"}, {"file": "ArtShoulder24x36.dc.html", "label": "Shoulder"}, {"file": "ArtHand24x36.dc.html", "label": "Hand"}, {"file": "ArtHeel24x36.dc.html", "label": "Heel"}]},
     {"id": "card-ajpvc", "group": "Business cards", "facility": "ajpvc", "kind": "card", "title": "Business card: AJPVC", "size": "3.5 × 2 in, two sides", "inches": [3.5, 2],
      "pages": [{"file": "CardAJPVCFront.dc.html", "label": "Front"}, {"file": "CardAJPVCBack.dc.html", "label": "Back"}],
      "tokens": {"[FULL NAME]": "{{CARD_NAME}}", "[TITLE]": "{{CARD_TITLE}}", "[DIRECT PHONE]": "{{CARD_DIRECT}}", "[CELL PHONE]": "{{CARD_CELL}}", "[EMAIL]": "{{CARD_EMAIL}}"}},

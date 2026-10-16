@@ -228,7 +228,7 @@
     ajpvc: { name: 'Advanced Joint Pain & Vascular Center', short: 'AJPVC', logo: 'assets/logo-long-transparent.png' },
     hvlc: { name: 'Heart Vascular & Leg Center', short: 'HVLC', logo: 'assets/logo-hvlc.png' }
   };
-  const GROUP_ORDER = ['Marketing materials', 'Folders', 'Patient guides', 'Newsletters', 'Referral materials'];
+  const GROUP_ORDER = ['Marketing materials', 'Folders', 'Patient guides', 'Newsletters', 'Waiting room art', 'Referral materials'];
   const gIdx = (g) => { const i = GROUP_ORDER.indexOf(g); return i < 0 ? 99 : i; };
   const byGroup = (a, b) => gIdx(a.group) - gIdx(b.group);
   const FAC_KEY = 'ajpvc.facility.v1';
