@@ -393,6 +393,109 @@
       ]
     },
     {
+      "id": "provider-sheets",
+      "group": "Referral materials",
+      "facility": "both",
+      "title": "Provider service sheets (6)",
+      "size": "6 one-page sheets, 8.5 × 11 in",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "RefSheet1.dc.html",
+          "label": "Knee (GAE)"
+        },
+        {
+          "file": "RefSheet2.dc.html",
+          "label": "Shoulder, hip, hand, heel (TAME/PFE)"
+        },
+        {
+          "file": "RefSheet3.dc.html",
+          "label": "PAD & limb salvage"
+        },
+        {
+          "file": "RefSheet4.dc.html",
+          "label": "Venous insufficiency"
+        },
+        {
+          "file": "RefSheet5.dc.html",
+          "label": "DVT & venous obstruction"
+        },
+        {
+          "file": "RefSheet6.dc.html",
+          "label": "Dialysis, carotid & HBOT"
+        }
+      ]
+    },
+    {
+      "id": "refer-card",
+      "group": "Referral materials",
+      "facility": "both",
+      "title": "When-to-refer pocket card",
+      "size": "4 × 9 in, 2-sided",
+      "inches": [
+        4,
+        9
+      ],
+      "pages": [
+        {
+          "file": "ReferCardFront.dc.html",
+          "label": "Front"
+        },
+        {
+          "file": "ReferCardBack.dc.html",
+          "label": "Back"
+        }
+      ]
+    },
+    {
+      "id": "provider-guide",
+      "group": "Referral materials",
+      "facility": "both",
+      "title": "Referring provider guide",
+      "size": "8-page booklet, 8.5 × 11 in pages",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "ProviderGuide1.dc.html",
+          "label": "Front cover"
+        },
+        {
+          "file": "ProviderGuide2.dc.html",
+          "label": "Who we are"
+        },
+        {
+          "file": "ProviderGuide3.dc.html",
+          "label": "Services at a glance"
+        },
+        {
+          "file": "ProviderGuide4.dc.html",
+          "label": "Joint pain program"
+        },
+        {
+          "file": "ProviderGuide5.dc.html",
+          "label": "Arterial care"
+        },
+        {
+          "file": "ProviderGuide6.dc.html",
+          "label": "Vein care & DVT"
+        },
+        {
+          "file": "ProviderGuide7.dc.html",
+          "label": "Testing & referral"
+        },
+        {
+          "file": "ProviderGuide8.dc.html",
+          "label": "Back cover"
+        }
+      ]
+    },
+    {
       "id": "vasc-guide",
       "group": "Patient guides",
       "facility": "both",
