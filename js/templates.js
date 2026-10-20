@@ -837,31 +837,31 @@ window.AJPVC_TEMPLATES = [
     "label": "Knee",
     "w": 1728,
     "h": 2304,
-    "html": "<div style=\"width: 1728px; height: 2304px; box-sizing: border-box; background: #F4F1E9; padding: 138px; display: flex; align-items: center; justify-content: center\"><img src=\"assets/wc-knee.jpg\" alt=\"Watercolor painting of the knee, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
+    "html": "<div style=\"position: relative; width: 1728px; height: 2304px; box-sizing: border-box; background: #F4F1E9; padding: 138px; display: flex; align-items: center; justify-content: center\"><p style=\"position: absolute; right: 110px; bottom: 96px; margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: 9px; text-transform: uppercase; color: #6E6A62\">The Knee</p><img src=\"assets/wc-knee.jpg\" alt=\"Watercolor painting of the knee, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
    },
    {
     "label": "Hip",
     "w": 1728,
     "h": 2304,
-    "html": "<div style=\"width: 1728px; height: 2304px; box-sizing: border-box; background: #F4F1E9; padding: 138px; display: flex; align-items: center; justify-content: center\"><img src=\"assets/wc-hip.jpg\" alt=\"Watercolor painting of the hip, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
+    "html": "<div style=\"position: relative; width: 1728px; height: 2304px; box-sizing: border-box; background: #F4F1E9; padding: 138px; display: flex; align-items: center; justify-content: center\"><p style=\"position: absolute; right: 110px; bottom: 96px; margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: 9px; text-transform: uppercase; color: #6E6A62\">The Hip</p><img src=\"assets/wc-hip.jpg\" alt=\"Watercolor painting of the hip, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
    },
    {
     "label": "Shoulder",
     "w": 1728,
     "h": 2304,
-    "html": "<div style=\"width: 1728px; height: 2304px; box-sizing: border-box; background: #F4F1E9; padding: 138px; display: flex; align-items: center; justify-content: center\"><img src=\"assets/wc-shoulder.jpg\" alt=\"Watercolor painting of the shoulder, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
+    "html": "<div style=\"position: relative; width: 1728px; height: 2304px; box-sizing: border-box; background: #F4F1E9; padding: 138px; display: flex; align-items: center; justify-content: center\"><p style=\"position: absolute; right: 110px; bottom: 96px; margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: 9px; text-transform: uppercase; color: #6E6A62\">The Shoulder</p><img src=\"assets/wc-shoulder.jpg\" alt=\"Watercolor painting of the shoulder, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
    },
    {
     "label": "Hand",
     "w": 1728,
     "h": 2304,
-    "html": "<div style=\"width: 1728px; height: 2304px; box-sizing: border-box; background: #F4F1E9; padding: 52px; display: flex; align-items: center; justify-content: center\"><img src=\"assets/wc-hand.jpg\" alt=\"Watercolor painting of the hand, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
+    "html": "<div style=\"position: relative; width: 1728px; height: 2304px; box-sizing: border-box; background: #F4F1E9; padding: 52px; display: flex; align-items: center; justify-content: center\"><p style=\"position: absolute; right: 110px; bottom: 96px; margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: 9px; text-transform: uppercase; color: #6E6A62\">The Hand</p><img src=\"assets/wc-hand.jpg\" alt=\"Watercolor painting of the hand, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
    },
    {
     "label": "Heel",
     "w": 1728,
     "h": 2304,
-    "html": "<div style=\"width: 1728px; height: 2304px; box-sizing: border-box; background: #F4F1E9; padding: 52px; display: flex; align-items: center; justify-content: center\"><img src=\"assets/wc-heel.jpg\" alt=\"Watercolor painting of the heel, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
+    "html": "<div style=\"position: relative; width: 1728px; height: 2304px; box-sizing: border-box; background: #F4F1E9; padding: 52px; display: flex; align-items: center; justify-content: center\"><p style=\"position: absolute; right: 110px; bottom: 96px; margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: 9px; text-transform: uppercase; color: #6E6A62\">The Heel</p><img src=\"assets/wc-heel.jpg\" alt=\"Watercolor painting of the heel, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
    }
   ]
  },
@@ -880,31 +880,31 @@ window.AJPVC_TEMPLATES = [
     "label": "Knee",
     "w": 2304,
     "h": 3456,
-    "html": "<div style=\"width: 2304px; height: 3456px; box-sizing: border-box; background: #F4F1E9; padding: 184px; display: flex; align-items: center; justify-content: center\"><img src=\"assets/wc-knee.jpg\" alt=\"Watercolor painting of the knee, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
+    "html": "<div style=\"position: relative; width: 2304px; height: 3456px; box-sizing: border-box; background: #F4F1E9; padding: 184px; display: flex; align-items: center; justify-content: center\"><p style=\"position: absolute; right: 147px; bottom: 128px; margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 40px; letter-spacing: 12px; text-transform: uppercase; color: #6E6A62\">The Knee</p><img src=\"assets/wc-knee.jpg\" alt=\"Watercolor painting of the knee, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
    },
    {
     "label": "Hip",
     "w": 2304,
     "h": 3456,
-    "html": "<div style=\"width: 2304px; height: 3456px; box-sizing: border-box; background: #F4F1E9; padding: 184px; display: flex; align-items: center; justify-content: center\"><img src=\"assets/wc-hip.jpg\" alt=\"Watercolor painting of the hip, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
+    "html": "<div style=\"position: relative; width: 2304px; height: 3456px; box-sizing: border-box; background: #F4F1E9; padding: 184px; display: flex; align-items: center; justify-content: center\"><p style=\"position: absolute; right: 147px; bottom: 128px; margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 40px; letter-spacing: 12px; text-transform: uppercase; color: #6E6A62\">The Hip</p><img src=\"assets/wc-hip.jpg\" alt=\"Watercolor painting of the hip, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
    },
    {
     "label": "Shoulder",
     "w": 2304,
     "h": 3456,
-    "html": "<div style=\"width: 2304px; height: 3456px; box-sizing: border-box; background: #F4F1E9; padding: 184px; display: flex; align-items: center; justify-content: center\"><img src=\"assets/wc-shoulder.jpg\" alt=\"Watercolor painting of the shoulder, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
+    "html": "<div style=\"position: relative; width: 2304px; height: 3456px; box-sizing: border-box; background: #F4F1E9; padding: 184px; display: flex; align-items: center; justify-content: center\"><p style=\"position: absolute; right: 147px; bottom: 128px; margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 40px; letter-spacing: 12px; text-transform: uppercase; color: #6E6A62\">The Shoulder</p><img src=\"assets/wc-shoulder.jpg\" alt=\"Watercolor painting of the shoulder, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
    },
    {
     "label": "Hand",
     "w": 2304,
     "h": 3456,
-    "html": "<div style=\"width: 2304px; height: 3456px; box-sizing: border-box; background: #F4F1E9; padding: 69px; display: flex; align-items: center; justify-content: center\"><img src=\"assets/wc-hand.jpg\" alt=\"Watercolor painting of the hand, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
+    "html": "<div style=\"position: relative; width: 2304px; height: 3456px; box-sizing: border-box; background: #F4F1E9; padding: 69px; display: flex; align-items: center; justify-content: center\"><p style=\"position: absolute; right: 147px; bottom: 128px; margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 40px; letter-spacing: 12px; text-transform: uppercase; color: #6E6A62\">The Hand</p><img src=\"assets/wc-hand.jpg\" alt=\"Watercolor painting of the hand, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
    },
    {
     "label": "Heel",
     "w": 2304,
     "h": 3456,
-    "html": "<div style=\"width: 2304px; height: 3456px; box-sizing: border-box; background: #F4F1E9; padding: 69px; display: flex; align-items: center; justify-content: center\"><img src=\"assets/wc-heel.jpg\" alt=\"Watercolor painting of the heel, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
+    "html": "<div style=\"position: relative; width: 2304px; height: 3456px; box-sizing: border-box; background: #F4F1E9; padding: 69px; display: flex; align-items: center; justify-content: center\"><p style=\"position: absolute; right: 147px; bottom: 128px; margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 40px; letter-spacing: 12px; text-transform: uppercase; color: #6E6A62\">The Heel</p><img src=\"assets/wc-heel.jpg\" alt=\"Watercolor painting of the heel, with the painful area washed in warm red and orange\" style=\"width: 100%; height: 100%; object-fit: contain; display: block\"></div>"
    }
   ]
  },
