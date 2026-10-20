@@ -501,6 +501,155 @@
       ]
     },
     {
+      "id": "flip-chart",
+      "group": "Referral materials",
+      "facility": "both",
+      "title": "Exam room flip chart",
+      "size": "Tent easel, 11 × 8.5 in landscape pages",
+      "inches": [
+        11,
+        8.5
+      ],
+      "pages": [
+        {
+          "file": "Flip00Cover.dc.html",
+          "label": "Cover"
+        },
+        {
+          "file": "Flip00Notes.dc.html",
+          "label": "How to use (provider side)"
+        },
+        {
+          "file": "Flip01Knee.dc.html",
+          "label": "Knee (patient side)"
+        },
+        {
+          "file": "Flip01KneeNotes.dc.html",
+          "label": "Knee (provider side)"
+        },
+        {
+          "file": "Flip02Healthy.dc.html",
+          "label": "Healthy (patient side)"
+        },
+        {
+          "file": "Flip02HealthyNotes.dc.html",
+          "label": "Healthy (provider side)"
+        },
+        {
+          "file": "Flip03Embolization.dc.html",
+          "label": "Embolization (patient side)"
+        },
+        {
+          "file": "Flip03EmbolizationNotes.dc.html",
+          "label": "Embolization (provider side)"
+        },
+        {
+          "file": "Flip04Shoulder.dc.html",
+          "label": "Shoulder (patient side)"
+        },
+        {
+          "file": "Flip04ShoulderNotes.dc.html",
+          "label": "Shoulder (provider side)"
+        },
+        {
+          "file": "Flip05Hip.dc.html",
+          "label": "Hip (patient side)"
+        },
+        {
+          "file": "Flip05HipNotes.dc.html",
+          "label": "Hip (provider side)"
+        },
+        {
+          "file": "Flip06Hand.dc.html",
+          "label": "Hand (patient side)"
+        },
+        {
+          "file": "Flip06HandNotes.dc.html",
+          "label": "Hand (provider side)"
+        },
+        {
+          "file": "Flip07Heel.dc.html",
+          "label": "Heel (patient side)"
+        },
+        {
+          "file": "Flip07HeelNotes.dc.html",
+          "label": "Heel (provider side)"
+        },
+        {
+          "file": "Flip08Circulation.dc.html",
+          "label": "Circulation (patient side)"
+        },
+        {
+          "file": "Flip08CirculationNotes.dc.html",
+          "label": "Circulation (provider side)"
+        },
+        {
+          "file": "Flip09PAD.dc.html",
+          "label": "PAD (patient side)"
+        },
+        {
+          "file": "Flip09PADNotes.dc.html",
+          "label": "PAD (provider side)"
+        },
+        {
+          "file": "Flip10Angio.dc.html",
+          "label": "Angio (patient side)"
+        },
+        {
+          "file": "Flip10AngioNotes.dc.html",
+          "label": "Angio (provider side)"
+        },
+        {
+          "file": "Flip11Wounds.dc.html",
+          "label": "Wounds (patient side)"
+        },
+        {
+          "file": "Flip11WoundsNotes.dc.html",
+          "label": "Wounds (provider side)"
+        },
+        {
+          "file": "Flip12Carotid.dc.html",
+          "label": "Carotid (patient side)"
+        },
+        {
+          "file": "Flip12CarotidNotes.dc.html",
+          "label": "Carotid (provider side)"
+        },
+        {
+          "file": "Flip13Valves.dc.html",
+          "label": "Valves (patient side)"
+        },
+        {
+          "file": "Flip13ValvesNotes.dc.html",
+          "label": "Valves (provider side)"
+        },
+        {
+          "file": "Flip14Closure.dc.html",
+          "label": "Closure (patient side)"
+        },
+        {
+          "file": "Flip14ClosureNotes.dc.html",
+          "label": "Closure (provider side)"
+        },
+        {
+          "file": "Flip15Sclero.dc.html",
+          "label": "Sclero (patient side)"
+        },
+        {
+          "file": "Flip15ScleroNotes.dc.html",
+          "label": "Sclero (provider side)"
+        },
+        {
+          "file": "Flip16DVT.dc.html",
+          "label": "DVT (patient side)"
+        },
+        {
+          "file": "Flip16DVTNotes.dc.html",
+          "label": "DVT (provider side)"
+        }
+      ]
+    },
+    {
       "id": "vasc-guide",
       "group": "Patient guides",
       "facility": "both",
