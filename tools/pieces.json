@@ -347,7 +347,7 @@
       "group": "Referral materials",
       "facility": "both",
       "title": "Personal injury referral form",
-      "size": "8.5 × 11 in, 1 page",
+      "size": "8.5 × 11 in, 2-sided",
       "inches": [
         8.5,
         11
@@ -355,7 +355,11 @@
       "pages": [
         {
           "file": "PIReferralForm.dc.html",
-          "label": "Form"
+          "label": "Front"
+        },
+        {
+          "file": "PIReferralFormBack.dc.html",
+          "label": "Back"
         }
       ]
     },
