@@ -1,0 +1,337 @@
+{
+ "inside_knee": {
+  "title": "Inside a Healthy Knee",
+  "points": [
+   "Smooth cartilage covers the bone ends so the knee glides.",
+   "A thin lining makes fluid that keeps the joint slippery.",
+   "Cartilage has no nerves, so pain comes from other parts."
+  ],
+  "explain": [
+   "Cartilage gives a smooth, low-friction surface; it has no blood vessels and no pain-sensing nerves.",
+   "The synovium lines the joint and makes fluid that lubricates and nourishes the cartilage.",
+   "Bone under the cartilage, menisci, ligaments, tendons, muscles, nerves and vessels work together as one system."
+  ],
+  "options": [
+   "Education and self-management about how the joint works",
+   "Strengthening for quadriceps, hamstrings and hip muscles",
+   "Weight management when relevant, to reduce joint load"
+  ],
+  "ask": [
+   "Where exactly is the pain, and what makes it worse?",
+   "Is there swelling, warmth, or stiffness after rest?",
+   "What has your joint problem stopped you from doing?"
+  ],
+  "refer": [
+   "Hot, swollen, painful joint with fever: urgent evaluation for infection.",
+   "Inability to bear weight, deformity, or sudden loss of function after injury.",
+   "A genuinely locked knee: evaluate for a treatable mechanical obstruction."
+  ]
+ },
+ "whole_joint": {
+  "title": "Arthritis Is a Whole-Joint Disease",
+  "points": [
+   "Arthritis is more than “wear and tear.”",
+   "Cartilage, bone, the joint lining, and other parts can change.",
+   "Two people with similar X-rays can hurt very differently."
+  ],
+  "explain": [
+   "OA involves cartilage, subchondral bone, synovium, menisci, ligaments and surrounding tissues, not cartilage alone.",
+   "Pain can come from inflamed synovium, subchondral bone, the joint capsule, periarticular tissues and sensitized nerves.",
+   "Similar X-rays can hide different biology: some patients have more synovitis, others more structural or bone changes."
+  ],
+  "options": [
+   "Education, exercise and physical therapy as the foundation",
+   "Weight management, bracing or a cane when appropriate",
+   "Topical or oral NSAIDs, weighing each patient’s risks",
+   "Injections or GAE if symptoms persist despite good care"
+  ],
+  "ask": [
+   "How long does morning stiffness last?",
+   "Are other joints swollen or painful?",
+   "How is the pain affecting your sleep and activity?"
+  ],
+  "refer": [
+   "Persistent swelling, prolonged morning stiffness, or symmetric small-joint involvement: consider inflammatory arthritis and rheumatology.",
+   "Hot, swollen joint with systemic symptoms: urgent evaluation for septic arthritis."
+  ]
+ },
+ "referred": {
+  "title": "Where Pain Starts Isn’t Always Where It Hurts",
+  "points": [
+   "Hip or back problems can cause pain felt in the knee.",
+   "Finding the true source helps pick the right treatment.",
+   "Tell us about numbness, tingling, or pain in other areas."
+  ],
+  "explain": [
+   "Hip disease and lumbar spine problems can produce pain felt around the knee, thigh or buttock.",
+   "Knee-directed treatment may not help if the main pain source is elsewhere.",
+   "GAE treats pain arising from the knee itself; it cannot fix pain coming from the hip or spine."
+  ],
+  "options": [
+   "Treat each pain generator on its own terms",
+   "Knee treatments, including GAE, when the knee is the main source",
+   "Separate evaluation and care for hip or back pain"
+  ],
+  "ask": [
+   "Does the pain spread into your thigh, buttock or lower back?",
+   "Do you have numbness, tingling or weakness?",
+   "Are several joints affected, or have you had fever?"
+  ],
+  "refer": [
+   "Back pain with new bladder or bowel dysfunction or saddle numbness: emergency.",
+   "New weakness, numbness, limb color or temperature change, or absent pulses.",
+   "Persistent swelling of small hand or foot joints: rheumatologic evaluation."
+  ]
+ },
+ "kl_grades": {
+  "title": "How Knee Arthritis Is Graded",
+  "points": [
+   "Doctors grade knee arthritis on an X-ray from 0 to 4.",
+   "Higher grades mean more changes in the joint’s shape.",
+   "Your grade does not measure how much you hurt."
+  ],
+  "explain": [
+   "Kellgren–Lawrence grades radiographic OA 0 to 4: none, doubtful, definite but mild, moderate, severe.",
+   "The grade reflects osteophytes, joint-space narrowing, sclerosis and deformity — it is not a measure of pain.",
+   "Some patients have major structural change with little pain; others have significant pain with milder X-ray findings."
+  ],
+  "options": [
+   "Knee X-ray as the first imaging test",
+   "MRI when X-rays are nondiagnostic or specific problems suspected",
+   "Plan treatment on symptoms, function and imaging together",
+   "GAE typically considered for mild-to-moderate OA; some advanced cases too"
+  ],
+  "ask": [
+   "Does your X-ray match how your knee feels day to day?",
+   "What activities has your knee pain stopped you from doing?"
+  ],
+  "refer": [
+   "Grade 4 with major deformity: orthopedic assessment — do not delay it solely to pursue GAE.",
+   "Severe pain with only mild X-ray changes: look for other pain sources (hip, spine, meniscus)."
+  ]
+ },
+ "spectrum": {
+  "title": "Your Treatment Options, From Self-Care to Surgery",
+  "points": [
+   "Exercise and self-care are the base of every plan.",
+   "Shots or GAE may help if pain keeps going.",
+   "Surgery is an option when joint damage is advanced."
+  ],
+  "explain": [
+   "Education, exercise, physical therapy and weight management are core OA care, not just a waiting period.",
+   "Steroid injections give short-term relief for some; evidence for hyaluronic acid and PRP is mixed.",
+   "GAE and replacement are not interchangeable; replacement suits advanced structural disease when nonsurgical care has failed."
+  ],
+  "options": [
+   "Exercise, PT, weight management, bracing, topical or oral NSAIDs",
+   "Steroid injection for short-term relief; HA and PRP evidence mixed",
+   "GAE for persistent knee OA pain in selected patients",
+   "Osteotomy, partial or total knee replacement when indicated"
+  ],
+  "ask": [
+   "What would you do if your knee hurt less?",
+   "Which treatments have you tried, for how long, and did they help?",
+   "Are you hoping to avoid or delay surgery?"
+  ],
+  "refer": [
+   "Advanced OA with substantial pain and functional loss despite nonsurgical care: orthopedic assessment.",
+   "Persistent symptomatic knee OA despite appropriate care: GAE consultation.",
+   "Features of inflammatory arthritis: rheumatology."
+  ]
+ },
+ "lining": {
+  "title": "Inside the Joint Lining: Extra Vessels and Nerves",
+  "points": [
+   "Arthritis can make the thin lining inside the knee swollen.",
+   "New blood vessels and nerves can grow there and add pain.",
+   "GAE aims to calm these extra vessels, not fix cartilage."
+  ],
+  "explain": [
+   "Inflamed synovium signals new vessel growth; new vessels may let in more inflammatory cells, sustaining a cycle.",
+   "Sensory nerves may grow alongside new vessels, and inflammation can make nerve endings more sensitive.",
+   "This is one possible contributor to OA pain; mechanisms remain under investigation and sham-controlled trials are mixed."
+  ],
+  "options": [
+   "Foundation care: exercise, physical therapy, appropriate medications",
+   "Steroid injection to reduce inflammation short term",
+   "GAE to reduce flow to selected abnormal vessels"
+  ],
+  "ask": [
+   "Does your knee swell or feel warm?",
+   "Where is your single most painful spot?",
+   "Is the pain worse at night or at rest?"
+  ],
+  "refer": [
+   "Persistent symptomatic knee OA despite appropriate care: discuss GAE evaluation.",
+   "Suspected rheumatoid or psoriatic arthritis: rheumatology — GAE is not an established first-line treatment."
+  ]
+ },
+ "gae_vs_tkr": {
+  "title": "GAE and Knee Replacement Are Different Tools",
+  "points": [
+   "GAE treats painful blood vessels through a pinhole in an artery.",
+   "Knee replacement swaps damaged joint surfaces using open surgery.",
+   "GAE does not rebuild cartilage or straighten a crooked knee."
+  ],
+  "explain": [
+   "GAE targets abnormal vessels feeding inflamed tissue; replacement removes and replaces damaged joint surfaces.",
+   "GAE: local anesthesia, usually home same day, routine activity within days. Replacement: weeks to months of rehabilitation.",
+   "Having GAE does not prevent a later replacement, but it is not a substitute when surgery is clearly indicated."
+  ],
+  "options": [
+   "GAE: persistent pain, not ready for or unsuited to surgery",
+   "Total knee replacement: advanced structural damage and deformity",
+   "Partial replacement or osteotomy for one-compartment disease"
+  ],
+  "ask": [
+   "What worries you most about surgery?",
+   "Has an orthopedic surgeon evaluated your knee?",
+   "What result would make a treatment worthwhile for you?"
+  ],
+  "refer": [
+   "Major deformity or advanced disease where replacement is indicated: do not delay orthopedic consultation.",
+   "Persistent OA pain in a patient wishing to delay or avoid surgery: GAE consultation."
+  ]
+ },
+ "candidate": {
+  "title": "Is GAE Right for Me?",
+  "points": [
+   "Good fit: knee arthritis pain despite 3+ months of good care.",
+   "Pain from your hip, back, or nerves needs a closer look.",
+   "An infection or a tear needing surgery usually rules it out."
+  ],
+  "explain": [
+   "Often a good fit: OA knee pain of 5/10 or more limiting daily life despite 3+ months of good conservative care.",
+   "Typically mild-to-moderate OA on X-ray; some advanced cases with active synovitis may still benefit.",
+   "Patients must understand GAE reduces symptoms, does not reverse OA, and benefit may be limited or fade."
+  ],
+  "options": [
+   "Optimize exercise, PT, weight and medications first",
+   "GAE for selected persistent symptomatic knee OA",
+   "Orthopedic assessment for major deformity or structural failure",
+   "Coverage varies; many insurers consider GAE investigational"
+  ],
+  "ask": [
+   "How long have you had pain, and how bad is it from 0 to 10?",
+   "What treatments have you tried, and for how long?",
+   "Do you take blood thinners, or have kidney disease or a contrast allergy?"
+  ],
+  "refer": [
+   "Usually not a fit: active infection, advanced PAD, meniscus or ligament tear needing surgery, major malalignment.",
+   "Inflammatory arthritis as the main cause of pain: rheumatology.",
+   "Mild PAD, kidney disease, contrast allergy or bleeding risk: needs careful evaluation, not automatic exclusion."
+  ]
+ },
+ "gae_day": {
+  "title": "A Typical GAE Day",
+  "points": [
+   "Most people go home the same day.",
+   "A numbing shot is used, and many people stay awake.",
+   "The procedure itself often takes about one to two hours."
+  ],
+  "explain": [
+   "Local anesthetic at the access site, often the groin; some centers add IV sedation. Many patients stay awake.",
+   "Angiography shows abnormal “blush”; a microcatheter delivers embolic material to selected branches while sparing normal tissue.",
+   "The procedure commonly takes about one to two hours; most patients go home the same day after observation."
+  ],
+  "options": [
+   "Bring a complete list of medicines and supplements",
+   "Don’t stop medicines unless your specialist says so",
+   "Follow fasting instructions; arrange a driver if sedated"
+  ],
+  "ask": [
+   "Do you take blood thinners, antiplatelets or diabetes medicines?",
+   "Do you have kidney problems or a contrast dye allergy?",
+   "Who can drive you home?"
+  ],
+  "refer": [
+   "Anticoagulation: coordinate a periprocedural plan with the prescribing physician.",
+   "Access-site bleeding, uncontrolled pain or other concerns: longer observation or admission."
+  ]
+ },
+ "recovery": {
+  "title": "The Road to Recovery After GAE",
+  "points": [
+   "Expect a sore knee for a few days.",
+   "Pain often eases over weeks; most gains come by 3–6 months.",
+   "Keep exercising — it helps you get the most from GAE."
+  ],
+  "explain": [
+   "First week: knee ache or flare, access-site bruising, possible skin color change; routine activity within days.",
+   "Pain often starts easing in weeks 2–6; most benefit by 3–6 months, tracked with KOOS or WOMAC.",
+   "Results vary; some get years of relief, others less. Studies without a sham group likely overstate the effect."
+  ],
+  "options": [
+   "Resume and progress physical therapy as pain eases",
+   "If pain returns: reassess, repeat GAE, or other treatments",
+   "Orthopedic evaluation if structural disease progresses"
+  ],
+  "ask": [
+   "How far can you walk now compared with before?",
+   "Are you keeping up with your exercises?",
+   "Has the pain changed location or character?"
+  ],
+  "refer": [
+   "Returning pain: rule out a new meniscal tear or hip or back source first.",
+   "Repeat GAE: expert consensus suggests waiting at least three months on the same knee.",
+   "Structural progression with disability: orthopedics — prior GAE does not prevent replacement."
+  ]
+ },
+ "after_call": {
+  "title": "After GAE: What’s Normal and When to Call",
+  "points": [
+   "A mild ache, small bruise, or faint skin blotch is normal.",
+   "Call for fever, bleeding, or skin that blisters or darkens.",
+   "Cold, numb leg or heavy bleeding? Call 911."
+  ],
+  "explain": [
+   "Skin discoloration happens when embolic material reaches tiny skin vessels; it usually fades over days to weeks.",
+   "Small skin ulcers occasionally occur and usually heal on their own with monitoring.",
+   "At the access site, a small bruise is common; a firm, growing or very painful swelling is not."
+  ],
+  "options": [
+   "Pain relief as recommended by the care team",
+   "Monitor and treat any skin breakdown",
+   "Prompt evaluation of access-site swelling or bleeding"
+  ],
+  "ask": [
+   "Any fever, chills, or spreading redness or warmth?",
+   "Is your foot cold, pale, blue or numb?",
+   "Is the skin over the knee blistering or darkening?"
+  ],
+  "refer": [
+   "Cold, numb leg or heavy bleeding: call 911.",
+   "Severe or rapidly worsening knee pain not controlled by recommended relief.",
+   "Numbness or tingling in the foot or leg that does not go away."
+  ]
+ },
+ "beyond": {
+  "title": "Embolization Beyond the Knee",
+  "points": [
+   "The same idea is being tried in the shoulder, elbow, and heel.",
+   "Research is early, mostly small studies, and results vary.",
+   "Regular care comes first; this is for pain that won’t improve."
+  ],
+  "explain": [
+   "Frozen shoulder, tennis elbow, plantar fasciitis, hip and hand OA: evidence is mostly small case series without controls.",
+   "After knee replacement, embolization has an established role for recurrent bleeding; data for persistent pain are early.",
+   "Consider only after a confirmed diagnosis and several months of standard care; results are uncertain."
+  ],
+  "options": [
+   "Frozen shoulder: physical therapy, injections, time",
+   "Tennis elbow: activity modification, physical therapy, time",
+   "Plantar fasciitis: stretching, footwear, orthotics, physical therapy",
+   "Embolization for selected patients not improving with standard care"
+  ],
+  "ask": [
+   "How long has the pain lasted despite treatment?",
+   "Has imaging ruled out a tear, fracture or nerve compression?",
+   "Do you understand the evidence is still early?"
+  ],
+  "refer": [
+   "Sudden pop with weakness pushing off: prompt assessment for Achilles rupture.",
+   "Pain after knee replacement: exclude infection, loosening and instability first.",
+   "Recurrent bleeding into a replaced knee: embolization evaluation."
+  ]
+ }
+}
