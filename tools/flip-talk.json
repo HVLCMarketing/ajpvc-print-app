@@ -201,9 +201,9 @@
  "candidate": {
   "title": "Is GAE Right for Me?",
   "points": [
-   "Good fit: knee arthritis pain despite 3+ months of good care.",
+   "Worth discussing: knee arthritis pain despite good care.",
    "Pain from your hip, back, or nerves needs a closer look.",
-   "An infection or a tear needing surgery usually rules it out."
+   "Infection or a problem needing surgery may come first."
   ],
   "explain": [
    "Often a good fit: OA knee pain of 5/10 or more limiting daily life despite 3+ months of good conservative care.",
@@ -225,7 +225,8 @@
    "Usually not a fit: active infection, advanced PAD, meniscus or ligament tear needing surgery, major malalignment.",
    "Inflammatory arthritis as the main cause of pain: rheumatology.",
    "Mild PAD, kidney disease, contrast allergy or bleeding risk: needs careful evaluation, not automatic exclusion."
-  ]
+  ],
+  "alt": "Three columns on whether GAE could be an option: reasons to discuss GAE, factors needing review, and when other care may come first, plus a note about pain after knee replacement"
  },
  "gae_day": {
   "title": "A Typical GAE Day",
