@@ -558,235 +558,235 @@
       "pages": [
         {
           "file": "FlipJ00Cover.dc.html",
-          "label": "Cover"
+          "label": "J00a · Cover"
         },
         {
           "file": "FlipJ00Notes.dc.html",
-          "label": "How to use (provider side)"
+          "label": "J00b · How to use (provider side)"
         },
         {
           "file": "FlipJ01InsideKnee.dc.html",
-          "label": "Inside Knee (patient side)"
+          "label": "J01a · Inside a Healthy Knee (patient side)"
         },
         {
           "file": "FlipJ01InsideKneeNotes.dc.html",
-          "label": "Inside Knee (provider side)"
+          "label": "J01b · Inside a Healthy Knee (provider side)"
         },
         {
           "file": "FlipJ02WholeJoint.dc.html",
-          "label": "Whole Joint (patient side)"
+          "label": "J02a · Arthritis Is a Whole-Joint Disease (patient side)"
         },
         {
           "file": "FlipJ02WholeJointNotes.dc.html",
-          "label": "Whole Joint (provider side)"
+          "label": "J02b · Arthritis Is a Whole-Joint Disease (provider side)"
         },
         {
           "file": "FlipJ03Types.dc.html",
-          "label": "Types (patient side)"
+          "label": "J03a · Arthritis Is Not One Disease (patient side)"
         },
         {
           "file": "FlipJ03TypesNotes.dc.html",
-          "label": "Types (provider side)"
+          "label": "J03b · Arthritis Is Not One Disease (provider side)"
         },
         {
           "file": "FlipJ04PainPatterns.dc.html",
-          "label": "Pain Patterns (patient side)"
+          "label": "J04a · Understanding Pain Patterns (patient side)"
         },
         {
           "file": "FlipJ04PainPatternsNotes.dc.html",
-          "label": "Pain Patterns (provider side)"
+          "label": "J04b · Understanding Pain Patterns (provider side)"
         },
         {
           "file": "FlipJ05Referred.dc.html",
-          "label": "Referred (patient side)"
+          "label": "J05a · Where Pain Starts Isn’t Always Where It Hurts (patient side)"
         },
         {
           "file": "FlipJ05ReferredNotes.dc.html",
-          "label": "Referred (provider side)"
+          "label": "J05b · Where Pain Starts Isn’t Always Where It Hurts (provider side)"
         },
         {
           "file": "FlipJ06Grades.dc.html",
-          "label": "Grades (patient side)"
+          "label": "J06a · How Knee Arthritis Is Graded (patient side)"
         },
         {
           "file": "FlipJ06GradesNotes.dc.html",
-          "label": "Grades (provider side)"
+          "label": "J06b · How Knee Arthritis Is Graded (provider side)"
         },
         {
           "file": "FlipJ07PainCycle.dc.html",
-          "label": "Pain Cycle (patient side)"
+          "label": "J07a · Breaking the Pain Cycle (patient side)"
         },
         {
           "file": "FlipJ07PainCycleNotes.dc.html",
-          "label": "Pain Cycle (provider side)"
+          "label": "J07b · Breaking the Pain Cycle (provider side)"
         },
         {
           "file": "FlipJ08Foundation.dc.html",
-          "label": "Foundation (patient side)"
+          "label": "J08a · Building the Foundation (patient side)"
         },
         {
           "file": "FlipJ08FoundationNotes.dc.html",
-          "label": "Foundation (provider side)"
+          "label": "J08b · Building the Foundation (provider side)"
         },
         {
           "file": "FlipJ09Options.dc.html",
-          "label": "Options (patient side)"
+          "label": "J09a · Your Treatment Options, From Self-Care to Surgery (patient side)"
         },
         {
           "file": "FlipJ09OptionsNotes.dc.html",
-          "label": "Options (provider side)"
+          "label": "J09b · Your Treatment Options, From Self-Care to Surgery (provider side)"
         },
         {
           "file": "FlipJ10Lining.dc.html",
-          "label": "Lining (patient side)"
+          "label": "J10a · Inside the Joint Lining: Extra Vessels and Nerves (patient side)"
         },
         {
           "file": "FlipJ10LiningNotes.dc.html",
-          "label": "Lining (provider side)"
+          "label": "J10b · Inside the Joint Lining: Extra Vessels and Nerves (provider side)"
         },
         {
           "file": "FlipJ11Vessels.dc.html",
-          "label": "Vessels (patient side)"
+          "label": "J11a · Blood Vessels and Knee Pain (patient side)"
         },
         {
           "file": "FlipJ11VesselsNotes.dc.html",
-          "label": "Vessels (provider side)"
+          "label": "J11b · Blood Vessels and Knee Pain (provider side)"
         },
         {
           "file": "FlipJ12Arteries.dc.html",
-          "label": "Arteries (patient side)"
+          "label": "J12a · The Genicular Arteries (patient side)"
         },
         {
           "file": "FlipJ12ArteriesNotes.dc.html",
-          "label": "Arteries (provider side)"
+          "label": "J12b · The Genicular Arteries (provider side)"
         },
         {
           "file": "FlipJ13HowGae.dc.html",
-          "label": "How GAE (patient side)"
+          "label": "J13a · How GAE Is Designed to Work (patient side)"
         },
         {
           "file": "FlipJ13HowGaeNotes.dc.html",
-          "label": "How GAE (provider side)"
+          "label": "J13b · How GAE Is Designed to Work (provider side)"
         },
         {
           "file": "FlipJ14GaeInside.dc.html",
-          "label": "GAE Inside (patient side)"
+          "label": "J14a · Treating From Inside the Vessels (patient side)"
         },
         {
           "file": "FlipJ14GaeInsideNotes.dc.html",
-          "label": "GAE Inside (provider side)"
+          "label": "J14b · Treating From Inside the Vessels (provider side)"
         },
         {
           "file": "FlipJ15Angiogram.dc.html",
-          "label": "Angiogram (patient side)"
+          "label": "J15a · What the Angiogram Shows (patient side)"
         },
         {
           "file": "FlipJ15AngiogramNotes.dc.html",
-          "label": "Angiogram (provider side)"
+          "label": "J15b · What the Angiogram Shows (provider side)"
         },
         {
           "file": "FlipJ16VsReplacement.dc.html",
-          "label": "vs. Replacement (patient side)"
+          "label": "J16a · GAE and Knee Replacement Are Different Tools (patient side)"
         },
         {
           "file": "FlipJ16VsReplacementNotes.dc.html",
-          "label": "vs. Replacement (provider side)"
+          "label": "J16b · GAE and Knee Replacement Are Different Tools (provider side)"
         },
         {
           "file": "FlipJ17Candidate.dc.html",
-          "label": "Candidate (patient side)"
+          "label": "J17a · Is GAE Right for Me? (patient side)"
         },
         {
           "file": "FlipJ17CandidateNotes.dc.html",
-          "label": "Candidate (provider side)"
+          "label": "J17b · Is GAE Right for Me? (provider side)"
         },
         {
           "file": "FlipJ18GaeDay.dc.html",
-          "label": "GAE Day (patient side)"
+          "label": "J18a · A Typical GAE Day (patient side)"
         },
         {
           "file": "FlipJ18GaeDayNotes.dc.html",
-          "label": "GAE Day (provider side)"
+          "label": "J18b · A Typical GAE Day (provider side)"
         },
         {
           "file": "FlipJ19Recovery.dc.html",
-          "label": "Recovery (patient side)"
+          "label": "J19a · The Road to Recovery After GAE (patient side)"
         },
         {
           "file": "FlipJ19RecoveryNotes.dc.html",
-          "label": "Recovery (provider side)"
+          "label": "J19b · The Road to Recovery After GAE (provider side)"
         },
         {
           "file": "FlipJ20SideEffects.dc.html",
-          "label": "Side Effects (patient side)"
+          "label": "J20a · Side Effects at a Glance (patient side)"
         },
         {
           "file": "FlipJ20SideEffectsNotes.dc.html",
-          "label": "Side Effects (provider side)"
+          "label": "J20b · Side Effects at a Glance (provider side)"
         },
         {
           "file": "FlipJ21AfterGae.dc.html",
-          "label": "After GAE (patient side)"
+          "label": "J21a · After GAE: What’s Normal and When to Call (patient side)"
         },
         {
           "file": "FlipJ21AfterGaeNotes.dc.html",
-          "label": "After GAE (provider side)"
+          "label": "J21b · After GAE: What’s Normal and When to Call (provider side)"
         },
         {
           "file": "FlipJ22Decision.dc.html",
-          "label": "Decision (patient side)"
+          "label": "J22a · A Step-by-Step Decision Path (patient side)"
         },
         {
           "file": "FlipJ22DecisionNotes.dc.html",
-          "label": "Decision (provider side)"
+          "label": "J22b · A Step-by-Step Decision Path (provider side)"
         },
         {
           "file": "FlipJ23Week.dc.html",
-          "label": "Week (patient side)"
+          "label": "J23a · A Joint-Friendly Week (patient side)"
         },
         {
           "file": "FlipJ23WeekNotes.dc.html",
-          "label": "Week (provider side)"
+          "label": "J23b · A Joint-Friendly Week (provider side)"
         },
         {
           "file": "FlipJ24Beyond.dc.html",
-          "label": "Beyond (patient side)"
+          "label": "J24a · Embolization Beyond the Knee (patient side)"
         },
         {
           "file": "FlipJ24BeyondNotes.dc.html",
-          "label": "Beyond (provider side)"
+          "label": "J24b · Embolization Beyond the Knee (provider side)"
         },
         {
           "file": "FlipJ25Shoulder.dc.html",
-          "label": "Shoulder (patient side)"
+          "label": "J25a · Shoulder Pain (patient side)"
         },
         {
           "file": "FlipJ25ShoulderNotes.dc.html",
-          "label": "Shoulder (provider side)"
+          "label": "J25b · Shoulder pain and TAME (provider side)"
         },
         {
           "file": "FlipJ26Hip.dc.html",
-          "label": "Hip (patient side)"
+          "label": "J26a · Hip Arthritis Pain (patient side)"
         },
         {
           "file": "FlipJ26HipNotes.dc.html",
-          "label": "Hip (provider side)"
+          "label": "J26b · Hip pain and TAME (provider side)"
         },
         {
           "file": "FlipJ27Hand.dc.html",
-          "label": "Hand (patient side)"
+          "label": "J27a · Hand & Thumb Arthritis (patient side)"
         },
         {
           "file": "FlipJ27HandNotes.dc.html",
-          "label": "Hand (provider side)"
+          "label": "J27b · Hand OA and TAME (provider side)"
         },
         {
           "file": "FlipJ28Heel.dc.html",
-          "label": "Heel (patient side)"
+          "label": "J28a · Heel Pain (Plantar Fasciitis) (patient side)"
         },
         {
           "file": "FlipJ28HeelNotes.dc.html",
-          "label": "Heel (provider side)"
+          "label": "J28b · Heel pain and PFE (provider side)"
         }
       ]
     },
@@ -803,83 +803,83 @@
       "pages": [
         {
           "file": "FlipV00Cover.dc.html",
-          "label": "Cover"
+          "label": "V00a · Cover"
         },
         {
           "file": "FlipV00Notes.dc.html",
-          "label": "How to use (provider side)"
+          "label": "V00b · How to use (provider side)"
         },
         {
           "file": "FlipV01Circulation.dc.html",
-          "label": "Circulation (patient side)"
+          "label": "V01a · How Blood Flows Through Your Legs (patient side)"
         },
         {
           "file": "FlipV01CirculationNotes.dc.html",
-          "label": "Circulation (provider side)"
+          "label": "V01b · Circulation basics (provider side)"
         },
         {
           "file": "FlipV02PAD.dc.html",
-          "label": "PAD (patient side)"
+          "label": "V02a · Peripheral Artery Disease (PAD) (patient side)"
         },
         {
           "file": "FlipV02PADNotes.dc.html",
-          "label": "PAD (provider side)"
+          "label": "V02b · PAD (provider side)"
         },
         {
           "file": "FlipV03Angio.dc.html",
-          "label": "Angio (patient side)"
+          "label": "V03a · Opening a Narrowed Artery (patient side)"
         },
         {
           "file": "FlipV03AngioNotes.dc.html",
-          "label": "Angio (provider side)"
+          "label": "V03b · Angiogram, angioplasty and stenting (provider side)"
         },
         {
           "file": "FlipV04Wounds.dc.html",
-          "label": "Wounds (patient side)"
+          "label": "V04a · Nonhealing Wounds & Preventing Amputation (patient side)"
         },
         {
           "file": "FlipV04WoundsNotes.dc.html",
-          "label": "Wounds (provider side)"
+          "label": "V04b · Limb salvage (provider side)"
         },
         {
           "file": "FlipV05Carotid.dc.html",
-          "label": "Carotid (patient side)"
+          "label": "V05a · Carotid Artery Disease (patient side)"
         },
         {
           "file": "FlipV05CarotidNotes.dc.html",
-          "label": "Carotid (provider side)"
+          "label": "V05b · Carotid disease (provider side)"
         },
         {
           "file": "FlipV06Valves.dc.html",
-          "label": "Valves (patient side)"
+          "label": "V06a · Healthy Valves vs. Weak Valves (patient side)"
         },
         {
           "file": "FlipV06ValvesNotes.dc.html",
-          "label": "Valves (provider side)"
+          "label": "V06b · Venous insufficiency (provider side)"
         },
         {
           "file": "FlipV07Closure.dc.html",
-          "label": "Closure (patient side)"
+          "label": "V07a · Closing the Faulty Vein (patient side)"
         },
         {
           "file": "FlipV07ClosureNotes.dc.html",
-          "label": "Closure (provider side)"
+          "label": "V07b · Vein closure (provider side)"
         },
         {
           "file": "FlipV08Sclero.dc.html",
-          "label": "Sclero (patient side)"
+          "label": "V08a · Spider Veins & Bulging Surface Veins (patient side)"
         },
         {
           "file": "FlipV08ScleroNotes.dc.html",
-          "label": "Sclero (provider side)"
+          "label": "V08b · Sclerotherapy and phlebectomy (provider side)"
         },
         {
           "file": "FlipV09DVT.dc.html",
-          "label": "DVT (patient side)"
+          "label": "V09a · Blood Clots & Deep Vein Problems (patient side)"
         },
         {
           "file": "FlipV09DVTNotes.dc.html",
-          "label": "DVT (provider side)"
+          "label": "V09b · DVT and deep veins (provider side)"
         }
       ]
     },
