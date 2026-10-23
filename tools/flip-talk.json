@@ -258,7 +258,7 @@
   "title": "The Road to Recovery After GAE",
   "points": [
    "Expect a sore knee for a few days.",
-   "Pain often eases over weeks; most gains come by 3–6 months.",
+   "Pain may ease over weeks; we review progress at 3–6 months.",
    "Keep exercising — it helps you get the most from GAE."
   ],
   "explain": [
@@ -280,7 +280,8 @@
    "Returning pain: rule out a new meniscal tear or hip or back source first.",
    "Repeat GAE: expert consensus suggests waiting at least three months on the same knee.",
    "Structural progression with disability: orthopedics — prior GAE does not prevent replacement."
-  ]
+  ],
+  "alt": "Recovery timeline after GAE: day 0 initial recovery, days 1 to 7 early recovery, weeks 2 to 6 assess early response, months 3 to 6 review progress, and 6 months and beyond continue knee care"
  },
  "after_call": {
   "title": "After GAE: What’s Normal and When to Call",
