@@ -251,7 +251,8 @@
   "refer": [
    "Anticoagulation: coordinate a periprocedural plan with the prescribing physician.",
    "Access-site bleeding, uncontrolled pain or other concerns: longer observation or admission."
-  ]
+  ],
+  "alt": "Six steps of a typical GAE day: check-in, preparation, the GAE procedure (often about 1 to 2 hours), recovery, discharge review, and going home"
  },
  "recovery": {
   "title": "The Road to Recovery After GAE",
