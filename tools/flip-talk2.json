@@ -236,7 +236,7 @@
   "points": [
    "Dye makes the knee arteries visible on X-ray.",
    "Abnormal vessels show up as a cloudy “blush.”",
-   "After treatment the blush fades; main artery stays open."
+   "The goal: less blush, with the main artery left open."
   ],
   "explain": [
    "Contrast angiography can show abnormal vascular staining, often called a blush, that may correspond to inflamed tissue and the patient’s painful region.",
@@ -258,7 +258,7 @@
    "Reduced kidney function: check labs and minimize contrast.",
    "Blush that does not match the painful area: reassess the pain source."
   ],
-  "alt": "Side-by-side simplified X-ray drawings: before, a cloudy abnormal blush of small vessels beside a branch artery; after, the blush is reduced and the main artery is still open."
+  "alt": "Two simplified angiogram drawings: before embolization, a cloudy small-vessel blush; the intended result after embolization, a reduced blush with normal flow preserved in the main artery"
  },
  "side_effects": {
   "title": "Side Effects at a Glance",
