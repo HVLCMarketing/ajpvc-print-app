@@ -286,8 +286,8 @@
  "after_call": {
   "title": "After GAE: What’s Normal and When to Call",
   "points": [
-   "A mild ache, small bruise, or faint skin blotch is normal.",
-   "Call for fever, bleeding, or skin that blisters or darkens.",
+   "A mild ache, small bruise, or tiredness is normal.",
+   "Call for fever, new swelling, worse pain, or skin changes.",
    "Cold, numb leg or heavy bleeding? Call 911."
   ],
   "explain": [
@@ -309,7 +309,8 @@
    "Cold, numb leg or heavy bleeding: call 911.",
    "Severe or rapidly worsening knee pain not controlled by recommended relief.",
    "Numbness or tingling in the foot or leg that does not go away."
-  ]
+  ],
+  "alt": "Three columns of symptoms after GAE: often mild and temporary, call your care team now, and call 911 now, plus what to do for puncture-site bleeding"
  },
  "beyond": {
   "title": "Embolization Beyond the Knee",
