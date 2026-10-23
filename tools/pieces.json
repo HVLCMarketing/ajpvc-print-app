@@ -1067,6 +1067,35 @@
       ]
     },
     {
+      "id": "provider-newsletter-2026-11",
+      "group": "Newsletters",
+      "facility": "both",
+      "title": "Provider newsletter: November 2026",
+      "size": "4 pages, 8.5 × 11 in",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "ProviderNewsNov2026p1.dc.html",
+          "label": "Page 1"
+        },
+        {
+          "file": "ProviderNewsNov2026p2.dc.html",
+          "label": "Page 2"
+        },
+        {
+          "file": "ProviderNewsNov2026p3.dc.html",
+          "label": "Page 3"
+        },
+        {
+          "file": "ProviderNewsNov2026p4.dc.html",
+          "label": "Page 4"
+        }
+      ]
+    },
+    {
       "id": "art-18x24",
       "group": "Waiting room art",
       "facility": "ajpvc",
