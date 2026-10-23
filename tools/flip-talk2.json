@@ -1,0 +1,350 @@
+{
+ "pain_cycle": {
+  "title": "Breaking the Pain Cycle",
+  "points": [
+   "Pain can make you move less.",
+   "Moving less weakens muscles, so moving gets harder.",
+   "Easing pain and rebuilding strength can break the cycle."
+  ],
+  "explain": [
+   "Pain leads to less activity, which causes muscle weakness and loss of conditioning, making stairs, chairs and distance harder and reducing activity further.",
+   "The cycle does not mean every increase in pain reflects worsening structural damage; pain, movement and physical capacity influence one another.",
+   "The aim is not to eliminate all discomfort first, but to reduce symptoms enough to allow safe, sustainable activity and better function."
+  ],
+  "options": [
+   "Education, exercise and physical therapy",
+   "Weight management, medications and assistive devices",
+   "GAE or orthopedic care when indicated"
+  ],
+  "ask": [
+   "What has your knee pain stopped you from doing?",
+   "How far can you walk, and how are stairs and chairs?",
+   "Has the pain affected your sleep or mood?"
+  ],
+  "refer": [
+   "Rapid loss of function or inability to bear weight.",
+   "Persistent low mood or hopelessness: discuss support and treatment.",
+   "Hot, swollen joint with fever: urgent evaluation for infection."
+  ],
+  "alt": "Circular diagram in which pain with walking or stairs leads to less activity, weaker muscles, harder movement and even less activity, with “Break the cycle: treat pain + rebuild strength” in the center."
+ },
+ "types": {
+  "title": "Arthritis Is Not One Disease",
+  "points": [
+   "More than 100 conditions can affect the joints.",
+   "Each type has different causes and treatments.",
+   "An accurate diagnosis is always the first step."
+  ],
+  "explain": [
+   "Osteoarthritis is the most common form and is a whole-joint condition affecting cartilage, bone, synovium and surrounding tissues.",
+   "Inflammatory arthritis (rheumatoid, psoriatic and related) is immune-driven and needs rheumatology care; post-traumatic arthritis follows fractures, ligament tears or other injuries that change joint shape or loading.",
+   "Crystal arthritis such as gout causes sudden, intensely painful flares, often in the big toe; non-arthritic causes such as tendon, meniscal, bursal or nerve problems should also be considered."
+  ],
+  "options": [
+   "OA: foundation care, then injections, GAE or surgery as needed",
+   "Inflammatory arthritis: rheumatology-directed treatment",
+   "Gout: crystal-specific treatment; injury: address mechanics"
+  ],
+  "ask": [
+   "Have you had a past injury, fracture or surgery on this joint?",
+   "Do other joints swell, or does morning stiffness last long?",
+   "Have you had sudden attacks of severe pain and swelling?"
+  ],
+  "refer": [
+   "Symmetric small-joint swelling or prolonged morning stiffness: rheumatology.",
+   "Sudden hot, red, swollen joint: evaluate for gout or infection.",
+   "Fever with a painful joint: urgent evaluation for septic arthritis."
+  ],
+  "alt": "Four cards describing types of arthritis: osteoarthritis, inflammatory arthritis, post-traumatic arthritis and crystal arthritis, each with a simple joint icon."
+ },
+ "pain_patterns": {
+  "title": "Understanding Pain Patterns",
+  "points": [
+   "Pain with use that eases with rest is common in OA.",
+   "Stiffness, swelling or warmth may point to inflammation.",
+   "Tell us about night pain and what activities trigger it."
+  ],
+  "explain": [
+   "Mechanical pain relates to movement or loading, rising with walking, stairs or standing and easing with rest; OA commonly has a mechanical component.",
+   "Prolonged morning stiffness, persistent swelling, warmth and multiple-joint involvement may suggest inflammatory or infective arthritis.",
+   "Night pain can occur with more advanced OA, but unexplained or severe night pain, systemic symptoms or a rapidly changing pattern warrant further evaluation."
+  ],
+  "options": [
+   "Mechanical OA pain: foundation care and load management",
+   "Inflammatory features: lab tests and rheumatology input",
+   "Imaging matched to the question: X-ray first, MRI if needed"
+  ],
+  "ask": [
+   "Does the pain get worse with activity and better with rest?",
+   "How long does stiffness last when you first get up?",
+   "Does pain wake you at night, and which activities trigger it?"
+  ],
+  "refer": [
+   "Severe or unexplained night pain, or pain with fever or weight loss.",
+   "Rapidly changing pain pattern: investigate other causes.",
+   "Multiple swollen, warm joints: evaluate for inflammatory arthritis."
+  ],
+  "alt": "Four panels describing mechanical pain, inflammatory pain, rest and night pain, and activity-related symptoms, each with an icon such as a person climbing stairs or lying in bed."
+ },
+ "foundation": {
+  "title": "Building the Foundation",
+  "points": [
+   "Learning about OA and staying active is the base.",
+   "Exercise and physical therapy build strength and mobility.",
+   "Other treatments build on this base; they don’t replace it."
+  ],
+  "explain": [
+   "Major guidelines identify education, exercise and weight management when relevant as core components of OA care.",
+   "Exercise should be individualized and progressed over time, including quadriceps, hamstring and hip strengthening, mobility, aerobic and balance training.",
+   "Bracing, canes, heat or cold, topical or oral NSAIDs, duloxetine and short-term injections complement this foundation; GAE is also meant to work alongside it, not replace it."
+  ],
+  "options": [
+   "Education, goal-setting and pacing activity",
+   "Progressive exercise and physical therapy",
+   "Weight management, devices and medications as needed"
+  ],
+  "ask": [
+   "What exercise or therapy have you done, and for how long?",
+   "Did your program include strengthening, and was it progressed?",
+   "What has made it hard to keep up with your exercises?"
+  ],
+  "refer": [
+   "Persistent pain despite an adequate foundation trial: discuss next-step options.",
+   "Oral NSAID use with heart, stomach or kidney risks: review safety.",
+   "Sharp pain, or swelling lasting more than a day or two after exercise: reassess the program."
+  ],
+  "alt": "Five-level pyramid with education and self-management at the base, then exercise and physical therapy, weight management, supportive devices, and medications and symptom tools at the top."
+ },
+ "vessels": {
+  "title": "Blood Vessels and Knee Pain",
+  "points": [
+   "An inflamed joint lining can grow new, abnormal vessels.",
+   "These vessels may help keep inflammation and pain going.",
+   "GAE is designed to reduce these abnormal vessels."
+  ],
+  "explain": [
+   "In OA, inflamed synovium releases cytokines and growth factors such as VEGF that promote angiogenesis, and the new vessels may carry in more inflammatory cells.",
+   "Sensory nerves may grow in alongside new vessels, and inflammatory mediators can sensitize nerve endings, which may contribute to persistent pain.",
+   "This is one of several contributors to multifactorial OA pain; GAE aims to interrupt the loop at the vessel step, and these mechanisms remain under investigation."
+  ],
+  "options": [
+   "Foundation care for mechanical and muscle contributors",
+   "Injections for short-term symptom control",
+   "GAE evaluation for persistent pain in selected patients"
+  ],
+  "ask": [
+   "Does your knee swell or feel warm at times?",
+   "Has the pain kept going despite exercise and medicines?",
+   "What treatments have you tried, and how did they work?"
+  ],
+  "refer": [
+   "Warm, swollen knee with fever: rule out infection or crystals.",
+   "Suspected inflammatory arthritis: rheumatology evaluation.",
+   "Pain mainly from the hip, spine or nerves: GAE unlikely to help."
+  ],
+  "alt": "Circular diagram in which synovial inflammation leads to new blood vessels, inflammatory cells, nerve ingrowth and sensitized pain, with “GAE target: reduce abnormal vessels” in the center."
+ },
+ "gae_inside": {
+  "title": "Treating From Inside the Vessels",
+  "points": [
+   "A small needle puncture, usually in the groin artery.",
+   "A thin tube is guided to the knee using live X-ray.",
+   "Tiny particles reduce flow to abnormal knee vessels."
+  ],
+  "explain": [
+   "Access is through a small arterial puncture, commonly femoral on either side, with radial or pedal access sometimes considered, so no incision is made at the knee.",
+   "A catheter is navigated under fluoroscopy, then a microcatheter is advanced into selected genicular branches while contrast angiography maps the anatomy.",
+   "Embolic particles are delivered slowly to reduce flow in abnormal vessels while preserving the parent artery, usually under local anesthetic with or without sedation."
+  ],
+  "options": [
+   "Local anesthetic, with or without sedation",
+   "Usually outpatient with same-day discharge",
+   "Commonly about one to two hours"
+  ],
+  "ask": [
+   "Do you have circulation problems or leg artery disease?",
+   "Have you reacted to X-ray dye, or do you have kidney disease?",
+   "Do you take blood thinners or have bleeding problems?"
+  ],
+  "refer": [
+   "Significant peripheral arterial disease: vascular assessment first.",
+   "Severe kidney impairment or contrast allergy: individualized risk planning.",
+   "Bleeding disorder or anticoagulation: a safe periprocedural plan is needed."
+  ],
+  "alt": "Leg diagram showing a catheter entering at the groin and traveling down the artery to the knee, a close-up of small vessels around the knee joint, and four numbered steps: access, navigate, select, treat."
+ },
+ "arteries": {
+  "title": "The Genicular Arteries",
+  "points": [
+   "A ring of small arteries surrounds the knee.",
+   "The branches differ from person to person.",
+   "Careful mapping helps protect healthy tissue."
+  ],
+  "explain": [
+   "Knee blood supply includes branches associated with the popliteal artery and the descending genicular artery, including the superior and inferior medial and lateral genicular arteries.",
+   "These vessels connect through anastomoses and their branching varies, so one branch may supply more than one region, including skin.",
+   "During GAE, angiography maps this network so the specialist can treat selected abnormal branches while preserving the knee’s main blood supply."
+  ],
+  "options": [
+   "Angiographic mapping before any treatment",
+   "Selective microcatheter placement",
+   "Protective steps such as cold packs on the skin"
+  ],
+  "ask": [
+   "Where exactly is your knee pain: inner, outer or front?",
+   "Have you had knee surgery or a knee replacement?",
+   "Do your legs cramp with walking and ease with rest?"
+  ],
+  "refer": [
+   "Calf, thigh or buttock pain with walking: evaluate for peripheral artery disease.",
+   "Weak or absent pulses, or a cold or discolored foot: vascular evaluation.",
+   "Non-healing leg or foot wounds: vascular evaluation."
+  ],
+  "alt": "Front-view illustration of a knee joint with labeled genicular arteries: descending, superior medial and lateral, inferior medial and lateral, and the popliteal artery behind the knee."
+ },
+ "how_gae": {
+  "title": "How GAE Is Designed to Work",
+  "points": [
+   "An inflamed lining with extra vessels can drive pain.",
+   "X-ray dye shows these areas as a cloudy “blush.”",
+   "Tiny particles slow that flow so the joint may calm down."
+  ],
+  "explain": [
+   "GAE targets synovitis with abnormal new vessels, which are thought to help sustain inflammation and interact with pain-sensitive nerves.",
+   "Angiography identifies abnormal staining, and a microcatheter delivers embolic particles to selected branches while keeping the main arteries open.",
+   "If abnormal vascularity contributes to symptoms, inflammation and pain may settle; GAE does not regrow cartilage, reverse structural OA or guarantee relief."
+  ],
+  "options": [
+   "Foundation care continues before and after GAE",
+   "Injections as another option for persistent pain",
+   "Orthopedic opinion for advanced structural disease"
+  ],
+  "ask": [
+   "What would you do if your knee hurt less?",
+   "What have you heard about GAE, and what do you expect?",
+   "How should we measure whether a treatment has helped?"
+  ],
+  "refer": [
+   "Major deformity or end-stage structural OA: orthopedic evaluation.",
+   "Meniscal or ligament injury needing surgery: orthopedic referral.",
+   "Active infection or septic arthritis: treat first and defer GAE."
+  ],
+  "alt": "Four knee illustrations in sequence: an inflamed lining with abnormal vessels, angiography finding the blush, embolization with a catheter and tiny particles, and a calmer joint with less abnormal flow."
+ },
+ "angiogram": {
+  "title": "What the Angiogram Shows",
+  "points": [
+   "Dye makes the knee arteries visible on X-ray.",
+   "Abnormal vessels show up as a cloudy “blush.”",
+   "After treatment the blush fades; main artery stays open."
+  ],
+  "explain": [
+   "Contrast angiography can show abnormal vascular staining, often called a blush, that may correspond to inflamed tissue and the patient’s painful region.",
+   "The blush is interpreted alongside pain location, anatomy and clinical findings; not every visible vessel is a treatment target.",
+   "A typical endpoint is reduced abnormal staining with flow preserved in the parent artery; the figure is a simplified illustration, not a patient image."
+  ],
+  "options": [
+   "Mark the most painful spot before the procedure",
+   "Selective angiography of each candidate branch",
+   "Completion imaging to check the endpoint"
+  ],
+  "ask": [
+   "Can you point to the spot where it hurts most?",
+   "Have you ever reacted to X-ray dye?",
+   "Do you have kidney problems or diabetes?"
+  ],
+  "refer": [
+   "Prior contrast reaction: individualized plan before angiography.",
+   "Reduced kidney function: check labs and minimize contrast.",
+   "Blush that does not match the painful area: reassess the pain source."
+  ],
+  "alt": "Side-by-side simplified X-ray drawings: before, a cloudy abnormal blush of small vessels beside a branch artery; after, the blush is reduced and the main artery is still open."
+ },
+ "side_effects": {
+  "title": "Side Effects at a Glance",
+  "points": [
+   "Common: knee ache, bruising, tiredness for a day or two.",
+   "Less likely: skin color change, small sore, foot tingling.",
+   "Rare: dye reaction, artery injury, infection or clot."
+  ],
+  "explain": [
+   "Most reported side effects are minor and short-lived; a temporary pain flare and access-site bruising or tenderness are common and usually settle within days to about two weeks.",
+   "Less likely effects include patchy skin discoloration over the knee, a small skin sore that usually heals on its own, foot tingling or numbness, and access-site hematoma, usually temporary.",
+   "Rare risks include contrast reaction, contrast-related kidney strain, artery injury, infection, blood clot and nontarget embolization injuring skin, muscle or nerve."
+  ],
+  "options": [
+   "Screening for PAD, kidney function, allergy and bleeding risk",
+   "Careful mapping and slow, controlled particle delivery",
+   "Clear aftercare instructions and scheduled follow-up"
+  ],
+  "ask": [
+   "Do you have kidney disease, diabetes or a dye allergy?",
+   "Do you take blood thinners or have bleeding problems?",
+   "Who can drive you home and check on you that day?"
+  ],
+  "refer": [
+   "Groin swelling, bleeding or pain that is getting worse.",
+   "Skin breakdown, a sore, or spreading color change over the knee.",
+   "Fever, calf swelling, or a cold, numb or weak foot."
+  ],
+  "alt": "Three columns of GAE side effects: common and usually mild, less likely and occasional, and rare, each listing example effects."
+ },
+ "decision": {
+  "title": "A Step-by-Step Decision Path",
+  "points": [
+   "Start with your goals and an accurate diagnosis.",
+   "Build the foundation, then check if it is enough.",
+   "If not, talk through next steps that fit you."
+  ],
+  "explain": [
+   "Persistent knee pain starts with defining goals and confirming the diagnosis by history, exam and X-ray, with MRI when needed; other sources are treated directly.",
+   "For knee OA, education, exercise, PT, weight management and medications come first, with reassessment after an adequate trial; if relief is enough, continue and monitor.",
+   "If not, options include injections, GAE, nerve ablation and an orthopedic opinion; mild-to-moderate, pain-driven OA may suit injections or GAE, while advanced OA with deformity warrants orthopedic evaluation."
+  ],
+  "options": [
+   "Injections or GAE for mild–moderate, pain-driven OA",
+   "Nerve ablation in selected patients",
+   "Orthopedic evaluation for advanced OA or deformity"
+  ],
+  "ask": [
+   "What would you do if your knee hurt less?",
+   "What have you tried, for how long, and how did it work?",
+   "How will we measure success: pain, distance or an activity?"
+  ],
+  "refer": [
+   "Hip, spine, tendon or nerve source: treat the true source.",
+   "Inflammatory arthritis features: rheumatology referral.",
+   "Advanced OA with deformity: orthopedic surgical evaluation."
+  ],
+  "alt": "Flowchart from persistent knee pain to accurate diagnosis, branching to treating another source or building the OA foundation, then reassessing relief and discussing next-step options such as injections, GAE or orthopedic evaluation."
+ },
+ "sample_week": {
+  "title": "A Joint-Friendly Week",
+  "points": [
+   "Mix walking, swimming or biking with strength work.",
+   "Strengthen your muscles at least two days a week.",
+   "Start where you are and build up gradually."
+  ],
+  "explain": [
+   "U.S. Physical Activity Guidelines recommend at least 150 minutes of moderate aerobic activity weekly plus muscle strengthening on two or more days, as able.",
+   "Low-impact choices such as level walking, cycling, swimming, water aerobics, tai chi and elliptical are generally well tolerated, and even 10 minutes at a time counts.",
+   "The week shown is an example only; a physical therapist should tailor and progress the plan, and during a flare patients should adjust activity rather than stop."
+  ],
+  "options": [
+   "Physical therapy to build a tailored plan",
+   "Sit-to-stand, bridges, leg raises and step-ups",
+   "Flare plan: adjust, pace, then return gradually"
+  ],
+  "ask": [
+   "What activities do you enjoy or want to get back to?",
+   "How many minutes can you walk comfortably today?",
+   "What gets in the way of staying active?"
+  ],
+  "refer": [
+   "Hot, red, very swollen joint, fever, or inability to bear weight.",
+   "Leg pain with walking that eases with rest: check for peripheral artery disease.",
+   "A flare that does not settle within a week or two."
+  ],
+  "alt": "Seven-day schedule with walking, strength, swimming or biking, rest or stretching and tai chi sessions of 10 to 30 minutes, above weekly targets of 150 minutes of aerobic activity, 2 or more strength days and some movement every day."
+ }
+}

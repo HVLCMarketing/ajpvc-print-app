@@ -60,7 +60,6 @@
     "4edb96c94bf973f90edcd8f3019b20f9": "book-after_call.jpg",
     "c3ad3b23a3affbf842477cb0eb2ca220": "book-beyond.jpg",
     "7696cfc8534d7707695e7a169540dc4e": "book-pain_cycle.jpg",
-    "c743f03fac3cc7b309ec9d7d99af6815": "book-types.jpg",
     "60808383941c239d25b7a1f58e769f22": "book-pain_patterns.jpg",
     "2a852f7d3ab1e6de57e2254e0e003b4b": "book-foundation.jpg",
     "88c070e4dc6539ea3ff149d2f9f11516": "book-vessels.jpg",
@@ -68,9 +67,10 @@
     "6500fd82635827de527c07aa6f73bb86": "book-arteries.jpg",
     "76c7afdca08a02edaf08e267f58dbaff": "book-how_gae.jpg",
     "5ae0c5e05f1ebb86b8f57816ecd38491": "book-angiogram.jpg",
-    "745d26497d21ce9216f4da550ea242b4": "book-side_effects.jpg",
     "bce1513ca9b74781af301d483f154402": "book-decision.jpg",
-    "028cd7959a04715b8c59f410b4d84043": "book-sample_week.jpg"
+    "028cd7959a04715b8c59f410b4d84043": "book-sample_week.jpg",
+    "6f9df7e230d3ba2f2a6b4c0ec879b940": "book-types.jpg",
+    "18d8b2cc56b65761fe6b790119988061": "book-side_effects.jpg"
   },
   "pieces": [
     {
@@ -573,147 +573,219 @@
           "label": "Inside Knee (provider side)"
         },
         {
-          "file": "FlipJ02Healthy.dc.html",
-          "label": "Healthy (patient side)"
-        },
-        {
-          "file": "FlipJ02HealthyNotes.dc.html",
-          "label": "Healthy (provider side)"
-        },
-        {
-          "file": "FlipJ03WholeJoint.dc.html",
+          "file": "FlipJ02WholeJoint.dc.html",
           "label": "Whole Joint (patient side)"
         },
         {
-          "file": "FlipJ03WholeJointNotes.dc.html",
+          "file": "FlipJ02WholeJointNotes.dc.html",
           "label": "Whole Joint (provider side)"
         },
         {
-          "file": "FlipJ04Referred.dc.html",
+          "file": "FlipJ03Types.dc.html",
+          "label": "Types (patient side)"
+        },
+        {
+          "file": "FlipJ03TypesNotes.dc.html",
+          "label": "Types (provider side)"
+        },
+        {
+          "file": "FlipJ04PainPatterns.dc.html",
+          "label": "Pain Patterns (patient side)"
+        },
+        {
+          "file": "FlipJ04PainPatternsNotes.dc.html",
+          "label": "Pain Patterns (provider side)"
+        },
+        {
+          "file": "FlipJ05Referred.dc.html",
           "label": "Referred (patient side)"
         },
         {
-          "file": "FlipJ04ReferredNotes.dc.html",
+          "file": "FlipJ05ReferredNotes.dc.html",
           "label": "Referred (provider side)"
         },
         {
-          "file": "FlipJ05Grades.dc.html",
+          "file": "FlipJ06Grades.dc.html",
           "label": "Grades (patient side)"
         },
         {
-          "file": "FlipJ05GradesNotes.dc.html",
+          "file": "FlipJ06GradesNotes.dc.html",
           "label": "Grades (provider side)"
         },
         {
-          "file": "FlipJ06Options.dc.html",
+          "file": "FlipJ07PainCycle.dc.html",
+          "label": "Pain Cycle (patient side)"
+        },
+        {
+          "file": "FlipJ07PainCycleNotes.dc.html",
+          "label": "Pain Cycle (provider side)"
+        },
+        {
+          "file": "FlipJ08Foundation.dc.html",
+          "label": "Foundation (patient side)"
+        },
+        {
+          "file": "FlipJ08FoundationNotes.dc.html",
+          "label": "Foundation (provider side)"
+        },
+        {
+          "file": "FlipJ09Options.dc.html",
           "label": "Options (patient side)"
         },
         {
-          "file": "FlipJ06OptionsNotes.dc.html",
+          "file": "FlipJ09OptionsNotes.dc.html",
           "label": "Options (provider side)"
         },
         {
-          "file": "FlipJ07Lining.dc.html",
+          "file": "FlipJ10Lining.dc.html",
           "label": "Lining (patient side)"
         },
         {
-          "file": "FlipJ07LiningNotes.dc.html",
+          "file": "FlipJ10LiningNotes.dc.html",
           "label": "Lining (provider side)"
         },
         {
-          "file": "FlipJ08Embolization.dc.html",
-          "label": "Embolization (patient side)"
+          "file": "FlipJ11Vessels.dc.html",
+          "label": "Vessels (patient side)"
         },
         {
-          "file": "FlipJ08EmbolizationNotes.dc.html",
-          "label": "Embolization (provider side)"
+          "file": "FlipJ11VesselsNotes.dc.html",
+          "label": "Vessels (provider side)"
         },
         {
-          "file": "FlipJ09Knee.dc.html",
-          "label": "Knee (patient side)"
+          "file": "FlipJ12Arteries.dc.html",
+          "label": "Arteries (patient side)"
         },
         {
-          "file": "FlipJ09KneeNotes.dc.html",
-          "label": "Knee (provider side)"
+          "file": "FlipJ12ArteriesNotes.dc.html",
+          "label": "Arteries (provider side)"
         },
         {
-          "file": "FlipJ10VsReplacement.dc.html",
-          "label": "Vs Replacement (patient side)"
+          "file": "FlipJ13HowGae.dc.html",
+          "label": "How GAE (patient side)"
         },
         {
-          "file": "FlipJ10VsReplacementNotes.dc.html",
-          "label": "Vs Replacement (provider side)"
+          "file": "FlipJ13HowGaeNotes.dc.html",
+          "label": "How GAE (provider side)"
         },
         {
-          "file": "FlipJ11Candidate.dc.html",
+          "file": "FlipJ14GaeInside.dc.html",
+          "label": "GAE Inside (patient side)"
+        },
+        {
+          "file": "FlipJ14GaeInsideNotes.dc.html",
+          "label": "GAE Inside (provider side)"
+        },
+        {
+          "file": "FlipJ15Angiogram.dc.html",
+          "label": "Angiogram (patient side)"
+        },
+        {
+          "file": "FlipJ15AngiogramNotes.dc.html",
+          "label": "Angiogram (provider side)"
+        },
+        {
+          "file": "FlipJ16VsReplacement.dc.html",
+          "label": "vs. Replacement (patient side)"
+        },
+        {
+          "file": "FlipJ16VsReplacementNotes.dc.html",
+          "label": "vs. Replacement (provider side)"
+        },
+        {
+          "file": "FlipJ17Candidate.dc.html",
           "label": "Candidate (patient side)"
         },
         {
-          "file": "FlipJ11CandidateNotes.dc.html",
+          "file": "FlipJ17CandidateNotes.dc.html",
           "label": "Candidate (provider side)"
         },
         {
-          "file": "FlipJ12GaeDay.dc.html",
-          "label": "Gae Day (patient side)"
+          "file": "FlipJ18GaeDay.dc.html",
+          "label": "GAE Day (patient side)"
         },
         {
-          "file": "FlipJ12GaeDayNotes.dc.html",
-          "label": "Gae Day (provider side)"
+          "file": "FlipJ18GaeDayNotes.dc.html",
+          "label": "GAE Day (provider side)"
         },
         {
-          "file": "FlipJ13Recovery.dc.html",
+          "file": "FlipJ19Recovery.dc.html",
           "label": "Recovery (patient side)"
         },
         {
-          "file": "FlipJ13RecoveryNotes.dc.html",
+          "file": "FlipJ19RecoveryNotes.dc.html",
           "label": "Recovery (provider side)"
         },
         {
-          "file": "FlipJ14AfterGae.dc.html",
-          "label": "After Gae (patient side)"
+          "file": "FlipJ20SideEffects.dc.html",
+          "label": "Side Effects (patient side)"
         },
         {
-          "file": "FlipJ14AfterGaeNotes.dc.html",
-          "label": "After Gae (provider side)"
+          "file": "FlipJ20SideEffectsNotes.dc.html",
+          "label": "Side Effects (provider side)"
         },
         {
-          "file": "FlipJ15Beyond.dc.html",
+          "file": "FlipJ21AfterGae.dc.html",
+          "label": "After GAE (patient side)"
+        },
+        {
+          "file": "FlipJ21AfterGaeNotes.dc.html",
+          "label": "After GAE (provider side)"
+        },
+        {
+          "file": "FlipJ22Decision.dc.html",
+          "label": "Decision (patient side)"
+        },
+        {
+          "file": "FlipJ22DecisionNotes.dc.html",
+          "label": "Decision (provider side)"
+        },
+        {
+          "file": "FlipJ23Week.dc.html",
+          "label": "Week (patient side)"
+        },
+        {
+          "file": "FlipJ23WeekNotes.dc.html",
+          "label": "Week (provider side)"
+        },
+        {
+          "file": "FlipJ24Beyond.dc.html",
           "label": "Beyond (patient side)"
         },
         {
-          "file": "FlipJ15BeyondNotes.dc.html",
+          "file": "FlipJ24BeyondNotes.dc.html",
           "label": "Beyond (provider side)"
         },
         {
-          "file": "FlipJ16Shoulder.dc.html",
+          "file": "FlipJ25Shoulder.dc.html",
           "label": "Shoulder (patient side)"
         },
         {
-          "file": "FlipJ16ShoulderNotes.dc.html",
+          "file": "FlipJ25ShoulderNotes.dc.html",
           "label": "Shoulder (provider side)"
         },
         {
-          "file": "FlipJ17Hip.dc.html",
+          "file": "FlipJ26Hip.dc.html",
           "label": "Hip (patient side)"
         },
         {
-          "file": "FlipJ17HipNotes.dc.html",
+          "file": "FlipJ26HipNotes.dc.html",
           "label": "Hip (provider side)"
         },
         {
-          "file": "FlipJ18Hand.dc.html",
+          "file": "FlipJ27Hand.dc.html",
           "label": "Hand (patient side)"
         },
         {
-          "file": "FlipJ18HandNotes.dc.html",
+          "file": "FlipJ27HandNotes.dc.html",
           "label": "Hand (provider side)"
         },
         {
-          "file": "FlipJ19Heel.dc.html",
+          "file": "FlipJ28Heel.dc.html",
           "label": "Heel (patient side)"
         },
         {
-          "file": "FlipJ19HeelNotes.dc.html",
+          "file": "FlipJ28HeelNotes.dc.html",
           "label": "Heel (provider side)"
         }
       ]
