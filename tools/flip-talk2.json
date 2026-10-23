@@ -263,9 +263,9 @@
  "side_effects": {
   "title": "Side Effects at a Glance",
   "points": [
-   "Common: knee ache, bruising, tiredness for a day or two.",
-   "Less likely: skin color change, small sore, foot tingling.",
-   "Rare: dye reaction, artery injury, infection or clot."
+   "Mild: knee soreness, a small bruise, or tiredness.",
+   "Skin: color change, blisters or sores, bleeding at the site.",
+   "Other risks: dye reaction, artery injury, clot or infection."
   ],
   "explain": [
    "Most reported side effects are minor and short-lived; a temporary pain flare and access-site bruising or tenderness are common and usually settle within days to about two weeks.",
@@ -287,7 +287,7 @@
    "Skin breakdown, a sore, or spreading color change over the knee.",
    "Fever, calf swelling, or a cold, numb or weak foot."
   ],
-  "alt": "Three columns of GAE side effects: common and usually mild, less likely and occasional, and rare, each listing example effects."
+  "alt": "Side effects and risks of GAE in three groups: mild recovery symptoms, skin and puncture-site effects, and other procedure risks, with when to call the care team and when to call 911"
  },
  "decision": {
   "title": "A Step-by-Step Decision Path",
