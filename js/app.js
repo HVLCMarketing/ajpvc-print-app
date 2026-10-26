@@ -134,7 +134,6 @@
 
   function showMap() {
     const loc = active() || {};
-    $('#mapPreview').innerHTML = loc.map ? `<img src="${loc.map}" alt="Uploaded location map">` : '<span>No map yet</span>';
     $('#providerPreview').innerHTML = loc.providerPhoto ? `<img src="${loc.providerPhoto}" alt="Uploaded provider photo">` : '<span>No photo yet</span>';
   }
 
@@ -170,22 +169,6 @@
     } catch (err) { handleEditError(err); }
   });
 
-  // map upload: downscale so the shared list stays quick to load
-  $('#mapFile').addEventListener('change', (e) => {
-    const file = e.target.files[0]; if (!file || !active() || !canEdit) return;
-    const img = new Image();
-    img.onload = () => {
-      const max = 1400, s = Math.min(1, max / Math.max(img.width, img.height));
-      const c = document.createElement('canvas');
-      c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
-      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
-      active().map = c.toDataURL('image/jpeg', 0.85);
-      URL.revokeObjectURL(img.src);
-      queueSave(active()); showMap(); renderAll();
-    };
-    img.src = URL.createObjectURL(file);
-    e.target.value = '';
-  });
   // provider photo: keep the whole picture, just scaled down
   $('#providerFile').addEventListener('change', (e) => {
     const file = e.target.files[0]; if (!file || !active() || !canEdit) return;
@@ -204,7 +187,6 @@
     e.target.value = '';
   });
   $('#clearProvider').addEventListener('click', () => { if (!active() || !canEdit) return; active().providerPhoto = ''; queueSave(active()); showMap(); renderAll(); });
-  $('#clearMap').addEventListener('click', () => { if (!active() || !canEdit) return; active().map = ''; queueSave(active()); showMap(); renderAll(); });
 
   $('#exportLocs').addEventListener('click', () => {
     const blob = new Blob([JSON.stringify(locations, null, 2)], { type: 'application/json' });
