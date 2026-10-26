@@ -355,6 +355,7 @@
     if (!offices().some((o) => o.id === card.officeId)) card.officeId = 'main';
     sel.value = card.officeId;
     ['name', 'title', 'direct', 'cell', 'email'].forEach((k) => { if (document.activeElement !== f.elements[k]) f.elements[k].value = card[k] || ''; });
+    $('#cardPhotoClear').hidden = !card.photo;
     saveCard();
     const p = cardPiece(); if (!p) return;
     $('#cardTitle').textContent = p.title;
@@ -364,11 +365,34 @@
       `<figure class="page"><div class="page-frame" data-w="${pg.w}" data-h="${pg.h}"><div class="sheet" style="width:${pg.w}px;height:${pg.h}px">${A.fill(pg.html, card.office, extra)}</div></div><figcaption>${A.esc(pg.label)}</figcaption></figure>`).join('') + '</div>';
     layoutAll();
   }
+  // shrink a chosen photo to a small square JPEG so it fits in browser storage and prints sharply at card size
+  function loadPhoto(file) {
+    return new Promise((resolve, reject) => {
+      const img = new Image(), url = URL.createObjectURL(file);
+      img.onload = () => {
+        const side = Math.min(img.naturalWidth, img.naturalHeight), out = 360;
+        const c = document.createElement('canvas'); c.width = c.height = out;
+        // crop to a centred square, biased toward the top where the face usually is
+        const sx = (img.naturalWidth - side) / 2, sy = Math.max(0, (img.naturalHeight - side) * 0.2);
+        c.getContext('2d').drawImage(img, sx, sy, side, side, 0, 0, out, out);
+        URL.revokeObjectURL(url); resolve(c.toDataURL('image/jpeg', 0.86));
+      };
+      img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('unreadable')); };
+      img.src = url;
+    });
+  }
   $('#cardForm').addEventListener('input', (e) => {
-    const k = e.target.name; if (!k) return;
+    const k = e.target.name; if (!k || k === 'photo') return;
     if (k === 'office') card.officeId = e.target.value; else card[k] = e.target.value;
     renderCard();
   });
+  $('#cardPhoto').addEventListener('change', async (e) => {
+    const file = e.target.files && e.target.files[0]; if (!file) return;
+    try { card.photo = await loadPhoto(file); } catch (x) { alert('That image could not be read. Try a JPEG or PNG file.'); }
+    e.target.value = '';
+    renderCard();
+  });
+  $('#cardPhotoClear').addEventListener('click', () => { delete card.photo; renderCard(); });
   $('#cardOrder').addEventListener('click', () => {
     document.querySelector('.tab[data-tab="order"]').click();
     const q = document.querySelector('#qtyGrid input[name="qty_business_cards"]');
@@ -377,7 +401,8 @@
   function cardDetails() {
     const o = card.office || {};
     return [`Card style: ${cardPiece() ? cardPiece().title : ''}`, `Name: ${card.name || ''}`, `Title: ${card.title || ''}`, `Direct: ${card.direct || ''}`,
-      `Cell: ${card.cell || ''}`, `Email: ${card.email || ''}`, `Office: ${[o.street, [o.city, o.state].filter(Boolean).join(', '), o.zip].filter(Boolean).join(' ')}`].join('\n');
+      `Cell: ${card.cell || ''}`, `Email: ${card.email || ''}`, `Office: ${[o.street, [o.city, o.state].filter(Boolean).join(', '), o.zip].filter(Boolean).join(' ')}`,
+      `Photo: ${card.photo ? 'attached (card_photo)' : 'none'}`].join('\n');
   }
 
   /* ---------- orders ---------- */
@@ -402,8 +427,13 @@
     $('#orderCardDetails').value = cq && +cq.value ? cardDetails() : '';
     const data = new FormData(f);
     data.set('location', v.LOCATION_NAME || 'Untitled');
+    const withPhoto = !!(cq && +cq.value && card.photo);
+    if (withPhoto) data.set('card_photo', await (await fetch(card.photo)).blob(), (card.name || 'card').replace(/[^A-Za-z0-9]+/g, '-') + '-photo.jpg');
+    else data.delete('card_photo');
     try {
-      const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
+      const res = withPhoto
+        ? await fetch('/', { method: 'POST', body: data })
+        : await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
       if (!res.ok) throw new Error(String(res.status));
       err.hidden = true; f.hidden = true; $('#orderDone').hidden = false; f.reset();
     } catch (x) {

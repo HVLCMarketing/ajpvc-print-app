@@ -117,6 +117,11 @@
             <label>Cell <input name="cell" inputmode="tel" placeholder="661-000-0000"></label>
           </div>
           <label>Email <input name="email" type="email" placeholder="name@heartandleg.com"></label>
+          <div class="photo-field">
+            <label>Photo (optional) <input name="photo" id="cardPhoto" type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <button type="button" class="btn ghost small" id="cardPhotoClear" hidden>Remove photo</button>
+          </div>
+          <p class="muted small">A head-and-shoulders photo works best; it is cropped to a circle next to the name. Leave it empty to print the card without a photo.</p>
           <label>Office address on the card
             <select name="office" id="cardOffice"></select></label>
           <p class="muted small">Office 661-324-4100 and fax 661-324-4600 are printed on every card. Leave direct line, cell or email blank to leave that line off.</p>
@@ -139,7 +144,7 @@
       <h1>Place a print order</h1>
       <p class="muted">Orders go to the marketing team by email. Materials are printed with the location details saved on the Materials tab.</p>
 
-      <form name="print-order" method="POST" data-netlify="true" netlify-honeypot="company_website" id="orderForm" class="order-form">
+      <form name="print-order" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="company_website" id="orderForm" class="order-form">
         <input type="hidden" name="form-name" value="print-order">
         <p class="hp"><label>Leave blank <input name="company_website"></label></p>
 
@@ -149,6 +154,7 @@
         <input type="hidden" name="location_details" id="orderLocationDetails">
         <input type="hidden" name="facility" id="orderFacility" value="Advanced Joint Pain & Vascular Center">
         <input type="hidden" name="card_details" id="orderCardDetails">
+        <input type="file" name="card_photo" id="orderCardPhoto" hidden>
 
         <h2>Quantities</h2>
         <div class="qty-grid" id="qtyGrid">

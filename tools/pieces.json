@@ -1219,7 +1219,8 @@
         "[TITLE]": "{{CARD_TITLE}}",
         "[DIRECT PHONE]": "{{CARD_DIRECT}}",
         "[CELL PHONE]": "{{CARD_CELL}}",
-        "[EMAIL]": "{{CARD_EMAIL}}"
+        "[EMAIL]": "{{CARD_EMAIL}}",
+        "[PHOTO]": "{{CARD_PHOTO}}"
       }
     },
     {
@@ -1248,7 +1249,8 @@
         "[TITLE]": "{{CARD_TITLE}}",
         "[DIRECT PHONE]": "{{CARD_DIRECT}}",
         "[CELL PHONE]": "{{CARD_CELL}}",
-        "[EMAIL]": "{{CARD_EMAIL}}"
+        "[EMAIL]": "{{CARD_EMAIL}}",
+        "[PHOTO]": "{{CARD_PHOTO}}"
       }
     }
   ],
