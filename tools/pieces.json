@@ -74,7 +74,12 @@
     "7bc38cfe0074818728695636db9e35b5": "icon-joint.png",
     "39cf014a9f5f4196619034f9ff8ba203": "icon-vessel.png",
     "700fd247256c462a6114e66b3b6541bf": "icon-foot.png",
-    "65beadf3208e90b69cefbf6563effb98": "icon-injury.png"
+    "65beadf3208e90b69cefbf6563effb98": "icon-injury.png",
+    "e5197be222a2949a23518fd6f811c134": "icon-joint-hi.png",
+    "90ed9029167cee958b2444d9d56ce4e8": "icon-vessel-hi.png",
+    "56f40a324858d059d27ecea5a4ead90d": "icon-foot-hi.png",
+    "fa362e18acc6577125fbc3372c049810": "icon-injury-hi.png",
+    "923f0cd788722ccd6eb90c5ceb9de20e": "logo-long-clean.png"
   },
   "pieces": [
     {
