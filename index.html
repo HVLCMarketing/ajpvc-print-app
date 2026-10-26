@@ -69,6 +69,18 @@
             <p class="hint">Use a screenshot or exported map (PNG or JPG). It's printed on the trifold.</p>
           </fieldset>
 
+          <fieldset class="map-field">
+            <legend>Featured provider (provider flyer)</legend>
+            <label>Name and credentials <input name="providerName" placeholder="Sarah Irani, FNP"></label>
+            <label>Title <input name="providerTitle" placeholder="Family Nurse Practitioner"></label>
+            <div class="map-preview provider-preview" id="providerPreview"><span>No photo yet</span></div>
+            <div class="row">
+              <label class="btn ghost file-btn">Upload photo<input type="file" id="providerFile" accept="image/jpeg,image/png,image/webp"></label>
+              <button type="button" class="btn ghost" id="clearProvider">Remove</button>
+            </div>
+            <p class="hint">A head-and-shoulders photo with the face near the top works best.</p>
+          </fieldset>
+
           <details class="events">
             <summary>Event details (flyer &amp; postcard)</summary>
             <label>Open house date <input name="openHouseDate" placeholder="Saturday, Nov 8"></label>
@@ -162,7 +174,7 @@
           <label data-facility="ajpvc">Patient folders <input type="number" name="qty_patient_folder" min="0" step="25" value="0"></label>
           <label data-facility="ajpvc">Provider folders <input type="number" name="qty_provider_folder" min="0" step="25" value="0"></label>
           <label data-facility="ajpvc">Grand opening flyers <input type="number" name="qty_flyer" min="0" step="25" value="0"></label>
-          <label data-facility="ajpvc">Provider flyers: Sarah Irani, FNP <input type="number" name="qty_provider_irani" min="0" step="25" value="0"></label>
+          <label data-facility="ajpvc">Provider flyers (featured provider for the location) <input type="number" name="qty_provider_flyer" min="0" step="25" value="0"></label>
           <label data-facility="ajpvc">Postcards <input type="number" name="qty_postcard" min="0" step="100" value="0"></label>
           <label data-facility="ajpvc">Waiting room art 18×24 (sets of 5) <input type="number" name="qty_art_18x24" min="0" step="1" value="0"></label>
           <label data-facility="ajpvc">Waiting room art 24×36 (sets of 5) <input type="number" name="qty_art_24x36" min="0" step="1" value="0"></label>

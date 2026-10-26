@@ -10,15 +10,16 @@ const json = (data, status = 200) =>
   new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
 
 const FIELDS = ['id', 'locationName', 'street', 'city', 'state', 'zip', 'hours', 'map',
-  'openHouseDate', 'openHouseTime', 'talkDate', 'talkVenue', 'updatedAt'];
+  'openHouseDate', 'openHouseTime', 'talkDate', 'talkVenue', 'providerName', 'providerTitle', 'providerPhoto', 'updatedAt'];
 
 function clean(loc) {
   const out = {};
   for (const k of FIELDS) {
     if (loc[k] === undefined || loc[k] === null) continue;
-    out[k] = String(loc[k]).slice(0, k === 'map' ? 3_000_000 : 300);
+    out[k] = String(loc[k]).slice(0, k === 'map' || k === 'providerPhoto' ? 3_000_000 : 300);
   }
   if (out.map && !out.map.startsWith('data:image/')) delete out.map;
+  if (out.providerPhoto && !out.providerPhoto.startsWith('data:image/')) delete out.providerPhoto;
   return out;
 }
 

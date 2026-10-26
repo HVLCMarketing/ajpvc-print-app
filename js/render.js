@@ -8,6 +8,7 @@
     CITY_STATE_ZIP: '[CITY, STATE ZIP]', FULL_ADDRESS: '[ADDRESS]', HOURS: '[HOURS]',
     OPEN_HOUSE_DATE: '[OPEN HOUSE DATE]', OPEN_HOUSE_TIME: '[TIME]',
     TALK_DATE: '[TALK DATE]', TALK_VENUE: '[VENUE]', MAP: '[LOCATION MAP]',
+    PROVIDER_NAME: '[PROVIDER NAME]', PROVIDER_TITLE: '[PROVIDER TITLE]', PROVIDER_PHOTO: '[PROVIDER PHOTO]',
     CARD_NAME: '[FULL NAME]', CARD_TITLE: '[TITLE]', CARD_DIRECT: '[DIRECT PHONE]', CARD_CELL: '[CELL PHONE]', CARD_EMAIL: '[EMAIL]', CARD_PHOTO: '[PHOTO]'
   };
 
@@ -28,7 +29,11 @@
       OPEN_HOUSE_DATE: clean(loc.openHouseDate),
       OPEN_HOUSE_TIME: clean(loc.openHouseTime),
       TALK_DATE: clean(loc.talkDate),
-      TALK_VENUE: clean(loc.talkVenue)
+      TALK_VENUE: clean(loc.talkVenue),
+      PROVIDER_NAME: clean(loc.providerName),
+      PROVIDER_TITLE: clean(loc.providerTitle),
+      // long names step down in size so they stay on one line
+      PROVIDER_NAME_PX: String(clean(loc.providerName).length <= 18 ? 42 : clean(loc.providerName).length <= 24 ? 34 : clean(loc.providerName).length <= 30 ? 28 : 24)
     };
   }
 
@@ -50,6 +55,11 @@
     let out = html.replace(/\{\{([A-Z_]+)\}\}/g, (m, k) => {
       if (k === 'CARD_PHOTO' && v.CARD_PHOTO && /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(v.CARD_PHOTO)) {
         return `<img src="${v.CARD_PHOTO}" alt="Photo of ${esc(v.CARD_NAME || 'the card holder')}" style="width:100%;height:100%;object-fit:cover;display:block">`;
+      }
+      if (k === 'PROVIDER_PHOTO') {
+        return loc && /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(loc.providerPhoto || '')
+          ? `<img src="${loc.providerPhoto}" alt="Photo of ${esc(v.PROVIDER_NAME || 'the provider')}" style="width:100%;height:100%;object-fit:cover;object-position:50% 15%;display:block">`
+          : `<mark class="ph">${LABELS.PROVIDER_PHOTO}</mark>`;
       }
       if (k === 'MAP') {
         return loc && loc.map

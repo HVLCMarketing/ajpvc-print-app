@@ -130,3 +130,5 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .tab:focus-visibl
 }
 .photo-field { display: flex; align-items: flex-end; gap: 10px; flex-wrap: wrap; }
 .photo-field label { flex: 1; min-width: 200px; }
+.provider-preview { height: 180px; }
+.provider-preview img { object-position: 50% 15%; }

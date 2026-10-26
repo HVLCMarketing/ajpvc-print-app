@@ -16,7 +16,7 @@
   let localOnly = [];          // locations found in this browser that aren't in the shared list
 
   const uid = () => 'loc-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
-  const blank = () => ({ id: uid(), locationName: 'New location', street: '', city: '', state: 'CA', zip: '', hours: '', map: '', openHouseDate: '', openHouseTime: '', talkDate: '', talkVenue: '' });
+  const blank = () => ({ id: uid(), locationName: 'New location', street: '', city: '', state: 'CA', zip: '', hours: '', map: '', providerName: '', providerTitle: '', providerPhoto: '', openHouseDate: '', openHouseTime: '', talkDate: '', talkVenue: '' });
   const active = () => locations.find((l) => l.id === activeId);
   const status = (msg, warn) => { const s = $('#saveState'); s.textContent = msg; s.classList.toggle('warn', !!warn); };
 
@@ -127,7 +127,7 @@
   function loadForm() {
     const loc = active() || {};
     const f = $('#locForm');
-    ['locationName', 'street', 'city', 'state', 'zip', 'hours', 'openHouseDate', 'openHouseTime', 'talkDate', 'talkVenue']
+    ['locationName', 'street', 'city', 'state', 'zip', 'hours', 'providerName', 'providerTitle', 'openHouseDate', 'openHouseTime', 'talkDate', 'talkVenue']
       .forEach((k) => { f.elements[k].value = loc[k] || ''; });
     showMap();
   }
@@ -135,6 +135,7 @@
   function showMap() {
     const loc = active() || {};
     $('#mapPreview').innerHTML = loc.map ? `<img src="${loc.map}" alt="Uploaded location map">` : '<span>No map yet</span>';
+    $('#providerPreview').innerHTML = loc.providerPhoto ? `<img src="${loc.providerPhoto}" alt="Uploaded provider photo">` : '<span>No photo yet</span>';
   }
 
   $('#locForm').addEventListener('input', (e) => {
@@ -185,6 +186,24 @@
     img.src = URL.createObjectURL(file);
     e.target.value = '';
   });
+  // provider photo: keep the whole picture, just scaled down
+  $('#providerFile').addEventListener('change', (e) => {
+    const file = e.target.files[0]; if (!file || !active() || !canEdit) return;
+    const img = new Image();
+    img.onload = () => {
+      const max = 1000, s = Math.min(1, max / Math.max(img.width, img.height));
+      const c = document.createElement('canvas');
+      c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      active().providerPhoto = c.toDataURL('image/jpeg', 0.88);
+      URL.revokeObjectURL(img.src);
+      queueSave(active()); showMap(); renderAll();
+    };
+    img.onerror = () => { URL.revokeObjectURL(img.src); alert('That image could not be read. Try a JPEG or PNG file.'); };
+    img.src = URL.createObjectURL(file);
+    e.target.value = '';
+  });
+  $('#clearProvider').addEventListener('click', () => { if (!active() || !canEdit) return; active().providerPhoto = ''; queueSave(active()); showMap(); renderAll(); });
   $('#clearMap').addEventListener('click', () => { if (!active() || !canEdit) return; active().map = ''; queueSave(active()); showMap(); renderAll(); });
 
   $('#exportLocs').addEventListener('click', () => {
