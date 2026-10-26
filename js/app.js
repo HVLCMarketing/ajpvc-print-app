@@ -289,6 +289,7 @@
       l.hidden = !on;
       if (!on) l.querySelector('input').value = 0;
     });
+    if ($('#qtyGrid').dataset.built) { syncOrderGroups(); renderOrderThumbs(); }
     $('#orderFacility').value = f.name;
     syncUrl();
   }
@@ -425,10 +426,98 @@
   }
 
   /* ---------- orders ---------- */
+  // what each orderable item is, shown under its preview on the order form
+  const ORDER_DESC = {
+    'trifold': 'Patient brochure on joint pain and vascular care, with this location’s address, hours and map.',
+    'patient-folder': 'Pocket folder for new-patient paperwork and handouts.',
+    'provider-folder': 'Pocket folder for referring-provider packets.',
+    'flyer': 'Grand opening flyer with this location’s open house and community talk details.',
+    'provider-flyer': 'Introduces this location’s featured provider and services. Two flyers per letter sheet.',
+    'postcard': 'Direct-mail postcard announcing this location.',
+    'art-18x24': 'Five watercolor joint prints (knee, hip, shoulder, hand, heel) for the waiting room.',
+    'art-24x36': 'The same five watercolor joint prints at the larger 24 × 36 size.',
+    'mousepad': 'Branded mousepad for front desks and referring offices.',
+    'card': 'Personal business cards. Set the name, title, phone and photo on the Business cards tab first.',
+    'newsletter-2026-11': 'Patient newsletter: new satellite locations, a joint-pain spotlight and more.',
+    'provider-newsletter-2026-11': 'Newsletter for referring providers: locations, referral tips, GAE and TAME.',
+    'vasc-guide': 'Patient guide to artery and vein conditions and how they are treated.',
+    'joint-guide': 'Patient guide to joint and tendon pain and the treatment options.',
+    'joint-guide-es': 'Spanish edition of the joint and tendon pain patient guide.',
+    'vasc-guide-es': 'Spanish edition of the arteries and veins patient guide.',
+    'provider-sheets': 'Six one-page clinical summaries for referring providers, one per service line.',
+    'refer-card': 'Pocket card for providers: when to refer, red flags and how to refer.',
+    'provider-guide': 'Booklet for referring providers covering our services and the referral process.',
+    'flip-joint': 'Exam-room tent flip chart: pictures face the patient, talking points face the provider.',
+    'flip-vasc': 'Exam-room tent flip chart for artery and vein conditions.',
+    'pi-referral-form': 'Two-sided referral form for personal injury law firms.',
+    'poster-hvlc-joint-pain': 'Joint pain wall poster, supplied as a print-ready PDF.',
+    'slick-personal-injury': 'One-page referral sheet for personal injury attorneys and case managers.',
+    'slick-workers-comp': 'One-page referral sheet for workers’ compensation adjusters and employers.',
+    'slick-corrections': 'One-page referral sheet for correctional health teams.',
+    'referral-form': 'Two-sided physician order form for referrals.'
+  };
+  const pieceFor = (key) => T.find((p) => p.id === (key === 'card' ? 'card-' + facility : key));
+  // turn the plain quantity list into cards with a preview, a description and the quantity box
+  function buildOrderCatalog() {
+    const grid = $('#qtyGrid'); if (grid.dataset.built) return;
+    const groups = {};
+    $$('#qtyGrid label[data-piece]').forEach((l) => {
+      const key = l.dataset.piece, input = l.querySelector('input'), p = pieceFor(key) || {};
+      const raw = l.textContent.trim(), m = raw.match(/^(.*?)\s*\(([^)]*)\)\s*$/);
+      const title = m ? m[1] : raw, unit = m ? m[2] : '';
+      l.className = 'qty-item'; l.textContent = '';
+      l.innerHTML = `<div class="qty-thumb"></div><div class="qty-body"><span class="qty-title">${A.esc(title)}</span>` +
+        `<span class="qty-desc">${A.esc(ORDER_DESC[key] || '')}</span><span class="qty-meta">${A.esc(p.size || '')}</span>` +
+        `<span class="qty-field"><span>Quantity${unit ? ' <small>(' + A.esc(unit) + ')</small>' : ''}</span></span></div>`;
+      l.querySelector('.qty-field').appendChild(input);
+      const g = key === 'card' ? 'Business cards' : (p.group || 'Other');
+      (groups[g] = groups[g] || []).push(l);
+    });
+    grid.textContent = '';
+    Object.keys(groups).sort((a, b) => gIdx(a) - gIdx(b)).forEach((g) => {
+      const sec = document.createElement('section'); sec.className = 'qty-group';
+      sec.innerHTML = `<h3>${A.esc(g)}</h3><div class="qty-list"></div>`;
+      groups[g].forEach((l) => sec.querySelector('.qty-list').appendChild(l));
+      grid.appendChild(sec);
+    });
+    grid.dataset.built = '1';
+  }
+  // previews use the location picked on the order form (business cards use the card details)
+  function renderOrderThumbs() {
+    buildOrderCatalog();
+    const loc = locations.find((l) => l.id === $('#orderLocation').value) || active() || {};
+    $$('#qtyGrid .qty-item').forEach((l) => {
+      const box = l.querySelector('.qty-thumb');
+      if (l.hidden) { box.innerHTML = ''; return; }
+      const p = pieceFor(l.dataset.piece);
+      if (!p) { box.innerHTML = ''; return; }
+      if (p.kind === 'file') { box.innerHTML = `<img src="${p.preview}" alt="" loading="lazy">`; return; }
+      const pg = p.pages[0], isCard = p.kind === 'card';
+      const html = isCard ? A.fill(pg.html, card.office, A.cardValues(card)) : A.fill(pg.html, loc);
+      box.innerHTML = `<div class="qty-frame" data-w="${pg.w}" data-h="${pg.h}"><div class="sheet" style="width:${pg.w}px;height:${pg.h}px">${html}</div></div>`;
+    });
+    layoutThumbs();
+  }
+  function layoutThumbs() {
+    $$('#qtyGrid .qty-frame').forEach((f) => {
+      const box = f.parentElement, bw = box.clientWidth, bh = box.clientHeight; if (!bw) return;
+      const w = +f.dataset.w, h = +f.dataset.h, sc = Math.min(bw / w, bh / h);
+      f.style.width = Math.round(w * sc) + 'px'; f.style.height = Math.round(h * sc) + 'px';
+      f.firstElementChild.style.transform = `scale(${sc})`;
+    });
+  }
+  new ResizeObserver(() => layoutThumbs()).observe($('#qtyGrid'));
+  $('#orderLocation').addEventListener('change', renderOrderThumbs);
+  // show each group heading only when it has items for this facility
+  function syncOrderGroups() {
+    $$('#qtyGrid .qty-group').forEach((g) => { g.hidden = !$$('.qty-item', g).some((l) => !l.hidden); });
+  }
+
   function fillOrderLocations() {
     const sel = $('#orderLocation');
     sel.innerHTML = locations.map((l) => `<option value="${l.id}">${A.esc(l.locationName || 'Untitled')}</option>`).join('');
     sel.value = activeId;
+    renderOrderThumbs(); syncOrderGroups();
   }
 
   $('#orderForm').addEventListener('submit', async (e) => {
