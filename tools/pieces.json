@@ -70,7 +70,8 @@
     "43f4a61c49afee78cb8d915826caeafe": "book-foundation.jpg",
     "1cad9a3d0b608e14a29b7d199cb0575a": "book-gae_vs_tkr.jpg",
     "645007f0d77d81f71023fcff9ad3bbe9": "book-beyond.jpg",
-    "383fba5dcb8c73ad4772dcad0a2b4971": "book-candidate.jpg"
+    "383fba5dcb8c73ad4772dcad0a2b4971": "book-candidate.jpg",
+    "39647f61087d39e8247e57444c932a00": "irani-photo.jpg"
   },
   "pieces": [
     {
@@ -156,6 +157,23 @@
         "[DATE], [TIME]": "{{OPEN_HOUSE_DATE}}, {{OPEN_HOUSE_TIME}}",
         "[DATE]": "{{OPEN_HOUSE_DATE}}"
       }
+    },
+    {
+      "id": "provider-irani",
+      "group": "Marketing materials",
+      "facility": "ajpvc",
+      "title": "Provider flyer: Sarah Irani, FNP",
+      "size": "9 × 6 in",
+      "inches": [
+        9,
+        6
+      ],
+      "pages": [
+        {
+          "file": "ProviderIrani.dc.html",
+          "label": "Front"
+        }
+      ]
     },
     {
       "id": "postcard",
