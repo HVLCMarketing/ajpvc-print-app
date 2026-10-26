@@ -166,15 +166,15 @@
       "group": "Marketing materials",
       "facility": "ajpvc",
       "title": "Provider flyer",
-      "size": "9 × 6 in",
+      "size": "8.5 × 5.5 in, printed 2 per 8.5 × 11 sheet",
       "inches": [
-        9,
-        6
+        8.5,
+        11
       ],
       "pages": [
         {
-          "file": "ProviderFlyer.dc.html",
-          "label": "Front"
+          "file": "ProviderFlyer2up.dc.html",
+          "label": "Sheet (2 flyers)"
         }
       ],
       "tokens": {
