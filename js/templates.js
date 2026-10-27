@@ -51,6 +51,25 @@ window.AJPVC_TEMPLATES = [
   ]
  },
  {
+  "id": "folder-concept-b",
+  "title": "Patient folder: concept B (mockup)",
+  "size": "9 × 12 pocket folder, 18 × 12 flat, outside only",
+  "inches": [
+   18,
+   12
+  ],
+  "facility": "ajpvc",
+  "group": "Folders",
+  "pages": [
+   {
+    "label": "Outside (back | front)",
+    "w": 1728,
+    "h": 1152,
+    "html": "<div style=\"width: 1728px; height: 1152px; display: flex; font-family: 'Public Sans', sans-serif\"><div style=\"position: relative; width: 864px; height: 1152px; overflow: hidden; background: #FFFFFF\">\n<svg width=\"864\" height=\"1152\" viewBox=\"0 0 864 1152\" style=\"position: absolute; inset: 0\" aria-hidden=\"true\">\n<path d=\"M0,0 H640 C450,70 230,150 0,205 Z\" fill=\"#16306E\"/>\n<path d=\"M0,232 C240,172 470,88 700,0\" fill=\"none\" stroke=\"#C8231E\" stroke-width=\"15\"/>\n<path d=\"M0,905 C250,1000 560,1070 864,1108 V1152 H0 Z\" fill=\"#16306E\"/>\n<path d=\"M0,872 C255,975 560,1046 880,1090\" fill=\"none\" stroke=\"#C8231E\" stroke-width=\"12\"/>\n</svg>\n<div style=\"position: absolute; left: 0; right: 0; top: 470px; display: flex; flex-direction: column; align-items: center; gap: 40px; text-align: center\">\n<p style=\"margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 19px; letter-spacing: 7px; text-transform: uppercase; color: #16306E; white-space: nowrap\">Health <span style=\"color: #C8231E; padding: 0 10px\">•</span> Mobility <span style=\"color: #C8231E; padding: 0 10px\">•</span> Wellness</p>\n<div style=\"display: flex; flex-direction: column; gap: 6px; font-size: 21px; line-height: 1.45; color: #1B2440\">\n<p style=\"margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 22px; color: #16306E\">{{LOCATION_NAME}}</p>\n<p style=\"margin: 0\">{{STREET}}, {{CITY_STATE_ZIP}}</p>\n<p style=\"margin: 0\">661-324-4100 · heartandleg.com · Se habla español</p>\n</div>\n</div>\n</div><div style=\"position: relative; width: 864px; height: 1152px; overflow: hidden; background: #FFFFFF; border-left: 1px solid #ECEAE4; box-sizing: border-box\">\n<img src=\"assets/wc-knee.jpg\" alt=\"\" style=\"position: absolute; right: -40px; top: 0; width: 340px; height: 1152px; object-fit: cover; object-position: 50% 35%; opacity: .3; -webkit-mask-image: linear-gradient(to left, #000 30%, transparent), linear-gradient(to bottom, #000 70%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(to left, #000 30%, transparent), linear-gradient(to bottom, #000 70%, transparent); mask-composite: intersect\">\n<svg width=\"864\" height=\"1152\" viewBox=\"0 0 864 1152\" style=\"position: absolute; inset: 0\" aria-hidden=\"true\">\n<path d=\"M0,1010 C270,950 570,1010 864,1118 V1152 H0 Z\" fill=\"#16306E\"/>\n<path d=\"M0,986 C285,925 590,988 864,1092\" fill=\"none\" stroke=\"#C8231E\" stroke-width=\"16\"/>\n</svg>\n<div style=\"position: absolute; left: 0; right: 0; top: 230px; display: flex; flex-direction: column; align-items: center; gap: 46px\">\n<img src=\"assets/logo-tall-clean.png\" alt=\"Advanced Joint Pain &amp; Vascular Center logo\" style=\"width: 470px; height: 456px; object-fit: contain; display: block\">\n<p style=\"margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 19px; letter-spacing: 7px; text-transform: uppercase; color: #16306E; white-space: nowrap\">Health <span style=\"color: #C8231E; padding: 0 10px\">•</span> Mobility <span style=\"color: #C8231E; padding: 0 10px\">•</span> Wellness</p>\n</div>\n</div></div>"
+   }
+  ]
+ },
+ {
   "id": "provider-folder",
   "title": "Provider folder",
   "size": "9 × 12 pocket folder, 18 × 12 flat",
