@@ -1284,6 +1284,29 @@
         "[EMAIL]": "{{CARD_EMAIL}}",
         "[PHOTO]": "{{CARD_PHOTO}}"
       }
+    },
+    {
+      "id": "landing",
+      "group": "Web",
+      "facility": "ajpvc",
+      "kind": "web",
+      "title": "Location landing page",
+      "size": "Web page",
+      "inches": [
+        13.33,
+        35.4
+      ],
+      "tokens": {
+        "[PROVIDER NAME]": "{{PROVIDER_NAME}}",
+        "[PROVIDER TITLE]": "{{PROVIDER_TITLE}}",
+        "[PROVIDER PHOTO]": "{{PROVIDER_PHOTO}}"
+      },
+      "pages": [
+        {
+          "file": "Main.dc.html",
+          "label": "Landing page"
+        }
+      ]
     }
   ],
   "tokens": {

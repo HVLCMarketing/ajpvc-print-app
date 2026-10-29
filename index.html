@@ -21,6 +21,7 @@
   <nav class="tabs" aria-label="Sections">
     <button type="button" class="tab is-active" data-tab="materials">Location materials</button>
     <button type="button" class="tab" data-tab="cards">Business cards</button>
+    <button type="button" class="tab" data-tab="landing" data-only="ajpvc">Landing pages</button>
     <button type="button" class="tab" data-tab="order">Place an order</button>
   </nav>
 </header>
@@ -138,6 +139,39 @@
         <div class="gallery-head"><h2 id="cardTitle">Business card</h2><p class="muted">3.5 × 2 in. Front and back shown at a larger size; it prints at true size.</p></div>
         <div id="cardPreview" class="pieces"></div>
       </section>
+    </div>
+  </section>
+
+  <!-- ============ LANDING PAGES ============ -->
+  <section id="tab-landing" class="tab-panel" hidden>
+    <div class="landing-wrap">
+      <div class="landing-head">
+        <div>
+          <h1>Location landing pages</h1>
+          <p class="muted">One web page per location. The address, hours and featured provider come from the location details on the Location materials tab. Copy the code into your website, or download it as a file.</p>
+        </div>
+        <label class="landing-pick">Location <select id="landingLocation"></select></label>
+      </div>
+      <p class="landing-warn" id="landingWarn" hidden></p>
+      <div class="landing-grid">
+        <section class="landing-preview" aria-label="Landing page preview">
+          <div class="landing-bar"><h2>Preview</h2>
+            <div class="seg" role="group" aria-label="Preview width">
+              <button type="button" class="btn ghost small is-on" data-w="1280">Desktop</button>
+              <button type="button" class="btn ghost small" data-w="390">Phone</button>
+            </div></div>
+          <div class="landing-frame"><iframe id="landingFrame" title="Landing page preview"></iframe></div>
+        </section>
+        <section class="landing-code" aria-label="Landing page HTML">
+          <div class="landing-bar"><h2>HTML code</h2>
+            <div class="row">
+              <button type="button" class="btn primary" id="landingCopy">Copy code</button>
+              <button type="button" class="btn ghost" id="landingDownload">Download .html</button>
+            </div></div>
+          <textarea id="landingCode" readonly spellcheck="false" aria-label="HTML code for this location's landing page"></textarea>
+          <p class="muted small">The screening form has no destination yet: your web developer points its <code>action</code> at your scheduling or email system. The provider photo is built into the code, so the file is larger when a photo is uploaded.</p>
+        </section>
+      </div>
     </div>
   </section>
 
