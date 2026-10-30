@@ -192,3 +192,12 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .tab:focus-visibl
 .gbp-person h3, .gbp-post h3 { margin: 0; }
 .gbp-person > p { margin: -6px 0 0; }
 .gbp-cta { margin: 0; font-size: 13px; color: var(--muted); }
+
+.gbp-people { grid-template-columns: 1fr !important; }
+.gbp-person summary { display: flex; align-items: center; gap: 12px; cursor: pointer; list-style: none; }
+.gbp-person summary::-webkit-details-marker { display: none; }
+.gbp-person summary::before { content: '▸'; color: var(--muted); }
+.gbp-person[open] summary::before { content: '▾'; }
+.gbp-person h4 { margin: 6px 0 0; font-size: 14px; color: var(--navy); }
+.gbp-confirm { background: #FFF4D6; border: 1px solid #E8C766; border-radius: 8px; padding: 10px 14px; font-size: 13px; }
+.gbp-confirm ul { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 3px; }

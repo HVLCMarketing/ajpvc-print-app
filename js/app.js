@@ -511,38 +511,62 @@ ${body}
     sel.value = locations.some((l) => l.id === keep) ? keep : (locations[0] || {}).id || '';
     const loc = locations.find((l) => l.id === sel.value) || {}, v = A.values(loc), F = G.facilities[facility];
     $('#gbpFacName').textContent = F.name;
+    const X = F.fixed || {};
+    const addr = X.address || v.FULL_ADDRESS || '[ADDRESS]', hours = X.hours || v.HOURS || '[HOURS]';
     $('#gbpBusiness').innerHTML = `<h2>Business profile: ${A.esc(F.name)}</h2>
+      ${X.address ? '<p class="muted small">Official name, address, phone and hours from the project hub. Use them exactly the same everywhere: Google, directories, the website and Zoho.</p>' : ''}
       <div class="gbp-grid">
       ${gbpField('Business name', F.name, { note: 'Use the name exactly as it appears on the sign. Google does not allow adding the city or keywords to the name.' })}
-      ${gbpField('Primary category', F.categories.primary, { note: 'Suggested. Pick the closest match in Google’s category list.' })}
+      ${gbpField('Primary category', F.categories.primary, { note: X.address ? 'Never use “Vascular surgeon”: no one at HVLC is a surgeon.' : 'Suggested. Pick the closest match in Google’s category list.' })}
       ${gbpField('Additional categories', F.categories.additional.join(', '), { note: 'Only add categories Google offers that describe services you actually provide.' })}
-      ${gbpField('Phone', '661-324-4100')}
-      ${gbpField('Website', 'https://heartandleg.com')}
-      ${gbpField('Address', v.FULL_ADDRESS || '[ADDRESS]')}
-      ${gbpField('Hours', v.HOURS || '[HOURS]', { note: 'Google asks for hours day by day; enter them from this line.' })}
+      ${gbpField('Phone', X.phone || '661-324-4100')}
+      ${gbpField('Website', 'https://heartandleg.com', { note: 'The homepage, not a provider page.' })}
+      ${gbpField('Address', addr)}
+      ${gbpField('Hours', hours, { note: 'Google asks for hours day by day; enter them from this line.' })}
+      ${X.appointment ? gbpField('Appointment link', X.appointment) : ''}
+      ${X.opening ? gbpField('Opening date', X.opening) : ''}
+      ${X.social ? gbpField('Social profiles', X.social) : ''}
       </div>
-      ${gbpField('Business description', gbpFill(F.description, loc), { limit: 750, note: 'Google allows up to 750 characters. Leave out phone numbers, links and promotional claims.' })}
-      <h3>Services</h3><div class="gbp-grid">${F.services.map(([n, d]) => gbpField(A.esc(n), d, { limit: 300, rows: 3 })).join('')}</div>`;
+      ${gbpField('Business description', gbpFill(F.description, loc), { limit: 750, note: 'Google allows up to 750 characters. Leave out phone numbers and links.' })}
+      <h3>Services</h3><div class="gbp-grid">${F.services.map(([n, d]) => gbpField(A.esc(n), d, { limit: 300, rows: 4 })).join('')}</div>`;
     $('#gbpPosts').innerHTML = `<h2>Standard updates</h2>
       <p class="muted small">Post one of these as an <b>Update</b> every week or two. Google rejects updates that include a phone number in the text, so add it with the button instead. Add a photo to each post.</p>
       <div class="gbp-posts">${F.posts.map(([t, body, cta]) => `<article class="gbp-post"><h3>${A.esc(gbpFill(t, loc))}</h3>
         ${gbpField('Update text', gbpFill(body, loc), { limit: 1500, rows: 8 })}
         <p class="gbp-cta">Button: <b>${A.esc(cta === 'Call' ? 'Call now' : cta)}</b>${cta === 'Call' ? '' : ' → https://heartandleg.com'}</p></article>`).join('')}</div>`;
-    const people = G.providers.slice();
-    if (loc.providerName && !people.some((p) => loc.providerName.toLowerCase().includes(p.name.split(' ').slice(-1)[0].toLowerCase()))) {
+    const D = G.drafts || [];
+    const lastOf = (n) => n.split(',')[0].trim().split(' ').slice(-1)[0].toLowerCase();
+    const drafted = new Set(D.map((d) => lastOf(d.profileName)));
+    const people = G.providers.filter((p) => !drafted.has(lastOf(p.name)));
+    if (loc.providerName && !drafted.has(lastOf(loc.providerName)) && !people.some((p) => lastOf(p.name) === lastOf(loc.providerName))) {
       const [nm, ...cr] = loc.providerName.split(','); people.unshift({ name: nm.trim(), cred: cr.join(',').trim(), role: /\bMD|DO\b/.test(loc.providerName) ? 'md' : /PA/.test(loc.providerName) ? 'pa' : 'np' });
     }
+    const draftCard = (d) => `<details class="gbp-person"><summary><h3>${A.esc(d.profileName)}</h3><span class="badge badge-ok">Draft from project hub</span></summary>
+      ${d.confirm.length ? `<div class="gbp-confirm"><b>To confirm before publishing</b><ul>${d.confirm.map((c) => `<li>${A.esc(c)}</li>`).join('')}</ul></div>` : ''}
+      <div class="gbp-grid">
+      ${gbpField('Profile name', d.profileName, { note: 'Name and credential only. No practice name, “Dr.” or keywords, or Google may suspend the profile.' })}
+      ${gbpField('Primary category', d.category)}
+      ${d.additional.length ? gbpField('Additional categories', d.additional.join(', ')) : ''}
+      ${gbpField('Address', d.address)}${gbpField('Phone', d.phone)}${gbpField('Hours', d.hours)}
+      ${gbpField('Website', d.website)}${gbpField('Appointment link', d.appointment)}
+      </div>
+      ${gbpField('Description', d.description, { limit: 750, rows: 7 })}
+      <h4>Services</h4><div class="gbp-grid">${d.services.map((sv) => gbpField(A.esc(sv.name), sv.description, { limit: 300, rows: 3, note: sv.description ? '' : 'No description in the draft yet. Add one or list the name only.' })).join('')}</div>
+      ${d.post ? `<h4>First Google post</h4>${gbpField('Post title', d.post.title || '')}${gbpField('Post text', d.post.body || '', { limit: 1500, rows: 6 })}` : ''}
+      </details>`;
+    const templCard = (p) => {
+      const R = G.roles[p.role], parts = p.name.split(' ');
+      const full = p.name + (p.cred ? ', ' + p.cred : '');
+      const text = gbpFill(R.text, loc, { NAME: p.name, CRED: p.cred, FIRST: parts[0], LAST: parts[parts.length - 1] });
+      return `<details class="gbp-person"><summary><h3>${A.esc(full)}</h3><span class="badge badge-warn">No draft yet</span></summary>
+        <p class="muted small">${A.esc(R.title)}. Starter wording only; replace it with a reviewed draft like the ones above.</p>
+        ${gbpField('Profile name', full, { note: 'Name and credential only. No practice name, “Dr.” or keywords.' })}
+        ${gbpField('Primary category', R.category)}
+        ${gbpField('Description', text, { limit: 750, rows: 6 })}</details>`;
+    };
     $('#gbpProviders').innerHTML = `<h2>Provider profiles</h2>
-      <p class="muted small">Google allows a separate profile for each provider who sees patients at a location. Each provider (or the practice) claims it under the provider’s name, with the same address and phone as ${A.esc(v.LOCATION_NAME || 'the location')}. Confirm each name, credential and category before posting.</p>
-      <div class="gbp-people">${people.map((p) => {
-        const R = G.roles[p.role], parts = p.name.split(' ');
-        const full = p.name + (p.cred ? ', ' + p.cred : '');
-        const text = gbpFill(R.text, loc, { NAME: p.name, CRED: p.cred, FIRST: parts[0], LAST: parts[parts.length - 1] });
-        return `<article class="gbp-person"><h3>${A.esc(full)}</h3><p class="muted small">${A.esc(R.title)}</p>
-          ${gbpField('Profile name', p.role === 'md' || p.role === 'cmo' ? 'Dr. ' + full : full)}
-          ${gbpField('Primary category', R.category)}
-          ${gbpField('Description', text, { limit: 750, rows: 8 })}</article>`;
-      }).join('')}</div>`;
+      <p class="muted small">Each provider who sees patients gets a separate profile with the practice address and phone. PAs and NPs list procedures only as evaluations, since physicians perform them. The clinical team approves all medical wording before anything is published.</p>
+      <div class="gbp-people">${D.map(draftCard).join('')}${people.map(templCard).join('')}</div>`;
     $$('#tab-gbp .gbp-field').forEach(updateCount);
   }
   function updateCount(f) {
