@@ -22,6 +22,7 @@
     <button type="button" class="tab is-active" data-tab="materials">Location materials</button>
     <button type="button" class="tab" data-tab="cards">Business cards</button>
     <button type="button" class="tab" data-tab="landing" data-only="ajpvc">Landing pages</button>
+    <button type="button" class="tab" data-tab="gbp">Google profiles</button>
     <button type="button" class="tab" data-tab="order">Place an order</button>
   </nav>
 </header>
@@ -175,6 +176,23 @@
     </div>
   </section>
 
+  <!-- ============ GOOGLE PROFILES ============ -->
+  <section id="tab-gbp" class="tab-panel" hidden>
+    <div class="gbp-wrap">
+      <div class="landing-head">
+        <div>
+          <h1>Google Business Profiles</h1>
+          <p class="muted">Standard wording for the <b id="gbpFacName">facility</b> profile, ready-made updates, and a profile for each provider. Pick a location to fill in the address, hours and city. You can edit any box before copying; edits here are not saved.</p>
+        </div>
+        <label class="landing-pick">Location <select id="gbpLocation"></select></label>
+      </div>
+      <nav class="gbp-jump" aria-label="Google profile sections"><a href="#gbpBusiness">Business profile</a><a href="#gbpPosts">Standard updates</a><a href="#gbpProviders">Provider profiles</a></nav>
+      <section id="gbpBusiness" class="gbp-section"></section>
+      <section id="gbpPosts" class="gbp-section"></section>
+      <section id="gbpProviders" class="gbp-section"></section>
+    </div>
+  </section>
+
   <!-- ============ ORDER ============ -->
   <section id="tab-order" class="tab-panel" hidden>
     <div class="order-wrap">
@@ -250,6 +268,7 @@
 
 <script src="js/templates.js"></script>
 <script src="js/render.js"></script>
+<script src="js/gbp-data.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
