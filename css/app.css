@@ -201,3 +201,7 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .tab:focus-visibl
 .gbp-person h4 { margin: 6px 0 0; font-size: 14px; color: var(--navy); }
 .gbp-confirm { background: #FFF4D6; border: 1px solid #E8C766; border-radius: 8px; padding: 10px 14px; font-size: 13px; }
 .gbp-confirm ul { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 3px; }
+
+.print-opts { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; }
+.print-opts .opt { display: flex; align-items: center; gap: 6px; font-weight: 600; white-space: nowrap; }
+.print-opts input { width: auto; min-height: 0; }

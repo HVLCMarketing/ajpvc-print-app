@@ -102,7 +102,8 @@
           "file": "TrifoldInside.dc.html",
           "label": "Inside"
         }
-      ]
+      ],
+      "duplex": true
     },
     {
       "id": "patient-folder",
@@ -1253,7 +1254,8 @@
         "[CELL PHONE]": "{{CARD_CELL}}",
         "[EMAIL]": "{{CARD_EMAIL}}",
         "[PHOTO]": "{{CARD_PHOTO}}"
-      }
+      },
+      "duplex": true
     },
     {
       "id": "card-hvlc",
@@ -1283,7 +1285,8 @@
         "[CELL PHONE]": "{{CARD_CELL}}",
         "[EMAIL]": "{{CARD_EMAIL}}",
         "[PHOTO]": "{{CARD_PHOTO}}"
-      }
+      },
+      "duplex": true
     },
     {
       "id": "landing",

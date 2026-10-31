@@ -9,6 +9,7 @@ window.AJPVC_TEMPLATES = [
    8.5
   ],
   "facility": "ajpvc",
+  "duplex": true,
   "group": "Marketing materials",
   "pages": [
    {
@@ -1527,6 +1528,7 @@ window.AJPVC_TEMPLATES = [
   ],
   "facility": "ajpvc",
   "kind": "card",
+  "duplex": true,
   "group": "Business cards",
   "pages": [
    {
@@ -1553,6 +1555,7 @@ window.AJPVC_TEMPLATES = [
   ],
   "facility": "hvlc",
   "kind": "card",
+  "duplex": true,
   "group": "Business cards",
   "pages": [
    {
