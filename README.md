@@ -25,13 +25,21 @@ Locations are saved on the Netlify site itself (Netlify Blobs), so everyone sees
 
 To change the passcode later, edit `EDIT_PASSCODE` and redeploy. Everyone will need to unlock again.
 
-## Turn on order emails (one time)
+## Turn on order emails with PDFs (one time)
 
-1. Deploy the site once. Netlify detects the `print-order` form automatically.
-2. In Netlify: *Site configuration → Forms → Form notifications → Add notification → Email notification*.
-3. Choose the `print-order` form and enter the email address that should receive orders.
+When an order is submitted, the site builds a print-ready PDF of every ordered piece for that location and emails them to the marketing team through [Resend](https://resend.com). Files that don't fit in one email (over about 30 MB together) are linked instead; every file also has a download link that works for 90 days.
 
-Every order also appears under *Forms* in the Netlify dashboard and can be exported to CSV.
+1. Create a free Resend account. Under **Domains**, add `vhpmd.com` and add the DNS records Resend shows (ask whoever manages the vhpmd.com DNS). Wait until the domain shows **Verified**.
+2. In Resend, create an **API key** with sending access.
+3. In Netlify: *Site configuration → Environment variables*, add:
+   - `RESEND_API_KEY`: the key from step 2
+   - `ORDER_EMAIL_TO`: who receives orders (separate several addresses with commas)
+   - `ORDER_EMAIL_FROM`: for example `AJPVC Print Orders <orders@vhpmd.com>`
+4. Redeploy the site.
+
+Orders still appear under *Forms* in the Netlify dashboard. If you also had a Netlify form email notification turned on, turn it off to avoid getting two emails per order.
+
+The PDFs are built by `netlify/functions/order-pdfs-background.mjs` (a background function, which can run for up to 15 minutes) and served by `netlify/functions/order-file.mjs`.
 
 ## Using it
 

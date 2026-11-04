@@ -3,6 +3,8 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@netlify/blobs": "^11.1.4"
+    "@netlify/blobs": "^11.1.4",
+    "@sparticuz/chromium": "^153.0.0",
+    "puppeteer-core": "^25.16.0"
   }
 }

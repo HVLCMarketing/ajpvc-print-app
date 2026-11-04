@@ -701,6 +701,17 @@ ${body}
         ? await fetch('/', { method: 'POST', body: data })
         : await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
       if (!res.ok) throw new Error(String(res.status));
+      // then ask the site to build a PDF of each ordered piece and email them to the marketing team
+      const items = $$('#qtyGrid label[data-piece]').map((l) => {
+        const i = l.querySelector('input'), p = pieceFor(l.dataset.piece);
+        return { piece: p ? p.id : l.dataset.piece, qty: +i.value || 0, label: p ? p.title : l.dataset.piece };
+      }).filter((x) => x.qty > 0);
+      const fd = Object.fromEntries(new FormData(f));
+      ['card_photo'].forEach((k) => delete fd[k]);
+      fetch('/.netlify/functions/order-pdfs-background', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...fd, location: loc, items, card: items.some((x) => x.piece.startsWith('card-')) ? card : null })
+      }).catch(() => {});
       err.hidden = true; f.hidden = true; $('#orderDone').hidden = false; f.reset();
     } catch (x) {
       const code = /^\d+$/.test(x.message) ? x.message : '';

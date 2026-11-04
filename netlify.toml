@@ -7,3 +7,8 @@
   for = "/js/templates.js"
   [headers.values]
     Cache-Control = "no-cache"
+
+[functions]
+  node_bundler = "esbuild"
+  # Chromium ships its own browser binary, so it is copied as-is instead of bundled
+  external_node_modules = ["@sparticuz/chromium"]
