@@ -1,4 +1,4 @@
-/* Specialty center mini sites: generated from /home/claude/minisites (see README) */
+/* Specialty center mini sites: generated from /home/claude/minisites */
 window.AJPVC_MINISITES = [
  {
   "slug": "ajpvc",
@@ -82,19 +82,33 @@ window.AJPVC_MINISITES = [
  },
  {
   "slug": "foot",
-  "name": "Advanced Foot & Ankle Pain Center",
-  "code": "AFAPC",
+  "name": "Advanced Foot Pain Center",
+  "code": "AFPC",
   "hub": false,
-  "folder": "advanced-foot-ankle-pain-center",
+  "folder": "advanced-foot-pain-center",
   "covers": [
    "Plantar fasciitis",
    "Stubborn heel pain",
-   "Ankle arthritis",
    "Foot sores and poor circulation"
   ],
   "preview": "https://claude.ai/artifact/QQCKGQuwUEzUBKJ8rh7jAy",
-  "zip": "files/minisites/advanced-foot-ankle-pain-center.zip",
+  "zip": "files/minisites/advanced-foot-pain-center.zip",
   "thumb": "assets/minisites/foot.webp"
+ },
+ {
+  "slug": "ankle",
+  "name": "Advanced Ankle Pain Center",
+  "code": "AAPC",
+  "hub": false,
+  "folder": "advanced-ankle-pain-center",
+  "covers": [
+   "Ankle arthritis",
+   "Long-lasting ankle pain",
+   "Ankle stiffness and swelling"
+  ],
+  "preview": "https://claude.ai/artifact/RrYJ1brrjVH1xkrxKxsmTX",
+  "zip": "files/minisites/advanced-ankle-pain-center.zip",
+  "thumb": "assets/minisites/ankle.webp"
  },
  {
   "slug": "elbow",
