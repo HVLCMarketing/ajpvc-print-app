@@ -146,6 +146,11 @@
   <!-- ============ LANDING PAGES ============ -->
   <section id="tab-landing" class="tab-panel" hidden>
     <div class="landing-wrap">
+      <div class="seg lp-switch" role="group" aria-label="Landing page type">
+        <button type="button" class="btn ghost is-on" data-lp="loc">Location pages</button>
+        <button type="button" class="btn ghost" data-lp="mini">Specialty mini sites</button>
+      </div>
+      <div id="lpLocations" class="lp-view">
       <div class="landing-head">
         <div>
           <h1>Location landing pages</h1>
@@ -171,6 +176,26 @@
             </div></div>
           <textarea id="landingCode" readonly spellcheck="false" aria-label="HTML code for this location's landing page"></textarea>
           <p class="muted small">The screening form has no destination yet: your web developer points its <code>action</code> at your scheduling or email system. The provider photo is built into the code, so the file is larger when a photo is uploaded.</p>
+        </section>
+      </div>
+      </div>
+      <div id="lpMini" class="lp-view" hidden>
+        <div class="landing-head">
+          <div>
+            <h1>Specialty mini sites</h1>
+            <p class="muted">Eleven patient-facing sites, one for each center in the Advanced Joint Pain &amp; Vascular Center network. Each is its own Netlify site with English and Spanish, a location finder and a request form that tags every lead with the code shown on its card.</p>
+          </div>
+          <a class="btn primary" href="files/minisites/AJPVC-mini-sites-all.zip" download>Download all 11 (.zip)</a>
+        </div>
+        <div class="mini-grid" id="miniGrid"></div>
+        <section class="mini-how" aria-label="How to publish a mini site">
+          <h2>Publishing a mini site</h2>
+          <ol>
+            <li>Download a site's .zip and unzip it. The folder holds <code>index.html</code>, <code>thank-you.html</code> and an <code>img</code> folder.</li>
+            <li>In Netlify, choose <em>Add new site, Deploy manually</em> and drop the unzipped folder. Repeat for each center. Forms turn on by themselves.</li>
+            <li>Under <em>Forms</em> in Netlify, set up the email notification for the <code>consultation</code> form. The <code>source</code> field tells you which center each request came from.</li>
+            <li>The links between the sites still point to the preview pages. Send the 11 final web addresses to have them swapped in.</li>
+          </ol>
         </section>
       </div>
     </div>
@@ -267,6 +292,7 @@
 </main>
 
 <script src="js/templates.js"></script>
+<script src="js/minisites.js"></script>
 <script src="js/render.js"></script>
 <script src="js/gbp-data.js"></script>
 <script src="js/app.js"></script>

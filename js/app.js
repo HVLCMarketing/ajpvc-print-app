@@ -475,6 +475,31 @@ ${body}
   }
   new ResizeObserver(() => layoutLanding()).observe($('.landing-frame'));
   $('#landingLocation').addEventListener('change', renderLanding);
+  /* ---------- specialty mini sites (second view of the Landing pages tab) ---------- */
+  (function () {
+    const grid = $('#miniGrid'), M = window.AJPVC_MINISITES || [];
+    if (!grid) return;
+    grid.innerHTML = M.map((m) => `
+      <article class="mini-card">
+        <a class="thumb" href="${A.esc(m.preview)}" target="_blank" rel="noopener" aria-label="Open the ${A.esc(m.name)} preview"><img src="${A.esc(m.thumb)}" alt="" loading="lazy"></a>
+        <div class="mini-body">
+          <span class="tag${m.hub ? ' hub' : ''}">${A.esc(m.code)}</span>
+          <h3>${A.esc(m.name)}</h3>
+          <p>${m.hub ? 'The network hub. Links to every center.' : 'Covers ' + A.esc(m.covers.slice(0, 3).join(', ').toLowerCase()) + ' and more.'}</p>
+          <div class="mini-actions">
+            <a class="btn primary small" href="${A.esc(m.preview)}" target="_blank" rel="noopener">Preview</a>
+            <a class="btn ghost small" href="${A.esc(m.zip)}" download>Download .zip</a>
+          </div>
+        </div>
+      </article>`).join('');
+    $$('.lp-switch button').forEach((b) => b.addEventListener('click', () => {
+      $$('.lp-switch button').forEach((x) => x.classList.toggle('is-on', x === b));
+      $('#lpLocations').hidden = b.dataset.lp !== 'loc';
+      $('#lpMini').hidden = b.dataset.lp !== 'mini';
+      if (b.dataset.lp === 'loc') layoutLanding();
+    }));
+  })();
+
   $$('.landing-preview .seg button').forEach((b) => b.addEventListener('click', () => {
     $$('.landing-preview .seg button').forEach((x) => x.classList.toggle('is-on', x === b));
     landingW = +b.dataset.w; renderLanding();
