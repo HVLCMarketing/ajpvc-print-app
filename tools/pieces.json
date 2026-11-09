@@ -1214,6 +1214,20 @@
       ]
     },
     {
+      "id": "sheet-gae-pfe",
+      "group": "Marketing materials",
+      "facility": "both",
+      "kind": "file",
+      "title": "GAE & PFE leg pain sheet: 11 × 8.5",
+      "size": "11 × 8.5 in, two sides, print-ready PDF",
+      "inches": [
+        11,
+        8.5
+      ],
+      "pdf": "files/HVLC_GAE_PFE_Sheet_11x8.5.pdf",
+      "preview": "files/HVLC_GAE_PFE_Sheet_11x8.5-preview.webp"
+    },
+    {
       "id": "poster-hvlc-joint-pain",
       "group": "Posters",
       "facility": "hvlc",

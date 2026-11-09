@@ -1504,6 +1504,21 @@ window.AJPVC_TEMPLATES = [
   ]
  },
  {
+  "id": "sheet-gae-pfe",
+  "title": "GAE & PFE leg pain sheet: 11 × 8.5",
+  "size": "11 × 8.5 in, two sides, print-ready PDF",
+  "inches": [
+   11,
+   8.5
+  ],
+  "kind": "file",
+  "pdf": "files/HVLC_GAE_PFE_Sheet_11x8.5.pdf",
+  "preview": "files/HVLC_GAE_PFE_Sheet_11x8.5-preview.webp",
+  "facility": "both",
+  "group": "Marketing materials",
+  "pages": []
+ },
+ {
   "id": "poster-hvlc-joint-pain",
   "title": "Joint pain poster: 24 × 36",
   "size": "24 × 36 in, print-ready PDF",

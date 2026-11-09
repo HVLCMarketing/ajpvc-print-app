@@ -633,6 +633,7 @@ ${body}
     'flip-joint': 'Exam-room tent flip chart: pictures face the patient, talking points face the provider.',
     'flip-vasc': 'Exam-room tent flip chart for artery and vein conditions.',
     'pi-referral-form': 'Two-sided referral form for personal injury law firms.',
+    'sheet-gae-pfe': 'Two-sided sheet on genicular artery embolization (knee OA) and plantar fascia embolization, supplied as a print-ready PDF.',
     'poster-hvlc-joint-pain': 'Joint pain wall poster, supplied as a print-ready PDF.',
     'slick-personal-injury': 'One-page referral sheet for personal injury attorneys and case managers.',
     'slick-workers-comp': 'One-page referral sheet for workers’ compensation adjusters and employers.',
