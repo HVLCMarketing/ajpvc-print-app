@@ -18,9 +18,10 @@
   <div class="row">
     <span class="print-opts" id="printOpts"></span>
     <span class="badge badge-warn" id="printWarn" hidden></span>
+    <button type="button" class="btn" id="printShopBtn" disabled title="Vector PDF at final size plus 1/8 in bleed and crop marks, for the print shop">Print-shop PDF (vector, bleed + crop marks)</button>
     <button type="button" class="btn primary" id="printBtn" disabled>Print / Save as PDF</button>
   </div>
-  <p class="hint">In the print dialog choose <b>Save as PDF</b> (or your printer), set margins to <b>None</b>, and turn on <b>Background graphics</b>. For two-sided printing choose <b>Flip on long edge</b>; the back side is already turned to match. Office printers can't print to the paper edge: for a full-color edge, tick <b>Edge-to-edge on an office printer</b>, print on 11 × 17, and trim at the marks.</p>
+  <p class="hint"><b>Print-shop PDF:</b> choose <b>Save as PDF</b>, margins <b>None</b>, background graphics <b>on</b>. Text and shapes stay vector with fonts embedded; photos stay at their original resolution. The page is the trim size plus 1/8 in bleed and a slug with crop marks. In the print dialog choose <b>Save as PDF</b> (or your printer), set margins to <b>None</b>, and turn on <b>Background graphics</b>. For two-sided printing choose <b>Flip on long edge</b>; the back side is already turned to match. Office printers can't print to the paper edge: for a full-color edge, tick <b>Edge-to-edge on an office printer</b>, print on 11 × 17, and trim at the marks.</p>
 </div>
 <div id="sheets"></div>
 <script src="js/templates.js"></script>
