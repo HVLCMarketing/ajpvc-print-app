@@ -212,6 +212,27 @@
       }
     },
     {
+      "id": "pt-handout",
+      "group": "Marketing materials",
+      "facility": "ajpvc",
+      "title": "Physical therapy patient handout (PCP referral or self-schedule)",
+      "size": "8.5 \u00d7 11 in, double-sided",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "PTHandoutFront.dc.html",
+          "label": "Front (patient)"
+        },
+        {
+          "file": "PTHandoutBack.dc.html",
+          "label": "Back (for PCP)"
+        }
+      ]
+    },
+    {
       "id": "postcard",
       "group": "Marketing materials",
       "facility": "ajpvc",
