@@ -82,7 +82,8 @@
     "fa362e18acc6577125fbc3372c049810": "icon-injury-hi.png",
     "923f0cd788722ccd6eb90c5ceb9de20e": "logo-long-clean.png",
     "b14f3e9e04c314982ca4cb082739bb7b": "logo-tall-clean.png",
-    "d02f9af7c5b85af55d65d12b260f640b": "logo-ajpvc-division-clean.png"
+    "d02f9af7c5b85af55d65d12b260f640b": "logo-ajpvc-division-clean.png",
+    "47317e7e365f7b19dff45fa36788f9a1": "qr-patient-referral.png"
   },
   "pieces": [
     {
@@ -90,7 +91,7 @@
       "group": "Marketing materials",
       "facility": "ajpvc",
       "title": "Trifold brochure",
-      "size": "11 × 8.5 in, two sides",
+      "size": "11 \u00d7 8.5 in, two sides",
       "inches": [
         11,
         8.5
@@ -112,7 +113,7 @@
       "group": "Folders",
       "facility": "ajpvc",
       "title": "Patient folder",
-      "size": "9 × 12 pocket folder, 18 × 12 flat",
+      "size": "9 \u00d7 12 pocket folder, 18 \u00d7 12 flat",
       "inches": [
         18,
         12
@@ -133,7 +134,7 @@
       "group": "Folders",
       "facility": "ajpvc",
       "title": "Patient folder: concept B (mockup)",
-      "size": "9 × 12 pocket folder, 18 × 12 flat, outside only",
+      "size": "9 \u00d7 12 pocket folder, 18 \u00d7 12 flat, outside only",
       "inches": [
         18,
         12
@@ -150,7 +151,7 @@
       "group": "Folders",
       "facility": "ajpvc",
       "title": "Provider folder",
-      "size": "9 × 12 pocket folder, 18 × 12 flat",
+      "size": "9 \u00d7 12 pocket folder, 18 \u00d7 12 flat",
       "inches": [
         18,
         12
@@ -171,7 +172,7 @@
       "group": "Marketing materials",
       "facility": "ajpvc",
       "title": "Grand opening flyer",
-      "size": "8.5 × 11 in",
+      "size": "8.5 \u00d7 11 in",
       "inches": [
         8.5,
         11
@@ -192,7 +193,7 @@
       "group": "Marketing materials",
       "facility": "ajpvc",
       "title": "Provider flyer",
-      "size": "8.5 × 5.5 in, printed 2 per 8.5 × 11 sheet",
+      "size": "8.5 \u00d7 5.5 in, printed 2 per 8.5 \u00d7 11 sheet",
       "inches": [
         8.5,
         11
@@ -215,7 +216,7 @@
       "group": "Marketing materials",
       "facility": "ajpvc",
       "title": "Direct mail postcard",
-      "size": "9 × 6 in, front",
+      "size": "9 \u00d7 6 in, front",
       "inches": [
         9,
         6
@@ -236,7 +237,7 @@
       "group": "Marketing materials",
       "facility": "ajpvc",
       "title": "Mousepad",
-      "size": "9.25 × 7.75 in",
+      "size": "9.25 \u00d7 7.75 in",
       "inches": [
         9.25,
         7.75
@@ -253,7 +254,7 @@
       "group": "Patient guides",
       "facility": "both",
       "title": "Patient guide: Joint & tendon pain",
-      "size": "16-page booklet, 8.5 × 11 in pages",
+      "size": "16-page booklet, 8.5 \u00d7 11 in pages",
       "inches": [
         8.5,
         11
@@ -330,7 +331,7 @@
       "group": "Patient guides",
       "facility": "both",
       "title": "Patient guide (Spanish): Joint & tendon pain",
-      "size": "16-page booklet, 8.5 × 11 in pages",
+      "size": "16-page booklet, 8.5 \u00d7 11 in pages",
       "inches": [
         8.5,
         11
@@ -407,7 +408,7 @@
       "group": "Referral materials",
       "facility": "hvlc",
       "title": "Referral slick sheet: Personal Injury",
-      "size": "8.5 × 11 in",
+      "size": "8.5 \u00d7 11 in",
       "inches": [
         8.5,
         11
@@ -424,7 +425,7 @@
       "group": "Referral materials",
       "facility": "both",
       "title": "Personal injury referral form",
-      "size": "8.5 × 11 in, 2-sided",
+      "size": "8.5 \u00d7 11 in, 2-sided",
       "inches": [
         8.5,
         11
@@ -445,7 +446,7 @@
       "group": "Referral materials",
       "facility": "hvlc",
       "title": "Referral slick sheet: Workers' Compensation",
-      "size": "8.5 × 11 in",
+      "size": "8.5 \u00d7 11 in",
       "inches": [
         8.5,
         11
@@ -462,7 +463,7 @@
       "group": "Referral materials",
       "facility": "hvlc",
       "title": "Referral slick sheet: Correctional Health",
-      "size": "8.5 × 11 in",
+      "size": "8.5 \u00d7 11 in",
       "inches": [
         8.5,
         11
@@ -479,7 +480,7 @@
       "group": "Referral materials",
       "facility": "hvlc",
       "title": "Physician referral (order) form",
-      "size": "8.5 × 11 in, two sides",
+      "size": "8.5 \u00d7 11 in, two sides",
       "inches": [
         8.5,
         11
@@ -500,7 +501,7 @@
       "group": "Referral materials",
       "facility": "both",
       "title": "Provider service sheets (6)",
-      "size": "6 one-page sheets, 8.5 × 11 in",
+      "size": "6 one-page sheets, 8.5 \u00d7 11 in",
       "inches": [
         8.5,
         11
@@ -537,7 +538,7 @@
       "group": "Referral materials",
       "facility": "both",
       "title": "When-to-refer pocket card",
-      "size": "4 × 9 in, 2-sided",
+      "size": "4 \u00d7 9 in, 2-sided",
       "inches": [
         4,
         9
@@ -558,7 +559,7 @@
       "group": "Referral materials",
       "facility": "both",
       "title": "Referring provider guide",
-      "size": "8-page booklet, 8.5 × 11 in pages",
+      "size": "8-page booklet, 8.5 \u00d7 11 in pages",
       "inches": [
         8.5,
         11
@@ -603,7 +604,7 @@
       "group": "Referral materials",
       "facility": "both",
       "title": "Exam room flip chart: Joint pain",
-      "size": "Tent easel, 11 × 8.5 in landscape pages",
+      "size": "Tent easel, 11 \u00d7 8.5 in landscape pages",
       "inches": [
         11,
         8.5
@@ -611,235 +612,235 @@
       "pages": [
         {
           "file": "FlipJ00Cover.dc.html",
-          "label": "J00a · Cover"
+          "label": "J00a \u00b7 Cover"
         },
         {
           "file": "FlipJ00Notes.dc.html",
-          "label": "J00b · How to use (provider side)"
+          "label": "J00b \u00b7 How to use (provider side)"
         },
         {
           "file": "FlipJ01InsideKnee.dc.html",
-          "label": "J01a · Inside a Healthy Knee (patient side)"
+          "label": "J01a \u00b7 Inside a Healthy Knee (patient side)"
         },
         {
           "file": "FlipJ01InsideKneeNotes.dc.html",
-          "label": "J01b · Inside a Healthy Knee (provider side)"
+          "label": "J01b \u00b7 Inside a Healthy Knee (provider side)"
         },
         {
           "file": "FlipJ02WholeJoint.dc.html",
-          "label": "J02a · Arthritis Is a Whole-Joint Disease (patient side)"
+          "label": "J02a \u00b7 Arthritis Is a Whole-Joint Disease (patient side)"
         },
         {
           "file": "FlipJ02WholeJointNotes.dc.html",
-          "label": "J02b · Arthritis Is a Whole-Joint Disease (provider side)"
+          "label": "J02b \u00b7 Arthritis Is a Whole-Joint Disease (provider side)"
         },
         {
           "file": "FlipJ03Types.dc.html",
-          "label": "J03a · Arthritis Is Not One Disease (patient side)"
+          "label": "J03a \u00b7 Arthritis Is Not One Disease (patient side)"
         },
         {
           "file": "FlipJ03TypesNotes.dc.html",
-          "label": "J03b · Arthritis Is Not One Disease (provider side)"
+          "label": "J03b \u00b7 Arthritis Is Not One Disease (provider side)"
         },
         {
           "file": "FlipJ04PainPatterns.dc.html",
-          "label": "J04a · Understanding Pain Patterns (patient side)"
+          "label": "J04a \u00b7 Understanding Pain Patterns (patient side)"
         },
         {
           "file": "FlipJ04PainPatternsNotes.dc.html",
-          "label": "J04b · Understanding Pain Patterns (provider side)"
+          "label": "J04b \u00b7 Understanding Pain Patterns (provider side)"
         },
         {
           "file": "FlipJ05Referred.dc.html",
-          "label": "J05a · Where Pain Starts Isn’t Always Where It Hurts (patient side)"
+          "label": "J05a \u00b7 Where Pain Starts Isn\u2019t Always Where It Hurts (patient side)"
         },
         {
           "file": "FlipJ05ReferredNotes.dc.html",
-          "label": "J05b · Where Pain Starts Isn’t Always Where It Hurts (provider side)"
+          "label": "J05b \u00b7 Where Pain Starts Isn\u2019t Always Where It Hurts (provider side)"
         },
         {
           "file": "FlipJ06Grades.dc.html",
-          "label": "J06a · How Knee Arthritis Is Graded (patient side)"
+          "label": "J06a \u00b7 How Knee Arthritis Is Graded (patient side)"
         },
         {
           "file": "FlipJ06GradesNotes.dc.html",
-          "label": "J06b · How Knee Arthritis Is Graded (provider side)"
+          "label": "J06b \u00b7 How Knee Arthritis Is Graded (provider side)"
         },
         {
           "file": "FlipJ07PainCycle.dc.html",
-          "label": "J07a · Breaking the Pain Cycle (patient side)"
+          "label": "J07a \u00b7 Breaking the Pain Cycle (patient side)"
         },
         {
           "file": "FlipJ07PainCycleNotes.dc.html",
-          "label": "J07b · Breaking the Pain Cycle (provider side)"
+          "label": "J07b \u00b7 Breaking the Pain Cycle (provider side)"
         },
         {
           "file": "FlipJ08Foundation.dc.html",
-          "label": "J08a · Building the Foundation (patient side)"
+          "label": "J08a \u00b7 Building the Foundation (patient side)"
         },
         {
           "file": "FlipJ08FoundationNotes.dc.html",
-          "label": "J08b · Building the Foundation (provider side)"
+          "label": "J08b \u00b7 Building the Foundation (provider side)"
         },
         {
           "file": "FlipJ09Options.dc.html",
-          "label": "J09a · Your Treatment Options, From Self-Care to Surgery (patient side)"
+          "label": "J09a \u00b7 Your Treatment Options, From Self-Care to Surgery (patient side)"
         },
         {
           "file": "FlipJ09OptionsNotes.dc.html",
-          "label": "J09b · Your Treatment Options, From Self-Care to Surgery (provider side)"
+          "label": "J09b \u00b7 Your Treatment Options, From Self-Care to Surgery (provider side)"
         },
         {
           "file": "FlipJ10Lining.dc.html",
-          "label": "J10a · Inside the Joint Lining: Extra Vessels and Nerves (patient side)"
+          "label": "J10a \u00b7 Inside the Joint Lining: Extra Vessels and Nerves (patient side)"
         },
         {
           "file": "FlipJ10LiningNotes.dc.html",
-          "label": "J10b · Inside the Joint Lining: Extra Vessels and Nerves (provider side)"
+          "label": "J10b \u00b7 Inside the Joint Lining: Extra Vessels and Nerves (provider side)"
         },
         {
           "file": "FlipJ11Vessels.dc.html",
-          "label": "J11a · Blood Vessels and Knee Pain (patient side)"
+          "label": "J11a \u00b7 Blood Vessels and Knee Pain (patient side)"
         },
         {
           "file": "FlipJ11VesselsNotes.dc.html",
-          "label": "J11b · Blood Vessels and Knee Pain (provider side)"
+          "label": "J11b \u00b7 Blood Vessels and Knee Pain (provider side)"
         },
         {
           "file": "FlipJ12Arteries.dc.html",
-          "label": "J12a · The Genicular Arteries (patient side)"
+          "label": "J12a \u00b7 The Genicular Arteries (patient side)"
         },
         {
           "file": "FlipJ12ArteriesNotes.dc.html",
-          "label": "J12b · The Genicular Arteries (provider side)"
+          "label": "J12b \u00b7 The Genicular Arteries (provider side)"
         },
         {
           "file": "FlipJ13HowGae.dc.html",
-          "label": "J13a · How GAE Is Designed to Work (patient side)"
+          "label": "J13a \u00b7 How GAE Is Designed to Work (patient side)"
         },
         {
           "file": "FlipJ13HowGaeNotes.dc.html",
-          "label": "J13b · How GAE Is Designed to Work (provider side)"
+          "label": "J13b \u00b7 How GAE Is Designed to Work (provider side)"
         },
         {
           "file": "FlipJ14GaeInside.dc.html",
-          "label": "J14a · Treating From Inside the Vessels (patient side)"
+          "label": "J14a \u00b7 Treating From Inside the Vessels (patient side)"
         },
         {
           "file": "FlipJ14GaeInsideNotes.dc.html",
-          "label": "J14b · Treating From Inside the Vessels (provider side)"
+          "label": "J14b \u00b7 Treating From Inside the Vessels (provider side)"
         },
         {
           "file": "FlipJ15Angiogram.dc.html",
-          "label": "J15a · What the Angiogram Shows (patient side)"
+          "label": "J15a \u00b7 What the Angiogram Shows (patient side)"
         },
         {
           "file": "FlipJ15AngiogramNotes.dc.html",
-          "label": "J15b · What the Angiogram Shows (provider side)"
+          "label": "J15b \u00b7 What the Angiogram Shows (provider side)"
         },
         {
           "file": "FlipJ16VsReplacement.dc.html",
-          "label": "J16a · GAE and Knee Replacement Are Different Tools (patient side)"
+          "label": "J16a \u00b7 GAE and Knee Replacement Are Different Tools (patient side)"
         },
         {
           "file": "FlipJ16VsReplacementNotes.dc.html",
-          "label": "J16b · GAE and Knee Replacement Are Different Tools (provider side)"
+          "label": "J16b \u00b7 GAE and Knee Replacement Are Different Tools (provider side)"
         },
         {
           "file": "FlipJ17Candidate.dc.html",
-          "label": "J17a · Is GAE Right for Me? (patient side)"
+          "label": "J17a \u00b7 Is GAE Right for Me? (patient side)"
         },
         {
           "file": "FlipJ17CandidateNotes.dc.html",
-          "label": "J17b · Is GAE Right for Me? (provider side)"
+          "label": "J17b \u00b7 Is GAE Right for Me? (provider side)"
         },
         {
           "file": "FlipJ18GaeDay.dc.html",
-          "label": "J18a · A Typical GAE Day (patient side)"
+          "label": "J18a \u00b7 A Typical GAE Day (patient side)"
         },
         {
           "file": "FlipJ18GaeDayNotes.dc.html",
-          "label": "J18b · A Typical GAE Day (provider side)"
+          "label": "J18b \u00b7 A Typical GAE Day (provider side)"
         },
         {
           "file": "FlipJ19Recovery.dc.html",
-          "label": "J19a · The Road to Recovery After GAE (patient side)"
+          "label": "J19a \u00b7 The Road to Recovery After GAE (patient side)"
         },
         {
           "file": "FlipJ19RecoveryNotes.dc.html",
-          "label": "J19b · The Road to Recovery After GAE (provider side)"
+          "label": "J19b \u00b7 The Road to Recovery After GAE (provider side)"
         },
         {
           "file": "FlipJ20SideEffects.dc.html",
-          "label": "J20a · Side Effects at a Glance (patient side)"
+          "label": "J20a \u00b7 Side Effects at a Glance (patient side)"
         },
         {
           "file": "FlipJ20SideEffectsNotes.dc.html",
-          "label": "J20b · Side Effects at a Glance (provider side)"
+          "label": "J20b \u00b7 Side Effects at a Glance (provider side)"
         },
         {
           "file": "FlipJ21AfterGae.dc.html",
-          "label": "J21a · After GAE: What’s Normal and When to Call (patient side)"
+          "label": "J21a \u00b7 After GAE: What\u2019s Normal and When to Call (patient side)"
         },
         {
           "file": "FlipJ21AfterGaeNotes.dc.html",
-          "label": "J21b · After GAE: What’s Normal and When to Call (provider side)"
+          "label": "J21b \u00b7 After GAE: What\u2019s Normal and When to Call (provider side)"
         },
         {
           "file": "FlipJ22Decision.dc.html",
-          "label": "J22a · A Step-by-Step Decision Path (patient side)"
+          "label": "J22a \u00b7 A Step-by-Step Decision Path (patient side)"
         },
         {
           "file": "FlipJ22DecisionNotes.dc.html",
-          "label": "J22b · A Step-by-Step Decision Path (provider side)"
+          "label": "J22b \u00b7 A Step-by-Step Decision Path (provider side)"
         },
         {
           "file": "FlipJ23Week.dc.html",
-          "label": "J23a · A Joint-Friendly Week (patient side)"
+          "label": "J23a \u00b7 A Joint-Friendly Week (patient side)"
         },
         {
           "file": "FlipJ23WeekNotes.dc.html",
-          "label": "J23b · A Joint-Friendly Week (provider side)"
+          "label": "J23b \u00b7 A Joint-Friendly Week (provider side)"
         },
         {
           "file": "FlipJ24Beyond.dc.html",
-          "label": "J24a · Embolization Beyond the Knee (patient side)"
+          "label": "J24a \u00b7 Embolization Beyond the Knee (patient side)"
         },
         {
           "file": "FlipJ24BeyondNotes.dc.html",
-          "label": "J24b · Embolization Beyond the Knee (provider side)"
+          "label": "J24b \u00b7 Embolization Beyond the Knee (provider side)"
         },
         {
           "file": "FlipJ25Shoulder.dc.html",
-          "label": "J25a · Shoulder Pain (patient side)"
+          "label": "J25a \u00b7 Shoulder Pain (patient side)"
         },
         {
           "file": "FlipJ25ShoulderNotes.dc.html",
-          "label": "J25b · Shoulder pain and TAME (provider side)"
+          "label": "J25b \u00b7 Shoulder pain and TAME (provider side)"
         },
         {
           "file": "FlipJ26Hip.dc.html",
-          "label": "J26a · Hip Arthritis Pain (patient side)"
+          "label": "J26a \u00b7 Hip Arthritis Pain (patient side)"
         },
         {
           "file": "FlipJ26HipNotes.dc.html",
-          "label": "J26b · Hip pain and TAME (provider side)"
+          "label": "J26b \u00b7 Hip pain and TAME (provider side)"
         },
         {
           "file": "FlipJ27Hand.dc.html",
-          "label": "J27a · Hand & Thumb Arthritis (patient side)"
+          "label": "J27a \u00b7 Hand & Thumb Arthritis (patient side)"
         },
         {
           "file": "FlipJ27HandNotes.dc.html",
-          "label": "J27b · Hand OA and TAME (provider side)"
+          "label": "J27b \u00b7 Hand OA and TAME (provider side)"
         },
         {
           "file": "FlipJ28Heel.dc.html",
-          "label": "J28a · Heel Pain (Plantar Fasciitis) (patient side)"
+          "label": "J28a \u00b7 Heel Pain (Plantar Fasciitis) (patient side)"
         },
         {
           "file": "FlipJ28HeelNotes.dc.html",
-          "label": "J28b · Heel pain and PFE (provider side)"
+          "label": "J28b \u00b7 Heel pain and PFE (provider side)"
         }
       ]
     },
@@ -848,7 +849,7 @@
       "group": "Referral materials",
       "facility": "both",
       "title": "Exam room flip chart: Arteries & veins",
-      "size": "Tent easel, 11 × 8.5 in landscape pages",
+      "size": "Tent easel, 11 \u00d7 8.5 in landscape pages",
       "inches": [
         11,
         8.5
@@ -856,83 +857,83 @@
       "pages": [
         {
           "file": "FlipV00Cover.dc.html",
-          "label": "V00a · Cover"
+          "label": "V00a \u00b7 Cover"
         },
         {
           "file": "FlipV00Notes.dc.html",
-          "label": "V00b · How to use (provider side)"
+          "label": "V00b \u00b7 How to use (provider side)"
         },
         {
           "file": "FlipV01Circulation.dc.html",
-          "label": "V01a · How Blood Flows Through Your Legs (patient side)"
+          "label": "V01a \u00b7 How Blood Flows Through Your Legs (patient side)"
         },
         {
           "file": "FlipV01CirculationNotes.dc.html",
-          "label": "V01b · Circulation basics (provider side)"
+          "label": "V01b \u00b7 Circulation basics (provider side)"
         },
         {
           "file": "FlipV02PAD.dc.html",
-          "label": "V02a · Peripheral Artery Disease (PAD) (patient side)"
+          "label": "V02a \u00b7 Peripheral Artery Disease (PAD) (patient side)"
         },
         {
           "file": "FlipV02PADNotes.dc.html",
-          "label": "V02b · PAD (provider side)"
+          "label": "V02b \u00b7 PAD (provider side)"
         },
         {
           "file": "FlipV03Angio.dc.html",
-          "label": "V03a · Opening a Narrowed Artery (patient side)"
+          "label": "V03a \u00b7 Opening a Narrowed Artery (patient side)"
         },
         {
           "file": "FlipV03AngioNotes.dc.html",
-          "label": "V03b · Angiogram, angioplasty and stenting (provider side)"
+          "label": "V03b \u00b7 Angiogram, angioplasty and stenting (provider side)"
         },
         {
           "file": "FlipV04Wounds.dc.html",
-          "label": "V04a · Nonhealing Wounds & Preventing Amputation (patient side)"
+          "label": "V04a \u00b7 Nonhealing Wounds & Preventing Amputation (patient side)"
         },
         {
           "file": "FlipV04WoundsNotes.dc.html",
-          "label": "V04b · Limb salvage (provider side)"
+          "label": "V04b \u00b7 Limb salvage (provider side)"
         },
         {
           "file": "FlipV05Carotid.dc.html",
-          "label": "V05a · Carotid Artery Disease (patient side)"
+          "label": "V05a \u00b7 Carotid Artery Disease (patient side)"
         },
         {
           "file": "FlipV05CarotidNotes.dc.html",
-          "label": "V05b · Carotid disease (provider side)"
+          "label": "V05b \u00b7 Carotid disease (provider side)"
         },
         {
           "file": "FlipV06Valves.dc.html",
-          "label": "V06a · Healthy Valves vs. Weak Valves (patient side)"
+          "label": "V06a \u00b7 Healthy Valves vs. Weak Valves (patient side)"
         },
         {
           "file": "FlipV06ValvesNotes.dc.html",
-          "label": "V06b · Venous insufficiency (provider side)"
+          "label": "V06b \u00b7 Venous insufficiency (provider side)"
         },
         {
           "file": "FlipV07Closure.dc.html",
-          "label": "V07a · Closing the Faulty Vein (patient side)"
+          "label": "V07a \u00b7 Closing the Faulty Vein (patient side)"
         },
         {
           "file": "FlipV07ClosureNotes.dc.html",
-          "label": "V07b · Vein closure (provider side)"
+          "label": "V07b \u00b7 Vein closure (provider side)"
         },
         {
           "file": "FlipV08Sclero.dc.html",
-          "label": "V08a · Spider Veins & Bulging Surface Veins (patient side)"
+          "label": "V08a \u00b7 Spider Veins & Bulging Surface Veins (patient side)"
         },
         {
           "file": "FlipV08ScleroNotes.dc.html",
-          "label": "V08b · Sclerotherapy and phlebectomy (provider side)"
+          "label": "V08b \u00b7 Sclerotherapy and phlebectomy (provider side)"
         },
         {
           "file": "FlipV09DVT.dc.html",
-          "label": "V09a · Blood Clots & Deep Vein Problems (patient side)"
+          "label": "V09a \u00b7 Blood Clots & Deep Vein Problems (patient side)"
         },
         {
           "file": "FlipV09DVTNotes.dc.html",
-          "label": "V09b · DVT and deep veins (provider side)"
+          "label": "V09b \u00b7 DVT and deep veins (provider side)"
         }
       ]
     },
@@ -941,7 +942,7 @@
       "group": "Patient guides",
       "facility": "both",
       "title": "Patient guide: Arteries & veins",
-      "size": "16-page booklet, 8.5 × 11 in pages",
+      "size": "16-page booklet, 8.5 \u00d7 11 in pages",
       "inches": [
         8.5,
         11
@@ -1018,7 +1019,7 @@
       "group": "Patient guides",
       "facility": "both",
       "title": "Patient guide (Spanish): Arteries & veins",
-      "size": "16-page booklet, 8.5 × 11 in pages",
+      "size": "16-page booklet, 8.5 \u00d7 11 in pages",
       "inches": [
         8.5,
         11
@@ -1095,7 +1096,7 @@
       "group": "Newsletters",
       "facility": "both",
       "title": "Patient newsletter: November 2026",
-      "size": "4 pages, 8.5 × 11 in",
+      "size": "4 pages, 8.5 \u00d7 11 in",
       "inches": [
         8.5,
         11
@@ -1124,7 +1125,7 @@
       "group": "Newsletters",
       "facility": "both",
       "title": "Provider newsletter: November 2026",
-      "size": "4 pages, 8.5 × 11 in",
+      "size": "4 pages, 8.5 \u00d7 11 in",
       "inches": [
         8.5,
         11
@@ -1152,8 +1153,8 @@
       "id": "art-18x24",
       "group": "Waiting room art",
       "facility": "ajpvc",
-      "title": "Waiting room art: 18 × 24 prints (set of 5)",
-      "size": "18 × 24 in, one print per page",
+      "title": "Waiting room art: 18 \u00d7 24 prints (set of 5)",
+      "size": "18 \u00d7 24 in, one print per page",
       "inches": [
         18,
         24
@@ -1185,8 +1186,8 @@
       "id": "art-24x36",
       "group": "Waiting room art",
       "facility": "ajpvc",
-      "title": "Waiting room art: 24 × 36 prints (set of 5)",
-      "size": "24 × 36 in, one print per page",
+      "title": "Waiting room art: 24 \u00d7 36 prints (set of 5)",
+      "size": "24 \u00d7 36 in, one print per page",
       "inches": [
         24,
         36
@@ -1219,8 +1220,8 @@
       "group": "Marketing materials",
       "facility": "both",
       "kind": "file",
-      "title": "GAE & PFE leg pain sheet: 11 × 8.5",
-      "size": "11 × 8.5 in, two sides, print-ready PDF",
+      "title": "GAE & PFE leg pain sheet: 11 \u00d7 8.5",
+      "size": "11 \u00d7 8.5 in, two sides, print-ready PDF",
       "inches": [
         11,
         8.5
@@ -1233,8 +1234,8 @@
       "group": "Posters",
       "facility": "hvlc",
       "kind": "file",
-      "title": "Joint pain poster: 24 × 36",
-      "size": "24 × 36 in, print-ready PDF",
+      "title": "Joint pain poster: 24 \u00d7 36",
+      "size": "24 \u00d7 36 in, print-ready PDF",
       "inches": [
         24,
         36
@@ -1248,7 +1249,7 @@
       "facility": "ajpvc",
       "kind": "card",
       "title": "Business card: AJPVC",
-      "size": "3.5 × 2 in, two sides",
+      "size": "3.5 \u00d7 2 in, two sides",
       "inches": [
         3.5,
         2
@@ -1279,7 +1280,7 @@
       "facility": "hvlc",
       "kind": "card",
       "title": "Business card: HVLC",
-      "size": "3.5 × 2 in, two sides",
+      "size": "3.5 \u00d7 2 in, two sides",
       "inches": [
         3.5,
         2
@@ -1329,7 +1330,7 @@
     }
   ],
   "tokens": {
-    "Mon–Fri [HOURS]": "{{HOURS}}",
+    "Mon\u2013Fri [HOURS]": "{{HOURS}}",
     "[HOURS]": "{{HOURS}}",
     "[STREET ADDRESS]": "{{STREET}}",
     "[CITY, STATE ZIP]": "{{CITY_STATE_ZIP}}",
