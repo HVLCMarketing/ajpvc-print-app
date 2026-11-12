@@ -234,6 +234,17 @@
   const GROUP_ORDER = ['Marketing materials', 'Folders', 'Patient guides', 'Newsletters', 'Posters', 'Waiting room art', 'Referral materials'];
   const gIdx = (g) => { const i = GROUP_ORDER.indexOf(g); return i < 0 ? 99 : i; };
   const byGroup = (a, b) => gIdx(a.group) - gIdx(b.group);
+  // bundles: named sets of pieces that go out together (pick one in the piece list to see and print them as a set)
+  const BUNDLES = [
+    { id: 'bundle:personal-injury', facility: 'ajpvc', title: 'Personal injury bundle',
+      note: 'For personal injury attorneys and case managers. The folder carries the two inserts: the referral form goes in one pocket and the slick sheet in the other.',
+      items: [
+        { id: 'general-folder', role: 'Folder (outside and inside)' },
+        { id: 'pi-referral-form', role: 'Pocket insert: referral form (front and back)' },
+        { id: 'slick-personal-injury', role: 'Pocket insert: referral slick sheet' }
+      ] }
+  ];
+  const bundleOf = (id) => BUNDLES.find((x) => x.id === id);
   const FAC_KEY = 'ajpvc.facility.v1';
   const FILTER_KEY = 'ajpvc.pieceFilter.v1';
   const params = new URLSearchParams(location.search);
@@ -264,8 +275,9 @@
     const groups = [...new Set(mine.map((p) => p.group))];
     filterSel.innerHTML = '<option value="all">All pieces</option>' + groups.map((g) => `<optgroup label="${A.esc(g)}">` +
       mine.filter((p) => p.group === g).map((p) => `<option value="${p.id}">${A.esc(p.title)}</option>`).join('') + '</optgroup>').join('') +
-      groups.map((g) => `<option value="group:${A.esc(g)}">All ${A.esc(g.toLowerCase())}</option>`).join('');
-    if (!mine.some((p) => p.id === pieceFilter || 'group:' + p.group === pieceFilter)) pieceFilter = 'all';
+      groups.map((g) => `<option value="group:${A.esc(g)}">All ${A.esc(g.toLowerCase())}</option>`).join('') +
+      (BUNDLES.filter((x) => x.facility === facility).length ? '<optgroup label="Bundles">' + BUNDLES.filter((x) => x.facility === facility).map((x) => `<option value="${x.id}">${A.esc(x.title)}</option>`).join('') + '</optgroup>' : '');
+    if (!mine.some((p) => p.id === pieceFilter || 'group:' + p.group === pieceFilter) && !(bundleOf(pieceFilter) && bundleOf(pieceFilter).facility === facility)) pieceFilter = 'all';
     filterSel.value = pieceFilter;
     // order form: only this facility's items; clear the others so they aren't ordered by mistake
     $$('#qtyGrid [data-facility]').forEach((l) => {
@@ -297,11 +309,24 @@
   function renderAll() {
     const loc = active();
     const host = $('#pieces');
-    const shown = T.filter((p) => p.kind !== 'card' && p.kind !== 'web' && (p.facility === facility || p.facility === 'both') && (pieceFilter === 'all' || p.id === pieceFilter || 'group:' + p.group === pieceFilter)).sort(byGroup);
+    const bundle = bundleOf(pieceFilter);
+    const shown = bundle ? bundle.items.map((it) => T.find((p) => p.id === it.id)).filter(Boolean) : T.filter((p) => p.kind !== 'card' && p.kind !== 'web' && (p.facility === facility || p.facility === 'both') && (pieceFilter === 'all' || p.id === pieceFilter || 'group:' + p.group === pieceFilter)).sort(byGroup);
     let lastGroup = null;
-    host.innerHTML = shown.map((p) => {
+    const bundleHead = bundle ? (() => {
+      const rows = bundle.items.map((it, i) => {
+        const p = T.find((x) => x.id === it.id); if (!p) return '';
+        const n = p.kind === 'file' ? 0 : p.pages.reduce((t, pg) => t + A.countPlaceholders(A.fill(pg.html, loc)), 0);
+        return `<li><span class="bundle-num">${i + 1}</span><div class="bundle-what"><b>${A.esc(p.title)}</b><span class="muted">${A.esc(it.role)} · ${A.esc(p.size)}</span></div>
+          <span class="badge ${n ? 'badge-warn' : 'badge-ok'}">${n ? n + ' placeholder' + (n > 1 ? 's' : '') + ' left' : 'Ready'}</span>
+          <a class="btn primary" href="print.html?piece=${p.id}" target="_blank" rel="noopener">Print / PDF</a></li>`;
+      }).join('');
+      return `<section class="bundle-card"><h2 class="group-head">${A.esc(bundle.title)}</h2><p class="muted">${A.esc(bundle.note)}</p>
+        <ol class="bundle-list">${rows}</ol>
+        <p class="muted bundle-foot">Everything below is filled in for <b>${A.esc((loc && loc.locationName) || 'the selected location')}</b>. The folder prints on 18 × 12 stock; the form and slick sheet print on letter. Print each one separately (use Print-shop PDF for the printer).</p></section>`;
+    })() : '';
+    host.innerHTML = bundleHead + shown.map((p) => {
       if (p.kind === 'file') {
-        const head = p.group !== lastGroup ? `<h2 class="group-head">${A.esc(p.group)}</h2>` : ''; lastGroup = p.group;
+        const head = !bundle && p.group !== lastGroup ? `<h2 class="group-head">${A.esc(p.group)}</h2>` : ''; lastGroup = p.group;
         return head + `<article class="piece" data-id="${p.id}">
         <header class="piece-head">
           <div><h3>${A.esc(p.title)}</h3><p class="muted">${A.esc(p.size)}</p></div>
@@ -316,7 +341,7 @@
       }
       const pages = p.pages.map((pg) => ({ ...pg, filled: A.fill(pg.html, loc) }));
       const n = pages.reduce((s, pg) => s + A.countPlaceholders(pg.filled), 0);
-      const heading = p.group !== lastGroup ? `<h2 class="group-head">${A.esc(p.group)}</h2>` : ''; lastGroup = p.group;
+      const heading = !bundle && p.group !== lastGroup ? `<h2 class="group-head">${A.esc(p.group)}</h2>` : ''; lastGroup = p.group;
       return heading + `<article class="piece" data-id="${p.id}">
         <header class="piece-head">
           <div><h3>${A.esc(p.title)}</h3><p class="muted">${A.esc(p.size)}</p></div>

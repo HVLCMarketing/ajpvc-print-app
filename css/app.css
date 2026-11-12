@@ -224,3 +224,11 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .tab:focus-visibl
 .mini-how { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 22px; max-width: 900px; }
 .mini-how h2 { margin: 0 0 8px; font-size: 17px; }
 .mini-how ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 14.5px; }
+
+.bundle-card{background:#fff;border:1px solid #e2ded4;border-radius:14px;padding:20px 24px;margin:0 0 24px}
+.bundle-card .group-head{margin-top:0}
+.bundle-list{list-style:none;margin:14px 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.bundle-list li{display:flex;align-items:center;gap:14px;padding:12px 14px;background:#f7f6f2;border-radius:10px;flex-wrap:wrap}
+.bundle-num{flex:none;width:30px;height:30px;border-radius:50%;background:#16306e;color:#fff;font-weight:700;display:grid;place-items:center}
+.bundle-what{flex:1;min-width:220px;display:flex;flex-direction:column;gap:2px}
+.bundle-foot{margin:0;font-size:.9rem}
