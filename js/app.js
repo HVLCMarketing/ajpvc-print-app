@@ -660,6 +660,7 @@ ${body}
     'pi-referral-form': 'Two-sided referral form for personal injury law firms.',
     'sheet-gae-pfe': 'Two-sided sheet on genicular artery embolization (knee OA) and plantar fascia embolization, supplied as a print-ready PDF.',
     'poster-hvlc-joint-pain': 'Joint pain wall poster, supplied as a print-ready PDF.',
+    'general-folder': 'Pocket folder for any audience: who we are, how it works, how to reach us, with the medical director.',
     'slick-personal-injury': 'One-page referral sheet for personal injury attorneys and case managers.',
     'slick-workers-comp': 'One-page referral sheet for workers’ compensation adjusters and employers.',
     'slick-corrections': 'One-page referral sheet for correctional health teams.',
@@ -734,6 +735,12 @@ ${body}
     const f = e.target, err = $('#orderError');
     const qty = $$('#qtyGrid input').reduce((s, i) => s + (+i.value || 0), 0);
     if (!qty) { err.textContent = 'Add a quantity for at least one item.'; err.hidden = false; return; }
+    const MIN_QTY = 50;
+    const low = $$('#qtyGrid label[data-piece]').filter((l) => { const n = +l.querySelector('input').value || 0; return n > 0 && n < MIN_QTY; });
+    if (low.length) {
+      err.textContent = `The minimum is ${MIN_QTY} of any piece. Raise or clear: ` + low.map((l) => (l.querySelector('.qty-title') || l).textContent.trim()).join(', ') + '.';
+      err.hidden = false; low[0].scrollIntoView({ block: 'center' }); return;
+    }
     const loc = locations.find((l) => l.id === f.elements.location.value) || {};
     const v = A.values(loc);
     $('#orderLocationDetails').value = [

@@ -448,7 +448,7 @@
     {
       "id": "slick-personal-injury",
       "group": "Referral materials",
-      "facility": "hvlc",
+      "facility": "both",
       "title": "Referral slick sheet: Personal Injury",
       "size": "8.5 \u00d7 11 in",
       "inches": [
@@ -486,7 +486,7 @@
     {
       "id": "slick-workers-comp",
       "group": "Referral materials",
-      "facility": "hvlc",
+      "facility": "both",
       "title": "Referral slick sheet: Workers' Compensation",
       "size": "8.5 \u00d7 11 in",
       "inches": [
@@ -503,7 +503,7 @@
     {
       "id": "slick-corrections",
       "group": "Referral materials",
-      "facility": "hvlc",
+      "facility": "both",
       "title": "Referral slick sheet: Correctional Health",
       "size": "8.5 \u00d7 11 in",
       "inches": [

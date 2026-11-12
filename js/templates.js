@@ -447,7 +447,7 @@ window.AJPVC_TEMPLATES = [
    8.5,
    11
   ],
-  "facility": "hvlc",
+  "facility": "both",
   "group": "Referral materials",
   "pages": [
    {
@@ -491,7 +491,7 @@ window.AJPVC_TEMPLATES = [
    8.5,
    11
   ],
-  "facility": "hvlc",
+  "facility": "both",
   "group": "Referral materials",
   "pages": [
    {
@@ -510,7 +510,7 @@ window.AJPVC_TEMPLATES = [
    8.5,
    11
   ],
-  "facility": "hvlc",
+  "facility": "both",
   "group": "Referral materials",
   "pages": [
    {

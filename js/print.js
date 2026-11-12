@@ -33,6 +33,8 @@
     `<label class="opt"><input type="checkbox" id="optBleed"> Add 1/8 in bleed (print shop)</label>` +
     `<label class="opt" title="Office printers cannot print to the paper edge. This prints the piece bigger than the paper size with trim marks, so you can cut it to a full-color edge."><input type="checkbox" id="optMarks"> Edge-to-edge on an office printer: bleed + trim marks on larger paper (11 × 17 for letter-size pieces)</label>`;
   if (piece.group === 'Waiting room art' || piece.kind === 'file') document.getElementById('printShopBtn').hidden = true;
+  // ?shop=1 opens the page already in print-shop mode (used by the order function to build the emailed PDFs)
+  if (new URLSearchParams(location.search).get('shop') === '1' && piece.group !== 'Waiting room art' && piece.kind !== 'file') opts.shop = true;
   let left = 0;
   function sheets() {
     left = 0;
