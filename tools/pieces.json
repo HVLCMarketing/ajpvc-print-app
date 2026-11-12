@@ -168,6 +168,27 @@
       ]
     },
     {
+      "id": "general-folder",
+      "group": "Folders",
+      "facility": "ajpvc",
+      "title": "General marketing folder",
+      "size": "9 \u00d7 12 pocket folder, 18 \u00d7 12 flat",
+      "inches": [
+        18,
+        12
+      ],
+      "pages": [
+        {
+          "file": "GeneralFolderOutside.dc.html",
+          "label": "Outside"
+        },
+        {
+          "file": "GeneralFolderInside.dc.html",
+          "label": "Inside"
+        }
+      ]
+    },
+    {
       "id": "flyer",
       "group": "Marketing materials",
       "facility": "ajpvc",
