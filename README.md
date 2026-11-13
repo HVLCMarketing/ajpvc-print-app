@@ -89,4 +89,4 @@ Every order placed on the "Place an order" tab becomes a tracked record (ORD-000
 
 ## Shareable order link
 
-`https://<your-site>/order` shows only the catalog and the order form (no location editing, business cards, landing pages, Google profiles or order manager). `?view=order` on the main address does the same. Add `?facility=hvlc` to open the Heart Vascular & Leg Center catalog.
+`https://<your-site>/order` shows only the catalog and the order form (no location editing, business cards, landing pages or order manager). `?view=order` on the main address does the same. Add `?facility=hvlc` to open the Heart Vascular & Leg Center catalog.

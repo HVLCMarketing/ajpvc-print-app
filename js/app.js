@@ -26,7 +26,6 @@
     $$('.tab-panel').forEach((p) => { p.hidden = p.id !== 'tab-' + b.dataset.tab; });
     if (b.dataset.tab === 'order') fillOrderLocations();
     else if (b.dataset.tab === 'landing') renderLanding();
-    else if (b.dataset.tab === 'gbp') renderGbp();
     else if (b.dataset.tab === 'cards') renderCard();
     else layoutAll();
   }));
@@ -290,7 +289,6 @@
       t.hidden = t.dataset.only !== facility;
       if (t.hidden && t.classList.contains('is-active')) $('.tab[data-tab="materials"]').click();
     });
-    if (!$('#tab-gbp').hidden) renderGbp();
     $('#orderFacility').value = f.name;
     syncUrl();
   }
@@ -541,98 +539,6 @@ ${body}
     a.download = fileSlug(loc); a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   });
 
-  /* ---------- Google Business Profiles ---------- */
-  const G = window.AJPVC_GBP;
-  // one copyable box: label, editable text, live character count against Google's limit
-  function gbpField(label, value, opts = {}) {
-    const rows = opts.rows || (value.length > 160 ? Math.min(9, Math.ceil(value.length / 85) + 1) : 1);
-    const lim = opts.limit ? `<span class="gbp-count" data-limit="${opts.limit}"></span>` : '';
-    const tag = rows > 1 ? `<textarea rows="${rows}">${A.esc(value)}</textarea>` : `<input value="${A.esc(value)}">`;
-    return `<div class="gbp-field"><div class="gbp-label"><span>${label}</span>${lim}<button type="button" class="btn ghost small gbp-copy">Copy</button></div>${tag}${opts.note ? `<p class="muted small">${opts.note}</p>` : ''}</div>`;
-  }
-  function gbpFill(t, loc, extra = {}) {
-    const v = A.values(loc);
-    const map = Object.assign({ CITY: v.CITY || '[CITY]', LOCATION: v.LOCATION_NAME || '[LOCATION NAME]', ADDRESS: v.FULL_ADDRESS || '[ADDRESS]', HOURS: v.HOURS || '[HOURS]', FACILITY: G.facilities[facility].name }, extra);
-    return t.replace(/\{([A-Z]+)\}/g, (m, k) => (k in map ? map[k] : m));
-  }
-  function renderGbp() {
-    const sel = $('#gbpLocation'), keep = sel.value || activeId;
-    sel.innerHTML = locations.map((l) => `<option value="${l.id}">${A.esc(l.locationName || 'Untitled')}</option>`).join('');
-    sel.value = locations.some((l) => l.id === keep) ? keep : (locations[0] || {}).id || '';
-    const loc = locations.find((l) => l.id === sel.value) || {}, v = A.values(loc), F = G.facilities[facility];
-    $('#gbpFacName').textContent = F.name;
-    const X = F.fixed || {};
-    const addr = X.address || v.FULL_ADDRESS || '[ADDRESS]', hours = X.hours || v.HOURS || '[HOURS]';
-    $('#gbpBusiness').innerHTML = `<h2>Business profile: ${A.esc(F.name)}</h2>
-      ${X.address ? '<p class="muted small">Official name, address, phone and hours from the project hub. Use them exactly the same everywhere: Google, directories, the website and Zoho.</p>' : ''}
-      <div class="gbp-grid">
-      ${gbpField('Business name', F.name, { note: 'Use the name exactly as it appears on the sign. Google does not allow adding the city or keywords to the name.' })}
-      ${gbpField('Primary category', F.categories.primary, { note: X.address ? 'Never use “Vascular surgeon”: no one at HVLC is a surgeon.' : 'Suggested. Pick the closest match in Google’s category list.' })}
-      ${gbpField('Additional categories', F.categories.additional.join(', '), { note: 'Only add categories Google offers that describe services you actually provide.' })}
-      ${gbpField('Phone', X.phone || '661-324-4100')}
-      ${gbpField('Website', 'https://heartandleg.com', { note: 'The homepage, not a provider page.' })}
-      ${gbpField('Address', addr)}
-      ${gbpField('Hours', hours, { note: 'Google asks for hours day by day; enter them from this line.' })}
-      ${X.appointment ? gbpField('Appointment link', X.appointment) : ''}
-      ${X.opening ? gbpField('Opening date', X.opening) : ''}
-      ${X.social ? gbpField('Social profiles', X.social) : ''}
-      </div>
-      ${gbpField('Business description', gbpFill(F.description, loc), { limit: 750, note: 'Google allows up to 750 characters. Leave out phone numbers and links.' })}
-      <h3>Services</h3><div class="gbp-grid">${F.services.map(([n, d]) => gbpField(A.esc(n), d, { limit: 300, rows: 4 })).join('')}</div>`;
-    $('#gbpPosts').innerHTML = `<h2>Standard updates</h2>
-      <p class="muted small">Post one of these as an <b>Update</b> every week or two. Google rejects updates that include a phone number in the text, so add it with the button instead. Add a photo to each post.</p>
-      <div class="gbp-posts">${F.posts.map(([t, body, cta]) => `<article class="gbp-post"><h3>${A.esc(gbpFill(t, loc))}</h3>
-        ${gbpField('Update text', gbpFill(body, loc), { limit: 1500, rows: 8 })}
-        <p class="gbp-cta">Button: <b>${A.esc(cta === 'Call' ? 'Call now' : cta)}</b>${cta === 'Call' ? '' : ' → https://heartandleg.com'}</p></article>`).join('')}</div>`;
-    const D = G.drafts || [];
-    const lastOf = (n) => n.split(',')[0].trim().split(' ').slice(-1)[0].toLowerCase();
-    const drafted = new Set(D.map((d) => lastOf(d.profileName)));
-    const people = G.providers.filter((p) => !drafted.has(lastOf(p.name)));
-    if (loc.providerName && !drafted.has(lastOf(loc.providerName)) && !people.some((p) => lastOf(p.name) === lastOf(loc.providerName))) {
-      const [nm, ...cr] = loc.providerName.split(','); people.unshift({ name: nm.trim(), cred: cr.join(',').trim(), role: /\bMD|DO\b/.test(loc.providerName) ? 'md' : /PA/.test(loc.providerName) ? 'pa' : 'np' });
-    }
-    const draftCard = (d) => `<details class="gbp-person"><summary><h3>${A.esc(d.profileName)}</h3><span class="badge badge-ok">Draft from project hub</span></summary>
-      ${d.confirm.length ? `<div class="gbp-confirm"><b>To confirm before publishing</b><ul>${d.confirm.map((c) => `<li>${A.esc(c)}</li>`).join('')}</ul></div>` : ''}
-      <div class="gbp-grid">
-      ${gbpField('Profile name', d.profileName, { note: 'Name and credential only. No practice name, “Dr.” or keywords, or Google may suspend the profile.' })}
-      ${gbpField('Primary category', d.category)}
-      ${d.additional.length ? gbpField('Additional categories', d.additional.join(', ')) : ''}
-      ${gbpField('Address', d.address)}${gbpField('Phone', d.phone)}${gbpField('Hours', d.hours)}
-      ${gbpField('Website', d.website)}${gbpField('Appointment link', d.appointment)}
-      </div>
-      ${gbpField('Description', d.description, { limit: 750, rows: 7 })}
-      <h4>Services</h4><div class="gbp-grid">${d.services.map((sv) => gbpField(A.esc(sv.name), sv.description, { limit: 300, rows: 3, note: sv.description ? '' : 'No description in the draft yet. Add one or list the name only.' })).join('')}</div>
-      ${d.post ? `<h4>First Google post</h4>${gbpField('Post title', d.post.title || '')}${gbpField('Post text', d.post.body || '', { limit: 1500, rows: 6 })}` : ''}
-      </details>`;
-    const templCard = (p) => {
-      const R = G.roles[p.role], parts = p.name.split(' ');
-      const full = p.name + (p.cred ? ', ' + p.cred : '');
-      const text = gbpFill(R.text, loc, { NAME: p.name, CRED: p.cred, FIRST: parts[0], LAST: parts[parts.length - 1] });
-      return `<details class="gbp-person"><summary><h3>${A.esc(full)}</h3><span class="badge badge-warn">No draft yet</span></summary>
-        <p class="muted small">${A.esc(R.title)}. Starter wording only; replace it with a reviewed draft like the ones above.</p>
-        ${gbpField('Profile name', full, { note: 'Name and credential only. No practice name, “Dr.” or keywords.' })}
-        ${gbpField('Primary category', R.category)}
-        ${gbpField('Description', text, { limit: 750, rows: 6 })}</details>`;
-    };
-    $('#gbpProviders').innerHTML = `<h2>Provider profiles</h2>
-      <p class="muted small">Each provider who sees patients gets a separate profile with the practice address and phone. PAs and NPs list procedures only as evaluations, since physicians perform them. The clinical team approves all medical wording before anything is published.</p>
-      <div class="gbp-people">${D.map(draftCard).join('')}${people.map(templCard).join('')}</div>`;
-    $$('#tab-gbp .gbp-field').forEach(updateCount);
-  }
-  function updateCount(f) {
-    const c = f.querySelector('.gbp-count'); if (!c) return;
-    const n = f.querySelector('input,textarea').value.length, lim = +c.dataset.limit;
-    c.textContent = `${n} / ${lim}`; c.classList.toggle('over', n > lim);
-  }
-  $('#tab-gbp').addEventListener('input', (e) => { const f = e.target.closest('.gbp-field'); if (f) updateCount(f); });
-  $('#tab-gbp').addEventListener('click', async (e) => {
-    const b = e.target.closest('.gbp-copy'); if (!b) return;
-    const box = b.closest('.gbp-field').querySelector('input,textarea');
-    try { await navigator.clipboard.writeText(box.value); } catch (x) { box.select(); document.execCommand('copy'); }
-    b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy'; }, 1400);
-  });
-  $('#gbpLocation').addEventListener('change', renderGbp);
-
   /* ---------- orders ---------- */
   // what each orderable item is, shown under its preview on the order form
   const ORDER_DESC = {
@@ -783,7 +689,7 @@ ${body}
 
   /* ---------- external order view ---------- */
   // /order (or ?view=order) is the link to share outside the team: only the catalog and the order form,
-  // with no location editing, business cards, landing pages, Google profiles or order manager.
+  // with no location editing, business cards, landing pages or order manager.
   const EXT = new URLSearchParams(location.search).get('view') === 'order' || /\/order\/?$/.test(location.pathname);
   function applyExt() {
     document.body.classList.add('ext');
