@@ -234,3 +234,6 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .tab:focus-visibl
 .bundle-foot{margin:0;font-size:.9rem}
 
 a.tab { text-decoration: none; display: inline-flex; align-items: center; }
+
+/* external order view: catalog and order form only */
+.ext .tabs, .ext #omLink, .ext #saveState { display: none; }

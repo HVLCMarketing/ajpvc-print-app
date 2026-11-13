@@ -12,3 +12,15 @@
   node_bundler = "esbuild"
   # Chromium ships its own browser binary, so it is copied as-is instead of bundled
   external_node_modules = ["@sparticuz/chromium"]
+
+# Shareable link for the catalog and order form only: https://<site>/order
+[[redirects]]
+  from = "/order/"
+  to = "/order"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/order"
+  to = "/index.html"
+  status = 200

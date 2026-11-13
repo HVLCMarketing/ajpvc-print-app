@@ -86,3 +86,7 @@ Every order placed on the "Place an order" tab becomes a tracked record (ORD-000
 - Each order keeps the print files and quantities, print shop / PO / quote, carrier and tracking number, a history log, and can email the requester when the status changes or re-send the print email.
 - Environment variables: `EDIT_PASSCODE` (required), `RESEND_API_KEY` and `ORDER_EMAIL_FROM` (required to send any email), `ORDER_EMAIL_TO` (optional, defaults to marketing@heartandleg.com).
 - Functions: `netlify/functions/orders.mjs` (the `/api/orders` API), `netlify/functions/order-pdfs-background.mjs` (builds PDFs and creates the record), shared code in `netlify/lib/orders.mjs`.
+
+## Shareable order link
+
+`https://<your-site>/order` shows only the catalog and the order form (no location editing, business cards, landing pages, Google profiles or order manager). `?view=order` on the main address does the same. Add `?facility=hvlc` to open the Heart Vascular & Leg Center catalog.

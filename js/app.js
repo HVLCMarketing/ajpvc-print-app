@@ -781,6 +781,18 @@ ${body}
   });
   $('#orderAgain').addEventListener('click', () => { $('#orderForm').hidden = false; $('#orderDone').hidden = true; fillOrderLocations(); });
 
+  /* ---------- external order view ---------- */
+  // /order (or ?view=order) is the link to share outside the team: only the catalog and the order form,
+  // with no location editing, business cards, landing pages, Google profiles or order manager.
+  const EXT = new URLSearchParams(location.search).get('view') === 'order' || /\/order\/?$/.test(location.pathname);
+  function applyExt() {
+    document.body.classList.add('ext');
+    document.title = 'Order printed materials';
+    const card = $('#qtyGrid label[data-piece="card"]'); if (card) card.remove();      // cards need the Business cards tab
+    const note = $('#tab-order .order-wrap > .muted'); if (note) note.textContent = 'Choose the location, pick the pieces you need (minimum 50 of any piece) and submit. The marketing team prints and ships your order.';
+    $('.tab[data-tab="order"]').click();
+  }
+
   /* ---------- start ---------- */
   async function start() {
     const browserLocs = A.loadLocations();
@@ -801,6 +813,7 @@ ${body}
     cacheLocally();
     refreshPicker(); loadForm(); renderAll();
     status(shared ? (locations.length ? 'Showing the shared location list.' : 'No shared locations yet. Unlock editing to add one.') : 'Saved in this browser only.');
+    if (EXT) applyExt();
     if (document.fonts) document.fonts.ready.then(layoutAll);
   }
   start();
