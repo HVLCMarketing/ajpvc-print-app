@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Manager</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/orders.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-brand">
+    <img src="assets/logo-long-transparent.png" alt="Advanced Joint Pain &amp; Vascular Center" class="topbar-logo">
+    <h1>Order manager</h1>
+  </div>
+  <nav class="tabs"><a class="tab" href="index.html">Back to print materials</a><button type="button" class="tab" id="lockBtn" hidden>Lock</button></nav>
+</header>
+<main class="om">
+  <section id="gate" class="om-gate" hidden>
+    <h2>Team passcode</h2>
+    <p class="muted">The order manager is for the marketing team. Enter the same passcode you use to edit locations.</p>
+    <form id="gateForm" class="row"><input type="password" id="passInput" placeholder="Passcode" autocomplete="current-password" required><button class="btn primary" type="submit">Open orders</button></form>
+    <p class="order-error" id="gateError" hidden></p>
+  </section>
+
+  <section id="app" hidden>
+    <div class="om-tiles" id="tiles"></div>
+    <div class="om-bar">
+      <input type="search" id="q" placeholder="Search order #, name, location, item…" aria-label="Search orders">
+      <select id="fLocation" aria-label="Location"><option value="">All locations</option></select>
+      <select id="fFlag" aria-label="Flags"><option value="">All orders</option><option value="late">Past needed-by date</option><option value="issue">PDF problem</option><option value="noemail">Email to marketing failed</option></select>
+      <button class="btn ghost" id="refresh" type="button">Refresh</button>
+    </div>
+    <p class="muted" id="count"></p>
+    <div class="om-wrap">
+      <div class="om-table-wrap"><table class="om-table" id="table"><thead><tr><th>Order</th><th>Placed</th><th>Location</th><th>Requested by</th><th>Pieces</th><th>Needed by</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </section>
+</main>
+
+<aside class="om-drawer" id="drawer" hidden aria-label="Order details">
+  <div class="om-drawer-bg" id="drawerBg"></div>
+  <div class="om-panel" id="panel"></div>
+</aside>
+<script src="js/orders.js"></script>
+</body>
+</html>

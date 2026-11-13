@@ -21,8 +21,8 @@
   const status = (msg, warn) => { const s = $('#saveState'); s.textContent = msg; s.classList.toggle('warn', !!warn); };
 
   /* ---------- tabs ---------- */
-  $$('.tab').forEach((b) => b.addEventListener('click', () => {
-    $$('.tab').forEach((x) => x.classList.toggle('is-active', x === b));
+  $$('.tab[data-tab]').forEach((b) => b.addEventListener('click', () => {
+    $$('.tab[data-tab]').forEach((x) => x.classList.toggle('is-active', x === b));
     $$('.tab-panel').forEach((p) => { p.hidden = p.id !== 'tab-' + b.dataset.tab; });
     if (b.dataset.tab === 'order') fillOrderLocations();
     else if (b.dataset.tab === 'landing') renderLanding();

@@ -76,3 +76,13 @@ The designs live on the **AJPVC Launch Creative Kit** canvas in Claude. The file
 | `source/` | Artboard copies from the design canvas |
 | `assets/` | Logos, photos, QR code |
 | `tools/pieces.json` | Which artboards make up each piece, print sizes, image map |
+
+## Order manager (orders.html)
+
+Every order placed on the "Place an order" tab becomes a tracked record (ORD-0001, ORD-0002, ...). The site builds the print-shop PDFs, emails them to marketing@heartandleg.com, and keeps the record in Netlify Blobs (store `orders`).
+
+- Open `orders.html` (link: "Order manager" in the top bar). It uses the same team passcode as location editing (`EDIT_PASSCODE`).
+- Statuses: Building PDFs (automatic) -> New -> Sent to print shop -> In production -> Shipped -> Delivered, plus On hold and Cancelled.
+- Each order keeps the print files and quantities, print shop / PO / quote, carrier and tracking number, a history log, and can email the requester when the status changes or re-send the print email.
+- Environment variables: `EDIT_PASSCODE` (required), `RESEND_API_KEY` and `ORDER_EMAIL_FROM` (required to send any email), `ORDER_EMAIL_TO` (optional, defaults to marketing@heartandleg.com).
+- Functions: `netlify/functions/orders.mjs` (the `/api/orders` API), `netlify/functions/order-pdfs-background.mjs` (builds PDFs and creates the record), shared code in `netlify/lib/orders.mjs`.
