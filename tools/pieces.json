@@ -1272,6 +1272,23 @@
       "preview": "files/HVLC_GAE_PFE_Sheet_11x8.5-preview.webp"
     },
     {
+      "id": "reflow27-sponsors",
+      "group": "Marketing materials",
+      "facility": "both",
+      "title": "Reflow27 sponsorship & exhibitor sheet",
+      "size": "8.5 \u00d7 11 in, one side",
+      "inches": [
+        8.5,
+        11
+      ],
+      "pages": [
+        {
+          "file": "Reflow27Sponsors.dc.html",
+          "label": "Sponsorship sheet"
+        }
+      ]
+    },
+    {
       "id": "poster-hvlc-joint-pain",
       "group": "Posters",
       "facility": "hvlc",
